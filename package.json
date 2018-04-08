@@ -6,16 +6,11 @@
     "homepage": "http://github.com/mksipe",
     "repository": {
       "type": "git",
-      "url": "git://github.com/mksipe/System-Services"
+      "url": "git://github.com/mksipe/System-Services",
+      "license": "GPL-3.0",
+      "name": "Mason Sipe",
+      "email": "masonsipe0513@gmail.com"
     },
-    "main": "lib/dep-graph.js",
-    "dependencies": {
-      "underscore": "1.2.1"
-    },
-    "devDependencies": {
-      "coffee-script": "1.1.2",
-      "nodeunit": "0.5.4",
-      "watchit": ">=0.0.1"
-    }
+    "main": "System-Services"
   }
   
