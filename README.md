@@ -2,13 +2,23 @@
 
 ## STATUS: ACTIVE
 
-## What's Next?
+## How to Use
+> Make a directory of where you want to put the software.
 
-The script is simple. It serves a basic purpose. Keep an eye out for what will come out later for this repository. 
+> In a terminal use these commands to install and initialize the script.
 
-## Future Plans
+`git clone https://github.com/mksipe/System-Services`
 
-Multiple directories with multiple services. Already started, cant stop. 
+`cd System-Services`
+
+`chmod 755 INITIALIZE.sh` You must be root to run this command.
+
+`./INITIALIZE.sh`
+
+The Software should be initialized and is automatically up-to-date.
+
+To update use the command `git pull`
+
 
 # BE AWARE!
 
