@@ -1,0 +1,21 @@
+{
+    "author": "Mason Sipe",
+    "name": "System-Services",
+    "description": "Basic Information Retrieval",
+    "version": "1.0",
+    "homepage": "http://github.com/mksipe",
+    "repository": {
+      "type": "git",
+      "url": "git://github.com/mksipe/System-Services"
+    },
+    "main": "lib/dep-graph.js",
+    "dependencies": {
+      "underscore": "1.2.1"
+    },
+    "devDependencies": {
+      "coffee-script": "1.1.2",
+      "nodeunit": "0.5.4",
+      "watchit": ">=0.0.1"
+    }
+  }
+  
