@@ -1,12 +1,12 @@
 {
-  "author": "Trevor Burnham (http://trevorburnham.com)",
-  "name": "dep-graph",
-  "description": "Simple dependency graph management",
+  "author": "Mason Sipe",
+  "name": "System-Services",
+  "description": "Basic System Information Retrieval",
   "version": "1.1.0",
-  "homepage": "http://github.com/TrevorBurnham/dep-graph",
+  "homepage": "http://github.com/mksipe/System-Services",
   "repository": {
     "type": "git",
-    "url": "git://github.com/TrevorBurnham/dep-graph.git"
+    "url": "git://github.com/mksipe/System-Services"
   },
   "main": "lib/dep-graph.js",
   "dependencies": {
