@@ -14,9 +14,14 @@ mv LICENSE git
 mkdir Firewall-Tools
 chmod 755 UFWC.sh
 mv UFWC.sh Firewall-Tools
+chmod 755 Malware-Detection
+mkdir Malware-Detection
+chmod 755 clamAVconf.sh
+mv clamAVconf.sh Malware-Detection
 mkdir Network-Tools
 chmod 755 Netspoof-Prevention.sh
 mv Netspoof-Prevention.sh Network-Tools
+mv ARP-Spoof-Prevention.sh
 mkdir Remote\ Logon
 chmod 755 Remote-Services-Settings.sh
 mv Remote-Services-Settings.sh Remote\ Logon
@@ -26,6 +31,10 @@ mv Password-Settings.sh User\ Policies
 chmod 755 User-Auth.sh
 mv User-Auth.sh User\ Policies
 mv Exploit-Search.sh System\ Information\ Gathering
+mkdir System-Tuning
+chmod 755 System-Tuning
+chmod 755 Firefox 
+mv Firefox.sh System-Tuning
 echo "Creating Readme"
 touch README.txt
 echo "----------HOW-TO-USE----------
@@ -36,8 +45,8 @@ A majority of the commands only need to be ran once.
 Objective: Configure UFW
 step 1 - cd Firewall-Tools
 step 2 - ./UFWC.sh
-----------TROUBLESHOOTING----------
-Read the WIKI for troubleshooting at 
-https://github.com/mksipe/System-Services/wiki/Troubleshooting" >> README.txt
+----------RESULTS----------
+The results to the specified command will automatically make a new file containing the result of the script.
+---------------------------" >> README.txt
 echo "Done"
 rm -f INITIALIZE.sh
