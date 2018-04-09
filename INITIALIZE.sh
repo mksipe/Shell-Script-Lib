@@ -36,6 +36,8 @@ chmod 755 System-Tuning
 chmod 755 Firefox 
 mv Firefox.sh System-Tuning
 mv ARP-Spoof-Prevention.sh Firewall-Tools
+chmod 755 Network-Scan.sh
+mv Network-Scan.sh Network-Tools
 echo "Creating Readme"
 touch README.txt
 echo "----------HOW-TO-USE----------
