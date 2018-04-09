@@ -4,10 +4,10 @@ echo "Changing Remote Logon Settings"
 
 # SSH
 
-sudo sed -i '/PermitRootLogin yes/c\PermitRootLogin no' /etc/ssh/sshd_config
-sudo sed -i '/Protocol/c\Protocol 2' /etc/ssh/sshd_config
-sudo sed -i 'PermitEmptyPasswords yes/c\PermitEmptyPasswords no' /etc/ssh/sshd_config
-sudo sed -i 'LoginGraceTime/c\LoginGraceTime 1m' /etc/ssh/sshd_config
+sudo sed -i '/PermitRootLogin yes/c\PermitRootLogin no' >>  /etc/ssh/sshd_config
+sudo sed -i '/Protocol/c\Protocol 2' >> /etc/ssh/sshd_config
+sudo sed -i 'PermitEmptyPasswords yes/c\PermitEmptyPasswords no' >> /etc/ssh/sshd_config
+sudo sed -i 'LoginGraceTime/c\LoginGraceTime 1m' >> /etc/ssh/sshd_config
 sudo service ssh restart 
 
 # VSFTPD
