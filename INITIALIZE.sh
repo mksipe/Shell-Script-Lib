@@ -35,6 +35,7 @@ mkdir System-Tuning
 chmod 755 System-Tuning
 chmod 755 Firefox 
 mv Firefox.sh System-Tuning
+mv ARP-Spoof-Prevention.sh Firewall-Tools
 echo "Creating Readme"
 touch README.txt
 echo "----------HOW-TO-USE----------
