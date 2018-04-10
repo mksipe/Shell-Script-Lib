@@ -49,7 +49,7 @@ chmod 755 Updates.sh
 mv Update.sh Updates
 echo "Creating Readme"
 touch README.txt
-/dev/null > README.txt
+echo /dev/null > README.txt
 echo "----------HOW-TO-USE----------
 To use a tool you will need to cd into a directory and chmod the startup program. 
 Not all directories have one. In this case they should have already been chmodded and shlould be already executable. 
