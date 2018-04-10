@@ -1,6 +1,13 @@
 #!/bin/sh
 
 echo "Initializing Directories"
+apt install nano -y
+apt install yum -y
+apt install vim -y
+apt install nmap -y
+apt install unzip -y
+apt install aptitude -y 
+apt install clamav -y
 mkdir System\ Information\ Gathering
 chmod 755 Startup.sh
 mv Current_Connections.sh System\ Information\ Gathering
@@ -21,7 +28,8 @@ mv clamAVconf.sh Malware-Detection
 mkdir Network-Tools
 chmod 755 Netspoof-Prevention.sh
 mv Netspoof-Prevention.sh Network-Tools
-mv ARP-Spoof-Prevention.sh
+chmod 755 ARP-Spoof-Prevention
+mv ARP-Spoof-Prevention.sh Network-Tools
 mkdir Remote\ Logon
 chmod 755 Remote-Services-Settings.sh
 mv Remote-Services-Settings.sh Remote\ Logon
@@ -31,15 +39,17 @@ mv Password-Settings.sh User\ Policies
 chmod 755 User-Auth.sh
 mv User-Auth.sh User\ Policies
 mv Exploit-Search.sh System\ Information\ Gathering
-mkdir System-Tuning
-chmod 755 System-Tuning
-chmod 755 Firefox 
 mv Firefox.sh System-Tuning
 mv ARP-Spoof-Prevention.sh Firewall-Tools
 chmod 755 Network-Scan.sh
 mv Network-Scan.sh Network-Tools
+mkdir Updates
+chmod 755 Updates
+chmod 755 Updates.sh
+mv Update.sh Updates
 echo "Creating Readme"
 touch README.txt
+/dev/null > README.txt
 echo "----------HOW-TO-USE----------
 To use a tool you will need to cd into a directory and chmod the startup program. 
 Not all directories have one. In this case they should have already been chmodded and shlould be already executable. 
