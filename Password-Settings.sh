@@ -1,4 +1,4 @@
-#!/bib/sh
+#!/bin/sh
 
 apt install libpam-cracklib -y 
 apt install auditd -y
