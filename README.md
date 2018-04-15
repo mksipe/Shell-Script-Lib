@@ -8,7 +8,7 @@
 
 System Services repository and contents were meant to run on a Linux system. Such as Ubuntu, Debian or Kali. This will not work with CentOS or any other kind of Redhat or sun system. 
 
-##PRE-WARNINGS
+## PRE-WARNINGS
 
 The contents of System Services can change and alter certain files on your computer. Use them at your own risk. Since this repository is going to mostly be under maintenance for improvement  It is hard to say that these files will change your system in a harmful way. Though it is an unlikely possibility it is not likely that it would happen. 
 
