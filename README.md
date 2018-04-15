@@ -41,3 +41,5 @@ First, open a directory you want to use as the download file for the services (s
 # BE AWARE!
 
 The System Information file gives out information about your system. (duh) Keep it in a secured location on your file system. The scripts can now alter information on a system. So be aware of this. 
+
+theme: jekyll-theme-midnight
