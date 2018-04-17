@@ -17,7 +17,7 @@ spinner () {
 sudo apt update -y & spinner
 sudo apt update -y & spinner
 sudo apt full-upgrade -y & spinner
-
+sudo apt autoremove -y & spinner
 # Update all YUM packages
 
 sudo yum update & spinner
@@ -27,3 +27,7 @@ sudo yum update & spinner
 aptitude update & spinner
 aptitude upgrade & spinner
 
+# Update Repos
+
+
+git pull & spinner

@@ -42,4 +42,4 @@ Ill=$(nmap -sP $NIP*)
 echo "----------Hosts----------" >> Network\ Information.txt
 echo "$Ill" >> Network\ Information.txt
 
-echo "Done" 
+echo "Done. Created a file with your network information included." 

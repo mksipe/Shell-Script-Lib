@@ -51,4 +51,4 @@ sudo sed -i 'LoginGraceTime/c\LoginGraceTime 1m' >> /etc/ssh/sshd_config
 sudo sysctl -p
 echo "Done"
 echo "This script alters data in the sysctl.conf file. It can only be ran once. Permissions to this file have changed."
-chmod 400 Netspoof-Prevention.sh 
+chmod 444 Netspoof-Prevention.sh 
