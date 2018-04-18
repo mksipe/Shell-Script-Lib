@@ -27,10 +27,8 @@ First, open a directory you want to use as the download file for the services (s
  3 `chmod 755 INITIALIZE.sh` (chmod option is optional 755 is everyone can execute read and write so is not recommended. For you to use do `chmod 400 INITIALIZE.sh`)
  
  4 `./INITIALIZE.sh`
- 
- 5.`cd /home`
 
- 6.`. /.bashrc`
+ 5.`. /.bashrc`
  
 ### Maintenance
 

@@ -49,6 +49,13 @@ sudo sed -i '/Protocol/c\Protocol 2' >> /etc/ssh/sshd_config
 sudo sed -i 'PermitEmptyPasswords yes/c\PermitEmptyPasswords no' >> /etc/ssh/sshd_config
 sudo sed -i 'LoginGraceTime/c\LoginGraceTime 1m' >> /etc/ssh/sshd_config
 sudo sysctl -p
+sudo echo 1 >/proc/sys/net/ipv4/tcp_syncookies
+sudo echo 1 >/proc/sys/net/ipv4/conf/all/rp_filter
+sudo iptables -A INPUT -m conntrack --ctstate ESTABLISHED,RELATED -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport ssh -j ACCEPT
+sudo iptables -A INPUT -p tcp --dport 80 -j ACCEPT
+sudo iptables -I INPUT 5 -m limit --limit 5/min -j LOG --log-prefix "iptables denied: " --log-level 7
+sudo sh -c "iptables-save > /etc/iptables.rules"
 echo "Done"
 echo "This script alters data in the sysctl.conf file. It can only be ran once. Permissions to this file have changed."
 chmod 444 Netspoof-Prevention.sh 
