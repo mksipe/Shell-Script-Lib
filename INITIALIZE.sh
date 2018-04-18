@@ -19,4 +19,6 @@ shopt -s expand_aliases 2> /dev/null
 chmod 705 /bin/lib/sh 2> /dev/null
 source .bashrc 2> /dev/null
 mv git /bin/lib/sh 2> /dev/null
+sudo cat /bin/lib/sh/LIB.bashrc > .bashrc
+. /.bashrc
 echo "Done"
