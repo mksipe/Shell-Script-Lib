@@ -1,4 +1,4 @@
-
+!#/bin/sh
 mkdir -p ~/bin
 mkdir -p ~/bin/lib
 mkdir -p ~/bin/lib/sh
