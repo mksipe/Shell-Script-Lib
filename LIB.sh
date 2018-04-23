@@ -18,5 +18,5 @@ alias MKS_Media-Search='/bin/lib/sh/Mediascan.sh'
 alias MKS_file-Privilage='/bin/lib/sh/FileSUIDpriv.sh'
 alias MKS_Version='/bin/lib/sh/Version.txt'
 alias MKS_Stealth-Mode='/bin/lib/sh/Stealth-Mode.sh'
-echo "ALMOST DONE! run the command . /.bash_aliases to initialize the commands. use MKS_help to get a list of commands."
+echo "ALMOST DONE! run the command . /.bash_aliases to initialize the commands. Use MKS_help to get a list of commands."
 

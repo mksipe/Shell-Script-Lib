@@ -20,6 +20,6 @@ chmod 705 /bin/lib/sh 2> /dev/null
 mv git /bin/lib/sh 2> /dev/null
 sudo cat /bin/lib/sh/1.bash_aliases | sudo tee /home/$USER/.bashrc
 . /bin/lib/sh/LIB.sh
-mv /bin/lib/sh/1.bash_aliases /home/$USER
-echo "Software installed by $USER on $DATE in $PATH" >> /bin/lib/sh/Version.txt
+
+echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/Version.txt
 echo "Done"
