@@ -15,5 +15,7 @@
     echo "MKS_User-Auth-Config - Configures high priority class users (This is not recommended this will make all users have the same password.)"
     echo "MKS_Media-Search - Search the system for media such as video files and audio files."
     echo "MKS_file-privilage - Searches the system for files that are shared among users that have rwe access."
+    echo "MKS_Stealth-Mode - Sets up your system to ignore ping scans. This is permanant and cannot be undone."
+    echo "MKS_Version - Shows the version information about the software."
     echo "MKS_help - Displays this page."
     
