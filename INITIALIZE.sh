@@ -21,7 +21,7 @@ mv git /bin/lib/sh 2> /dev/null
 sudo cat /bin/lib/sh/1.bash_aliases | sudo tee /home/$USER/.bashrc
 . /bin/lib/sh/LIB.sh
 git clone https://github.com/mksipe/LinuxAV-Light
-cd LinuxAv-Light
+cd ~/LinuxAV-Light
 chmod 755 INITIALIZE.sh
 ./INITIALIZE.sh
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/Version.txt
