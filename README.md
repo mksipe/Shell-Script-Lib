@@ -28,7 +28,9 @@ First, open a directory you want to use as the download file for the services (s
  
  4 `./INITIALIZE.sh`
 
- 5.`. /.bashrc`
+ 5 `cd /home`
+
+ 6 `. /.bashrc`
  
 ### Maintenance
 

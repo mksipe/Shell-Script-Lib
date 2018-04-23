@@ -20,7 +20,7 @@ sudo echo "
 " | sudo tee -a /etc/sysctl.conf
 sudo echo "#ignore send redirects" | sudo tee -a /etc/sysctl.conf
 sudo echo "net.ipv4.conf.all.send_redirects = 0" | sudo tee -a /etc/sysctl.conf
-sudo echo "net.ipv4.conf.default.send_redirects = 0" >>/etc/sysctl.conf
+sudo echo "net.ipv4.conf.default.send_redirects = 0" | sudo tee -a /etc/sysctl.conf
 sudo echo "
 " | sudo tee -a /etc/sysctl.conf
 sudo echo "#Block syn attacks" | sudo tee -a /etc/sysctl.conf
