@@ -49,3 +49,11 @@ The script used in this command is optional. The command to run this updates pac
 # BE AWARE!
 
 The System Information file gives out information about your system. (duh) Keep it in a secured location on your file system. The scripts can now alter information on a system. So be aware of this.
+
+## Outside Resources
+
+System-Services Uses outside resources to help improve its quality. It uses the LinuxAV-Light repository to help configure antivirus programs on the system as well as teh Linux-tor-incog repository to help make your system use more secure ways to browse the internet and to remain anonymous. 
+
+## Add-Ons
+
+The Add ons are mandatory and cant be uninstalled. Though if you don't want them on your system, you can download the script without the add ons with the branch that doesnt include add-ons.
