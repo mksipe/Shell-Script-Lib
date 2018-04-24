@@ -2,6 +2,8 @@
 DATE=$(date -u)
 mv 1.bash_aliases /home/
 echo "Initializing Directories"
+mkdir /home/$USER
+chmod 5775 /home/$USER
 chmod 755 Startup.sh
 mkdir git
 mv *.md git
@@ -24,5 +26,10 @@ git clone https://github.com/mksipe/LinuxAV-Light
 cd ~/LinuxAV-Light
 chmod 755 INITIALIZE.sh
 ./INITIALIZE.sh
+git clone https://github.com/mksipe/Linux-Tor-Incog
+cd ~/Linux-Tor-Incog
+chmod 755 INITIALIZE.sh
+./INITIALIZE.sh
+mv *.sh /bin/lib/sh
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/Version.txt
 echo "Done"
