@@ -23,13 +23,13 @@ mv git /bin/lib/sh 2> /dev/null
 sudo cat /bin/lib/sh/1.bash_aliases | sudo tee /home/$USER/.bashrc
 . /bin/lib/sh/LIB.sh
 git clone https://github.com/mksipe/LinuxAV-Light
-cd ~/LinuxAV-Light
-chmod 755 INITIALIZE.sh
-./INITIALIZE.sh
+chmod 755 LinuxAV-Light
+chmod 755 /LinuxAV-Light/INITIALIZE.sh
+. /LinuxAV-Light/INITIALIZE.sh
 git clone https://github.com/mksipe/Linux-Tor-Incog
-cd ~/Linux-Tor-Incog
-chmod 755 INITIALIZE.sh
-./INITIALIZE.sh
+chmod 755 Linux-Tor-Incog
+chmod 755 /Linux-Tor-Incog/INITIALIZE.sh
+. git/Linux-Tor-Incog/INITIALIZE.sh
 mv *.sh /bin/lib/sh
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/Version.txt
 echo "Done"
