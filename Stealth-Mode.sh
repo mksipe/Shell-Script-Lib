@@ -1,5 +1,4 @@
 #!/bin/sh
-apt install ufw -y
 touch defalultUFW.txt
 cp /etc/ufw/before.rules >> defalultUFW.txt
 mv defalultUFW.txt /bin/lib/sh

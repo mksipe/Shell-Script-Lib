@@ -52,8 +52,8 @@ The System Information file gives out information about your system. (duh) Keep 
 
 ## Outside Resources
 
-System-Services Uses outside resources to help improve its quality. It uses the LinuxAV-Light repository to help configure antivirus programs on the system as well as teh Linux-tor-incog repository to help make your system use more secure ways to browse the internet and to remain anonymous. 
+System-Services Uses outside resources to help improve its quality. It uses the LinuxAV-Light repository to help configure antivirus programs on the system as well as the Linux-tor-incog repository to help make your system use more secure ways to browse the internet and to remain anonymous. 
 
 ## Add-Ons
 
-The Add ons are mandatory and cant be uninstalled. Though if you don't want them on your system, you can download the script without the add ons with the branch that doesnt include add-ons (alone). 
+The Add-ons are mandatory and cant is uninstalled. Though if you don't want them on your system, you can download the script without the add-ons with the branch that doesn't include add-ons (alone).

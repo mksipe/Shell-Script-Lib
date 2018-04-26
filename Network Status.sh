@@ -13,8 +13,6 @@ sudo touch Network_Info_History.txt
 cat Network\ Information.txt >> Network_Info_History.txt
 cat /dev/null > Network\ Information.txt
 
-sudo apt install nmap -y
-
 echo "Fetching Network Information"
 echo "*----------$date----------*" >> Network\ Information.txt
 echo "----------IP Address----------" >> Network\ Information.txt

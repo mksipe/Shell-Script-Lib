@@ -1,5 +1,4 @@
 #!/bin/sh
-apt install locate -y
 echo "Results"
 locate --basename "*.mp3"
 locate --basename "*.mp4"
