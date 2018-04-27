@@ -1,11 +1,12 @@
 #!/bin/sh
 DATE=$(date -u)
-
+yellow='\133[1;33m'
+blue='\034[3;34m'
 if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     echo "You must be root."
     exit
 fi
-echo "Installing Required Packages"
+echo -e "${yellow}Installing Required Packages\n"
 apt update -y 
 apt full-upgrade -y
 apt install ufw -y
@@ -16,7 +17,7 @@ apt install iptables -y
 apt install nmap -y
 apt install clamav -y
 apt install git -y
-echo "Initializing Directories"
+echo -e "${blue}Initializing Directories\n"
 mkdir /Framework
 chmod 755 *.sh
 chmod 755 *.md
@@ -49,7 +50,7 @@ cd LinuxAV-Light
 mv *.sh /bin/lib/sh/MK3S/LAVL
 cd /home
 rm -r /Framework
-echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
+echo "${blue}Software installed by $USER on $DATE in $PATH\n" | sudo tee /bin/lib/sh/MK3S/Version.txt
 cd /bin/lib/sh/MK3S
 chmod 755 LTI
 chmod 755 LAVL
@@ -59,7 +60,7 @@ cd /bin/lib/sh/MK3S
 cd LAVL
 chmod 755 K0SH.sh
 cd /bin/lib/sh/MK3S
-echo "Program Library Installed"
+echo "${blue}Program Library Installed\n"
 /LTI/K1SH.sh
 /LAVL/K0SH.sh
 ./A:apache2.sh
@@ -75,7 +76,9 @@ echo "Program Library Installed"
 ./A:users-groups.sh
 ./apache2.sh
 ./banners.sh
+chmod 664 /sys/module/nf_conntrack_ipv6/uevent
 ./clamAVconf.sh
+chmod 600 /sys/module/nf_conntrack_ipv6/uevent
 ./files.sh
 ./iptables.sh
 ./network.sh
@@ -87,7 +90,7 @@ echo "Program Library Installed"
 ./UFWC.sh
 ./umasks.sh
 ./users-groups.sh
-echo "Autoconfigure Complete"
-echo "Here is the remaining scripts that you can use in these directories"
+echo "${blue}Autoconfigure Complete\n"
+echo "${yellow}Here is the remaining scripts that you can use in these directories\n"
 cat /bin/lib/sh/MK3S/manual.txt
 echo "Done"
