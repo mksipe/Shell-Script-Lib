@@ -23,11 +23,13 @@ chmod 755 *.md
 chmod 755 *.txt
 chmod 755 *.bash_aliases
 chmod 755 LICENSE
+chmod 755 *.conf
 mv *.sh /Framework
 mv *.md /Framework
 mv *.txt /Framework
 mv *.bash_aliases /Framework
 mv LICENSE /Framework
+mv *.conf /Framework
 cd /Framework
 git clone https://github.com/mksipe/Linux-Tor-Incog
 git clone https://github.com/mksipe/LinuxAV-Light
@@ -42,16 +44,22 @@ mv *.sh /bin/lib/sh/MK3S/LTI
 cd /Framework
 cd LinuxAV-Light
 mv *.sh /bin/lib/sh/MK3S/LAVL
+mv *.sh /bin/lib/sh/MK3S
+mv *.conf /bin/lib/sh/MK3S
 cd /home
 rm -r /Framework
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
 cd /bin/lib/sh/MK3S
-chmod 755 /LTI/K1sh.sh
+chmod 755 /LTI/K1SH.sh
 chmod 755 /LAVL/K0SH.sh
-. /LTI/K1sh.sh
-. /LAVL/K0sh.sh
+/LTI/K1SH.sh
+/LAVL/K0SH.sh
 shopt -s expand_aliases 2> /dev/null
-cd /root 
-cat /bin/lib/sh/MK3S/LIB.conf .bashrc
-~/.bashrc 
+cd /root
+chmod 755 /.bashrc
+cat /bin/lib/sh/MK3S/LIB.conf | sudo tee -a /root/.bashrc
+chmod 600 .bashrc
+. /.bashrc
+source /.bashrc
+~/.bashrc
 echo "Done"
