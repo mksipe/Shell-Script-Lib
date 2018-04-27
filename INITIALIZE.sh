@@ -36,7 +36,7 @@ mv *.conf /bin/lib/sh/MK3S
 mv LICENSE /bin/lib/sh/MK3S
 git clone https://github.com/mksipe/Linux-Tor-Incog
 git clone https://github.com/mksipe/LinuxAV-Light
-mkdir /bin 2> 
+mkdir /bin
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
 mkdir /bin/lib/sh/MK3S
