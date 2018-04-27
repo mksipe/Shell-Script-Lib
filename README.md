@@ -24,13 +24,10 @@ First, open a directory you want to use as the download file for the services (s
  
  2 `cd System-Services`
  
- 3 `chmod 755 INITIALIZE.sh` (chmod option is optional 755 is everyone can execute read and write so is not recommended. For you to use do `chmod 400 INITIALIZE.sh`)
+ 3 `chmod 755 INITIALIZE.sh` (chmod option is optional 755 is everyone can execute read and write so is not recommended. For you to use do `chmod 600 INITIALIZE.sh`)
  
  4 `./INITIALIZE.sh`
 
- 5 `cd /home`
-
- 6 `. /.bashrc`
  
 ### Maintenance
 
@@ -44,7 +41,6 @@ The script used in this command is optional. The command to run this updates pac
 
 3 `./INITIALIZE.sh`
 
-4.`. /.bashrc`
 
 # BE AWARE!
 
@@ -57,3 +53,7 @@ System-Services Uses outside resources to help improve its quality. It uses the 
 ## Add-Ons
 
 The Add-ons are mandatory and cant is uninstalled. Though if you don't want them on your system, you can download the script without the add-ons with the branch that doesn't include add-ons (alone).
+
+### Additional Source Credit
+
+Thank you @maldevel for allowing a portion of your software to be used in my program. (Origional Source: https://github.com/maldevel/blue-team)
