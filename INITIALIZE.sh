@@ -32,15 +32,15 @@ mv conf /Framework
 mv default /Framework
 mv mod /Framework
 cd /Framework
+mkdir /bin/lib 
+mkdir /bin/lib/sh 
+mkdir /bin/lib/sh/MK3S
 mv *.sh /bin/lib/sh/MK3S
 mv *.conf /bin/lib/sh/MK3S
 mv LICENSE /bin/lib/sh/MK3S
 mv conf /bin/lib/sh/MK3S
 mv default /bin/lib/sh/MK3S
 mv mod /bin/lib/sh/MK3S
-mkdir /bin/lib 
-mkdir /bin/lib/sh 
-mkdir /bin/lib/sh/MK3S
 rm -r /Framework
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
 cd /bin/lib/sh/MK3S
