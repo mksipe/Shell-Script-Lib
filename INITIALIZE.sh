@@ -22,12 +22,14 @@ chmod 755 *.txt
 chmod 755 *.bash_aliases 2> /dev/null
 chmod 755 LICENSE
 chmod 755 *.conf
+chmod 755 *.pl
 mv *.sh /Framework
 mv *.md /Framework
 mv *.txt /Framework
 mv *.bash_aliases /Framework 2> /dev/null
 mv LICENSE /Framework
 mv *.conf /Framework
+mv *.pl
 mv conf /Framework
 mv default /Framework
 mv mod /Framework
@@ -37,6 +39,7 @@ mkdir /bin/lib/sh
 mkdir /bin/lib/sh/MK3S
 mv *.sh /bin/lib/sh/MK3S
 mv *.conf /bin/lib/sh/MK3S
+mv *.pl
 mv LICENSE /bin/lib/sh/MK3S
 mv conf /bin/lib/sh/MK3S
 mv default /bin/lib/sh/MK3S
@@ -44,8 +47,6 @@ mv mod /bin/lib/sh/MK3S
 rm -r /Framework
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
 cd /bin/lib/sh/MK3S
-chmod 755 K1SH.sh
-chmod 755 K0SH.sh
 echo "Program Library Installed"
 ./clamAVconf.sh
 ./Stelath-Mode.sh
