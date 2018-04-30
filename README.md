@@ -50,10 +50,8 @@ The System Information file gives out information about your system. (duh) Keep 
 
 System-Services Uses outside resources to help improve its quality. It uses the LinuxAV-Light repository to help configure antivirus programs on the system as well as the Linux-tor-incog repository to help make your system use more secure ways to browse the internet and to remain anonymous. 
 
-## Add-Ons
-
-The Add-ons are mandatory and cant is uninstalled. Though if you don't want them on your system, you can download the script without the add-ons with the branch that doesn't include add-ons (alone).
 
 ### Additional Source Credit
 
-Thank you @maldevel for allowing a portion of your software to be used in my program. (Origional Source: https://github.com/maldevel/blue-team)
+Thank you @maldevel for allowing a portion of your software to be used in my program. (Origional Source: https://github.com/maldevel/blue-team) 
+Thank you @Blizzo for also allowing a portion of your software to be used in this program. (Origional Source : https://github.com/Blizzo/tools)

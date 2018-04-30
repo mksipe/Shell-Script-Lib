@@ -48,7 +48,7 @@ iptables -A INPUT -p tcp --tcp-flags ALL ALL -j DROP
 iptables -A INPUT -i lo -j ACCEPT
 
 # Allow ssh access
-iptables -A INPUT -p tcp -m tcp --dport 22 -j ACCEPT
+iptables -A INPUT -p tcp -m tcp --dport 62111 -j ACCEPT
 
 # Allow established connections
 iptables -I INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT

@@ -28,24 +28,19 @@ mv *.txt /Framework
 mv *.bash_aliases /Framework 2> /dev/null
 mv LICENSE /Framework
 mv *.conf /Framework
+mv conf /Framework
+mv default /Framework
+mv mod /Framework
 cd /Framework
 mv *.sh /bin/lib/sh/MK3S
 mv *.conf /bin/lib/sh/MK3S
 mv LICENSE /bin/lib/sh/MK3S
-git clone https://github.com/mksipe/Linux-Tor-Incog
-git clone https://github.com/mksipe/LinuxAV-Light
-mkdir /bin
+mv conf /bin/lib/sh/MK3S
+mv default /bin/lib/sh/MK3S
+mv mod /bin/lib/sh/MK3S
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
 mkdir /bin/lib/sh/MK3S
-mkdir /bin/lib/sh/MK3S/LTI
-mkdir /bin/lib/sh/MK3S/LAVL
-cd Linux-Tor-Incog
-mv *.sh /bin/lib/sh/MK3S/
-cd /Framework
-cd LinuxAV-Light
-mv *.sh /bin/lib/sh/MK3S/
-cd /home
 rm -r /Framework
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
 cd /bin/lib/sh/MK3S
@@ -66,6 +61,12 @@ echo "Program Library Installed"
 ./services.sh
 ./ssh.sh
 ./sudo-su.sh
+./ssl.sh
+./proftpd.sh
+./quota.sh
+./jail_maker_freebsd.sh
+./jail_maker.sh
+./users-linux.sh
 ./A:apache2.sh
 ./A:banners.sh
 ./A:files.sh
@@ -77,8 +78,14 @@ echo "Program Library Installed"
 ./A:sudo-su.sh
 ./A:umasks.sh
 ./A:users-groups.sh
-./K0SH.sh
-./K1SH.sh
+git clone https://github.com/mksipe/LinuxAV-Light
+chmod 755 LinuxAV-Light
+cd LinuxAV-Light
+chmod 755 *.sh
+mv *.sh /bin/lib/sh/MK3S
+cd /bin/lib/sh/MK3S
+./Daemonconf.sh
+./Snortconf.sh
 echo "Autoconfigure Complete"
 echo "Here is the remaining scripts that you can use in these directories"
 cat /bin/lib/sh/MK3S/manual.txt
