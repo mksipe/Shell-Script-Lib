@@ -59,7 +59,7 @@ if [ "$1" = "-s" -o "$1" = "--secure" ]; then
 	echo "Initializing secure jail setup..."
 	if test -d $1; then
 		cd $1
-		path=`echo $PWD`
+		path=`echo $(PWD)`
 	else
 		path="$1"
 	fi
@@ -151,11 +151,11 @@ if [ "$#" -eq 0 ]; then
 
 	#ask and copy executables
 	echo "Which executables would you like in your jail?"
-	common_bins=`/bin/ls /bin`
+	common_bins=$(/bin/ls /bin)
 
 	for i in $common_bins; do
 		read -p "$i (Y/N):" choice
-		choice=`echo $choice | tr '[:lower:]' '[:upper:]'`
+		choice=`echo $(choice) | tr '[:lower:]' '[:upper:]'`
 		if [ "$choice" = "Y" -o "$choice" = "YES" ]; then
 			/bin/cp /bin/$i $path/bin
 			bins+="/bin/$i "
@@ -163,7 +163,7 @@ if [ "$#" -eq 0 ]; then
 	done
 
 	read -p "Would you like to choose between a few common binaries in /usr/bin (Y/N): " more_bins
-	more_bins=`echo $more_bins | tr '[:lower:]' '[:upper:]'`
+	more_bins=`echo $(more_bins) | tr '[:lower:]' '[:upper:]'`
 	if [ "$more_bins" = "YES" -o "$more_bins" = "Y" ]; then
 		other_bins="awk clear cut diff expr head less man nano paste pico split strings strip tail tee test touch tr uniq users uptime vi w wall wc wget whatis who whoami yes zip zipgrep"
 

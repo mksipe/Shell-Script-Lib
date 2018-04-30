@@ -4,7 +4,7 @@
 
 #Asking to see if they have a ftp user
 read -p "Do you have FTP User(s)? (y/n): " ANS
-ANS=`echo $ANS | tr '[:lower:]' '[:upper:]'`
+ANS=$(echo $ANS | tr '[:lower:]' '[:upper:]')
 if [ "$ANS" == "Y" ]; then
    read -p "Enter user(s) name (separate each with a space): " FTPUSERS
 else

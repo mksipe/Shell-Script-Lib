@@ -20,7 +20,7 @@ if [ "$ANS" == "n" ]; then
 #if they've run the script before
 elif [ "$ANS" == "y" ]; then
    mv /etc/apache2/sites-available/default-ssl /etc/apache2/sites-available/default-ssl.bak
-   mv `pwd`/default /etc/apache2/sites-available/default-ssl
+   mv $(pwd)/default /etc/apache2/sites-available/default-ssl
    a2ensite default-ssl
    service apache2 reload
    echo "Remember to edit the default-ssl config file!"

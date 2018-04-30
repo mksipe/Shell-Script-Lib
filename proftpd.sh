@@ -4,7 +4,7 @@
 
 #Asking to see if they have a ftp user
 read -p "Do you have FTP User(s)? (y/n): " ANS
-ANS=`echo $ANS | tr '[:lower:]' '[:upper:]'`
+ANS=`echo $(ANS) | tr '[:lower:]' '[:upper:]'`
 if [ "$ANS" == "Y" ]; then
    read -p "Enter user(s) name (separate each with a space): " FTPUSERS
 else
@@ -20,7 +20,7 @@ apt-get install proftpd -y
 mv /etc/proftpd/proftpd.conf /etc/proftpd/proftpd.conf.bak
 
 #moving in the new config file
-cp `pwd`/proftpd.conf /etc/proftpd/proftpd.conf
+cp $(pwd)/proftpd.conf /etc/proftpd/proftpd.conf
 
 #making a chroot for each user
 cd /home

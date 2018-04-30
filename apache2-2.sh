@@ -12,7 +12,7 @@ mv /etc/apache2/apache2.conf /etc/apache2/apache2.conf.bak
 mv /etc/apache2/ports.conf /etc/apache2/ports.conf.bak
 
 #moving premade config to apache dir
-mv `pwd`/conf /etc/apache2/apache2.conf
+mv $(pwd)/conf /etc/apache2/apache2.conf
 
 #making the new ports.conf file
 echo "NameVirtualHost *:80" > /etc/apache2/ports.conf
@@ -37,7 +37,7 @@ apt-get install libapache-mod-security -y
 
 #moving in my config file
 mv /etc/modsecurity/modsecurity.conf-recommended /etc/modsecurity/modsecurity.conf.bak
-mv `pwd`/mod /etc/modsecurity/modsecurity.conf
+mv $(pwd)/mod /etc/modsecurity/modsecurity.conf
 
 #installing OWASP Security measures
 wget -O SpiderLabs-owasp-modsecurity-crs.tar.gz https://github.com/SpiderLabs/owasp-modsecurity-crs/tarball/master

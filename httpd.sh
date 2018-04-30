@@ -14,7 +14,7 @@ echo "HEY" >> index.html
 
 #moving in conf file
 mv /etc/httpd/conf/httpd.conf /etc/httpd/conf/httpd.conf.bak
-mv `pwd`/httpd.conf /etc/httpd/conf/httpd.conf
+mv $(pwd)/httpd.conf /etc/httpd/conf/httpd.conf
 
 #reloading and restarting
 service httpd reload
