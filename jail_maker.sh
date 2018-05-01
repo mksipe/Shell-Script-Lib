@@ -155,7 +155,7 @@ if [ "$#" -eq 0 ]; then
 
 	for i in $common_bins; do
 		read -p "$i (Y/N):" choice
-		choice=`echo $(choice) | tr '[:lower:]' '[:upper:]'`
+		choice=$(echo $choice | tr '[:lower:]' '[:upper:]')
 		if [ "$choice" = "Y" -o "$choice" = "YES" ]; then
 			/bin/cp /bin/$i $path/bin
 			bins+="/bin/$i "

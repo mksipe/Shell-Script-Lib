@@ -49,7 +49,7 @@ echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S
 cd /bin/lib/sh/MK3S
 echo "Program Library Installed"
 ./clamAVconf.sh
-./Stelath-Mode.sh
+./Stealth-Mode.sh
 ./UFWC.sh
 ./umasks.sh
 ./users-groups.sh
