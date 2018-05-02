@@ -1,4 +1,4 @@
-# System-Services-Shell-Library
+# System-Services-Library
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3133583a0f174b6cba59a5f3885fc279)](https://app.codacy.com/app/mksipe/System-Services?utm_source=github.com&utm_medium=referral&utm_content=mksipe/System-Services&utm_campaign=badger)
 ## STATUS: ACTIVE
 
@@ -53,5 +53,10 @@ System-Services Uses outside resources to help improve its quality. It uses the 
 
 ### Additional Source Credit
 
+>Other Software Repositories
+
 Thank you @maldevel for allowing a portion of your software to be used in my program. (Origional Source: https://github.com/maldevel/blue-team) 
-Thank you @Blizzo for also allowing a portion of your software to be used in this program. (Origional Source : https://github.com/Blizzo/tools)
+
+Thank you @Blizzo for allowing a portion of your software to be used in this program. (Origional Source: https://github.com/Blizzo/tools)
+
+Thank you @i80and for allowing your perl repository software to be used in this program. (Origional Source: https://github.com/i80and/ubuntu-linux-grsecurity)

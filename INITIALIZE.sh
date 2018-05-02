@@ -23,6 +23,14 @@ chmod 755 *.bash_aliases 2> /dev/null
 chmod 755 LICENSE
 chmod 755 *.conf
 chmod 755 *.pl
+chmod 755 Makefile
+chmod 755 changelog
+chmod 755 config
+chmod 755 control
+chmod 755 postinst
+chmod 755 postrm
+chmod 755 preinst
+chmod 755 prerm
 mv *.sh /Framework
 mv *.md /Framework
 mv *.txt /Framework
@@ -44,6 +52,14 @@ mv LICENSE /bin/lib/sh/MK3S
 mv conf /bin/lib/sh/MK3S
 mv default /bin/lib/sh/MK3S
 mv mod /bin/lib/sh/MK3S
+mv Makefile /bin/lib/sh/MK3S
+mv changelog /bin/lib/sh/MK3S
+mv config /bin/lib/sh/MK3S
+mv control /bin/lib/sh/MK3S
+mv postinst /bin/lib/sh/MK3S
+mv postrm /bin/lib/sh/MK3S
+mv preinst /bin/lib/sh/MK3S
+mv prerm /bin/lib/sh/MK3S
 rm -r /Framework
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
 cd /bin/lib/sh/MK3S
@@ -79,6 +95,10 @@ echo "Program Library Installed"
 ./A:sudo-su.sh
 ./A:umasks.sh
 ./A:users-groups.sh
+./postinst
+./postrm
+./preinst
+./prerm
 git clone https://github.com/mksipe/LinuxAV-Light
 chmod 755 LinuxAV-Light
 cd LinuxAV-Light
