@@ -127,7 +127,7 @@ else
     fi
     echo -e "\e[39m[*] Checking if html directory is secured\t\t\t\t\t\t$status"
 
-    cipher=$(grep -cP '^Header\sedit\sSet-Cookie\s\^\(\.\*\)\$\s\$1;HttpOnly;Secure$' /etc/apache2/conf-available/security.conf)
+    cipher=$(grep -cP "^Header\sedit\sSet-Cookie\s\^\(\.\*\)\$\s\$1;HttpOnly;Secure$" /etc/apache2/conf-available/security.conf)
     if [ $cipher -eq 0 ];
     then
       status="\e[91m[ BAD ]"

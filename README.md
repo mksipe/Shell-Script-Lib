@@ -1,5 +1,5 @@
 # System-Services-Library
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/17ac3e6e28944529a35cd53f11d8b8c3)](https://app.codacy.com/app/mksipe/System-Services-Library?utm_source=github.com&utm_medium=referral&utm_content=mksipe/System-Services-Library&utm_campaign=badger)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3133583a0f174b6cba59a5f3885fc279)](https://app.codacy.com/app/mksipe/System-Services?utm_source=github.com&utm_medium=referral&utm_content=mksipe/System-Services&utm_campaign=badger)
 ## STATUS: ACTIVE
 
 >This repository System-Services is meant to be used as a command line tool that will hopefully be deemed as useful while hardening your Linux system. I cannot guarantee this to be the most stable source for your system but it has been tested and is regularly checked for new ways to improve and to become more stable. Unfortunately, this type of repository doesn't have command setting on your system. They are all shell scripts. I'm working on ways to make this a thing but I need more time to work on this. I would appreciate the support from other people who are willing to make this a better program and to help make it more user-friendly.
@@ -55,8 +55,8 @@ System-Services Uses outside resources to help improve its quality. It uses the 
 
 >Other Software Repositories
 
-Thank you @maldevel for allowing a portion of your software to be used in my program. (Origional Source: https://github.com/maldevel/blue-team) 
+Thank you @maldevel for allowing a portion of your shell software to be used in my program. (Origional Source: https://github.com/maldevel/blue-team) 
 
-Thank you @Blizzo for allowing a portion of your software to be used in this program. (Origional Source: https://github.com/Blizzo/tools)
+Thank you @Blizzo for allowing a portion of your shell and configuration software to be used in this program. (Origional Source: https://github.com/Blizzo/tools)
 
 Thank you @i80and for allowing your perl repository software to be used in this program. (Origional Source: https://github.com/i80and/ubuntu-linux-grsecurity)

@@ -227,7 +227,7 @@ else
 fi
 echo -e "\e[39m[*] Checking /etc/issue.net file permissions\t\t\t\t\t\t$status"
 
-filemessage=$(cat /etc/issue.net | grep -c "Authorized uses only. All activity may be monitored and reported.")
+filemessage=$(cmd < /etc/issue.net | grep -c "Authorized uses only. All activity may be monitored and reported.")
 if [ $filemessage -eq 0 ];
 then
   status="\e[91m[ BAD ]"

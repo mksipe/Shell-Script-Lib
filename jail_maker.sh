@@ -47,7 +47,7 @@ copy_libraries(){
 	fi
 }
 
-error_file=".jm_error"
+error_file=(.jm_error)
 
 if [ "$1" = "-s" -o "$1" = "--secure" ]; then
 	if [ "$#" -ne 2 ]; then

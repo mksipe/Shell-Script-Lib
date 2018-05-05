@@ -41,6 +41,13 @@ mv *.pl
 mv conf /Framework
 mv default /Framework
 mv mod /Framework
+mv changelog /Framework
+mv conf /Framework
+mv control /Framework
+mv postinst /Framework
+mv postrm /Framework
+mv preinst /Framework
+mv prerm /Framework
 cd /Framework
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
@@ -60,6 +67,7 @@ mv postinst /bin/lib/sh/MK3S
 mv postrm /bin/lib/sh/MK3S
 mv preinst /bin/lib/sh/MK3S
 mv prerm /bin/lib/sh/MK3S
+mv manual.txt /bin/lib/sh/MK3S
 rm -r /Framework
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
 cd /bin/lib/sh/MK3S
@@ -81,8 +89,6 @@ echo "Program Library Installed"
 ./ssl.sh
 ./proftpd.sh
 ./quota.sh
-./jail_maker_freebsd.sh
-./jail_maker.sh
 ./users-linux.sh
 ./A:apache2.sh
 ./A:banners.sh
@@ -99,6 +105,8 @@ echo "Program Library Installed"
 ./postrm
 ./preinst
 ./prerm
+./ipfilter.sh
+./ipfw.sh
 git clone https://github.com/mksipe/LinuxAV-Light
 chmod 755 LinuxAV-Light
 cd LinuxAV-Light
@@ -107,6 +115,7 @@ mv *.sh /bin/lib/sh/MK3S
 cd /bin/lib/sh/MK3S
 ./Daemonconf.sh
 ./Snortconf.sh
+apt autoremove -y
 echo "Autoconfigure Complete"
 echo "Here is the remaining scripts that you can use in these directories"
 cat /bin/lib/sh/MK3S/manual.txt
