@@ -116,6 +116,12 @@ cd /bin/lib/sh/MK3S
 ./Daemonconf.sh
 ./Snortconf.sh
 apt autoremove -y
+cd /bin/lib/sh/MK3S
+git clone https://github.com/mksipe/LinuxIPconfig
+git clone https://github.com/mksipe/CyberPatriotScripts
+git clone https://github.com/mksipe/blue-team
+git clone https://github.com/mksipe/cyberpatriot
+git clone https://github.com/mksipe/tools
 echo "Autoconfigure Complete"
 echo "Here is the remaining scripts that you can use in these directories"
 cat /bin/lib/sh/MK3S/manual.txt
