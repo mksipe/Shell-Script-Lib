@@ -72,7 +72,7 @@ rm -r /Framework
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
 cd /bin/lib/sh/MK3S
 echo "Program Library Installed"
-./clamAVconf.sh
+unalias -a
 ./Stealth-Mode.sh
 ./UFWC.sh
 ./umasks.sh
