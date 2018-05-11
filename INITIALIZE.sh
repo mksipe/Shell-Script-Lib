@@ -15,6 +15,9 @@ apt install nmap -y
 apt install clamav -y
 apt install git -y
 echo -e "Initializing Directories"
+X=$(pwd)
+touch pwd.txt
+echo $X | sudo tee pwd.txt
 mkdir /Framework
 chmod 755 *.sh
 chmod 755 *.md
@@ -69,6 +72,8 @@ mv preinst /bin/lib/sh/MK3S
 mv prerm /bin/lib/sh/MK3S
 mv manual.txt /bin/lib/sh/MK3S
 rm -r /Framework
+XX=$(cat /bin/lib/sh/MK3S/pwd.sh)
+rm -r $XX
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
 cd /bin/lib/sh/MK3S
 echo "Program Library Installed"
@@ -119,9 +124,49 @@ apt autoremove -y
 cd /bin/lib/sh/MK3S
 git clone https://github.com/mksipe/LinuxIPconfig
 git clone https://github.com/mksipe/CyberPatriotScripts
-git clone https://github.com/mksipe/blue-team
 git clone https://github.com/mksipe/cyberpatriot
 git clone https://github.com/mksipe/tools
+chmod 755 LinuxIPconfig
+chmod 755 CyberPatriotScripts & chmod 755 CyberPatriotScripts/Linux
+chmod 755 cyberpatriot
+chmod 755 tools
+cd LinuxIPconfig
+chmod 755 *.sh
+mv *.sh /bin/lib/sh/MK3S
+cd /bin/lib/sh/MK3S/CyberPatriotScripts/Linux
+chmod 755 *.sh
+mv *.sh /bin/lib/sh/MK3S
+cd /bin/lib/sh/MK3S/cyberpatriot
+chmod 755 *.sh
+mv *.sh /bin/lib/sh/MK3S
+cd /bin/lib/sh/MK3S/tools/blue
+chmod 755 *.sh
+chmod 755 *.pl
+mv *.pl /bin/lib/sh/MK3S
+mv *.sh /bin/lib/sh/MK3S
+cd /bin/lib/sh/MK3S/tools/blue/apache2
+chmod 755 *
+mv * /bin/lib/sh/MK3S
+cd /bin/lib/sh/MK3S/tools/blue/ftp
+chmod 755 *
+mv * /bin/lib/sh/MK3S
+cd /bin/lib/sh/MK3S/tools/blue/httpd
+chmod 755 *
+mv * /bin/lib/sh/MK3S
+cd /bin/lib/sh/MK3S/tools/red
+chmod 755 *
+mv * /bin/lib/sh/MK3S
+cd /bin/lib/sh/MK3S/tools/red/SE
+chmod 755 *
+mv * /bin/lib/sh/MK3S
+cd /bin/lib/sh/MK3S/tools/red/bombs
+chmod 755 *
+mv * /bin/lib/sh/MK3S
+cd /bin/lib/sh/MK3S
+rm -r LinuxIPconfig
+rm -r CyberPatriotScripts
+rm -r cyberpatriot
+rm -r tools
 echo "Autoconfigure Complete"
 echo "Here is the remaining scripts that you can use in these directories"
 cat /bin/lib/sh/MK3S/manual.txt

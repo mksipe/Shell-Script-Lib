@@ -1,8 +1,8 @@
 # Shell-Script-Lib
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3133583a0f174b6cba59a5f3885fc279)](https://app.codacy.com/app/mksipe/System-Services?utm_source=github.com&utm_medium=referral&utm_content=mksipe/System-Services&utm_campaign=badger)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/3133583a0f174b6cba59a5f3885fc279)](https://app.codacy.com/app/mksipe/Shell-Script-Lib?utm_source=github.com&utm_medium=referral&utm_content=mksipe/Shell-Script-Lib&utm_campaign=badger)
 ## STATUS: ACTIVE
 
->This repository Shell Script Lib is meant to be used as a command line tool that will hopefully be deemed as useful while hardening your Linux system. I cannot guarantee this to be the most stable source for your system but it has been tested and is regularly checked for new ways to improve and to become more stable. Unfortunately, this type of repository doesn't have command setting on your system. They are all shell scripts. I'm working on ways to make this a thing but I need more time to work on this. I would appreciate the support from other people who are willing to make this a better program and to help make it more user-friendly.
+>This repository Shell-Script-Lib is meant to be used as a command line tool that will hopefully be deemed as useful while hardening your Linux system. I cannot guarantee this to be the most stable source for your system but it has been tested and is regularly checked for new ways to improve and to become more stable. Unfortunately, this type of repository doesn't have command setting on your system. They are all shell scripts. I'm working on ways to make this a thing but I need more time to work on this. I would appreciate the support from other people who are willing to make this a better program and to help make it more user-friendly.
 
 ## REQUIREMENTS
 
@@ -48,7 +48,7 @@ The System Information file gives out information about your system. (duh) Keep 
 
 ## Outside Resources
 
-System-Services Uses outside resources to help improve its quality. It uses the LinuxAV-Light repository to help configure antivirus programs on the system as well as the Linux-tor-incog repository to help make your system use more secure ways to browse the internet and to remain anonymous. 
+Shell-Script-Lib Uses outside resources to help improve its quality. It uses the LinuxAV-Light repository to help configure antivirus programs on the system as well as the Linux-tor-incog repository to help make your system use more secure ways to browse the internet and to remain anonymous. 
 
 
 ### Additional Source Credit
