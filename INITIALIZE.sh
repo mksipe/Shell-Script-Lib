@@ -145,23 +145,35 @@ chmod 755 *.pl
 mv *.pl /bin/lib/sh/MK3S
 mv *.sh /bin/lib/sh/MK3S
 cd /bin/lib/sh/MK3S/tools/blue/apache2
-chmod 755 *
-mv * /bin/lib/sh/MK3S
+chmod 755 *.sh
+chmod 755 *.pl
+mv *.sh /bin/lib/sh/MK3S
+mv *.pl /bin/lib/sh/MK3S
 cd /bin/lib/sh/MK3S/tools/blue/ftp
-chmod 755 *
-mv * /bin/lib/sh/MK3S
+chmod 755 *.sh
+chmod 755 *.pl
+mv *.sh /bin/lib/sh/MK3S
+mv *.pl /bin/lib/sh/MK3S
 cd /bin/lib/sh/MK3S/tools/blue/httpd
-chmod 755 *
-mv * /bin/lib/sh/MK3S
+chmod 755 *.sh
+chmod 755 *.pl
+mv *.sh /bin/lib/sh/MK3S
+mv *.pl /bin/lib/sh/MK3S
 cd /bin/lib/sh/MK3S/tools/red
-chmod 755 *
-mv * /bin/lib/sh/MK3S
+chmod 755 *.sh
+chmod 755 *.pl
+mv *.sh /bin/lib/sh/MK3S
+mv *.pl /bin/lib/sh/MK3S
 cd /bin/lib/sh/MK3S/tools/red/SE
-chmod 755 *
-mv * /bin/lib/sh/MK3S
+chmod 755 *.sh
+chmod 755 *.pl
+mv *.pl /bin/lib/sh/MK3S
+mv *.sh /bin/lib/sh/MK3S
 cd /bin/lib/sh/MK3S/tools/red/bombs
-chmod 755 *
-mv * /bin/lib/sh/MK3S
+chmod 755 *.sh
+chmod 755 *.pl
+mv *.pl /bin/lib/sh/MK3S
+mv *.sh /bin/lib/sh/MK3S
 cd /bin/lib/sh/MK3S
 rm -r LinuxIPconfig
 rm -r CyberPatriotScripts
