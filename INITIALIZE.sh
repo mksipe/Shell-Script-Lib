@@ -3,17 +3,6 @@ if [[ $(/usr/bin/id -u) -ne 0 ]]; then
     echo "You must be root."
     exit
 fi
-echo -e "Installing Required Packages"
-apt update -y 
-apt full-upgrade -y
-apt install ufw -y
-apt install cron -y 
-apt install nano -y
-apt install locate -y
-apt install iptables -y
-apt install nmap -y
-apt install clamav -y
-apt install git -y
 echo -e "Initializing Directories"
 X=$(pwd)
 touch pwd.txt
@@ -55,6 +44,8 @@ cd /Framework
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
 mkdir /bin/lib/sh/MK3S
+mkdir /bin/lib/sh/MK3S/logs
+mv *.log /bin/lib/MK3S/logs
 mv *.sh /bin/lib/sh/MK3S
 mv *.conf /bin/lib/sh/MK3S
 mv *.pl
@@ -71,13 +62,31 @@ mv postrm /bin/lib/sh/MK3S
 mv preinst /bin/lib/sh/MK3S
 mv prerm /bin/lib/sh/MK3S
 mv manual.txt /bin/lib/sh/MK3S
+
 rm -r /Framework
 XX=$(cat /bin/lib/sh/MK3S/pwd.sh)
 rm -r $XX
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
 cd /bin/lib/sh/MK3S
+source ./Functions.sh
 echo "Program Library Installed"
 unalias -a
+make_backup()
+echo -e "Installing Required Packages"
+apt update -y 
+apt full-upgrade -y
+apt install ufw -y
+apt install cron -y 
+apt install nano -y
+apt install locate -y
+apt install iptables -y
+apt install nmap -y
+apt install clamav -y
+apt install git -y
+apt install lightdm -y 
+Install_Security_Packages()
+Install_Default_Packages_Debian()
+echo "Running Setup Scripts"
 ./Stealth-Mode.sh
 ./UFWC.sh
 ./umasks.sh
@@ -93,7 +102,6 @@ unalias -a
 ./sudo-su.sh
 ./ssl.sh
 ./proftpd.sh
-./quota.sh
 ./users-linux.sh
 ./A:apache2.sh
 ./A:banners.sh
