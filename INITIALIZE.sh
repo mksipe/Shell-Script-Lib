@@ -71,6 +71,7 @@ cd /bin/lib/sh/MK3S
 source ./Functions.sh
 echo "Program Library Installed"
 unalias -a
+check_for_updates()
 make_backup()
 echo -e "Installing Required Packages"
 apt update -y 

@@ -147,7 +147,21 @@ function print_media_files ()
     echo $graphical > /bin/lib/sh/MK3S/graphical_files.txt
     
 }
-
+function media_scan_audio ()
+{
+    file_search() | grep mp3
+    file_search() | grep wav
+    file_search() | grep m4a
+    file_search() | grep mpeg
+    file_search() | grep ape
+}
+function media_scan_video ()
+{
+    file_search() | grep avi
+    file_search() | grep flv
+    file_search() | grep mov
+    file_search() | grep mp4 
+}
 function make_backup ()
 {
     #!/bin/bash
@@ -346,6 +360,7 @@ function log_new_events (event)
 
 function check_for_updates ()
 {
+    freshclam
     apt update -y
     apt full-upgrade -y
     apt autoclean -y
@@ -356,4 +371,306 @@ function check_for_updates ()
     ./INITIALIZE.sh
     Back()
     rm -r Shell-Script-Lib
+}
+function software_checker ()
+echo "Searching for Hacking tools"
+date=$(date -u)
+jtr=$(which John)
+jnny=$(which johnny)
+XHDA=$(which xhydra)
+ARM=$(which armitage)
+MSF=$(which metasploit)
+nmp=$(which nmap)
+zmp=$(which zenmap)
+wshk=$(which wireshark)
+nssus=$(which nessus)
+acrk=$(which aircrack)
+acrkng=$(which aircrack-ng)
+snt=$(which snort)
+CAB=$(which Cain and Abel)
+BT=$(which BackTrack)
+nc=$(which netcat)
+tcpd=$(which tcpdump)
+ksmt=$(which kismet)
+nkto=$(which nikto)
+bsuit=$(which Burpsuite)
+hpng=$(which hping)
+ecap=$(which ettercap)
+sysints=$(which sysinternals)
+w3af=$(which w3af)
+scpy=$(which scpy)
+hyda=$(which hydra)
+pros=$(which paros)
+oc=$(which ophcrack)
+rc=$(which rainbowcrack)
+msf=$(which metasploit-framework)
+tlnt=$(which telnet)
+ovas=$(which openvas)
+oVAS=$(which openVAS)
+nstmblr=$(which netstumbler)
+nStmblr=$(which netStumbler)
+amp=$(which Amap)
+Amp=$(which amap)
+sfh=$(which skipfish)
+Sfh=$(which SkipFish)
+Wpiti=$(which Wapiti)
+wpiti=$(which wapiti)
+Wfzz=$(which wfuzz)
+nmsis=$(which nemisis)
+Nmsis=$(which Nemisis)
+Ysna=$(which Yersinia)
+ysna=$(which yersinia)
+Dnsf=$(which Dsniff)
+dsnf=$(which dsniff)
+EA=$(which EtherApe)
+ea=$(which etherape)
+isdr=$(which inssider)
+ksmc=$(which kismac)
+NM=$(which networkminer)
+ngp=$(which ngrep)
+ntp=$(which ntop)
+pof=$(which p0f)
+bts=$(which brutus)
+fgd=$(which fgdump)
+l0ck=$(which l0phtcrack)
+mdsa=$(which medusa)
+SW=$(which solarwinds)
+SS=$(which superscan)
+pvssh=$(which ssh)
+pvwww=$(which www)
+pvsamba=$(which samba)
+pvvsftpd=$(which vsftpd)
+pvftp=$(which ftp)
+pvtcp=$(which tcp)
+pvphp=$(which php)
+pvsmtp=$(which smtp)
+pvhttp=$(which http)
+pvhttps=$(which https)
+djohn=$(sudo dpkg -l | grep john)
+djohnny=$(sudo dpkg -l | grep johnny)
+dxhydra=$(sudo dpkg -l | grep xhydra)
+darmitage=$(sudo dpkg -l | grep armitage)
+dmetasploit=$(sudo dpkg -l | grep metasploit)
+dnmap=$(sudo dpkg -l | grep nmap)
+dzenmap=$(sudo dpkg -l | grep zenmap)
+dwireshark=$(sudo dpkg -l | grep wireshark)
+dnessus=$(sudo dpkg -l | grep nessus)
+daircrack=$(sudo dpkg -l | grep aircrack-ng)
+daircrackng=$(sudo dpkg -l | grep aircrack)
+dcain=$(sudo dpkg -l | grep Cain)
+dbacktrack=$(sudo dpkg -l | grep BackTrack)
+dnetcat=$(sudo dpkg -l | grep netcat)
+dtcpdump=$(sudo dpkg -l | grep tcpdump)
+dkismet=$(sudo dpkg -l | grep kismet)
+dnikto=$(sudo dpkg -l | grep nikto)
+dburpsuite=$(sudo dpkg -l | grep burpsuite)
+dhping=$(sudo dpkg -l | grep hping)
+dettercap=$(sudo dpkg -l | grep ettercap)
+dsysinternals=$(sudo dpkg -l | grep sysinternals)
+dw3af=$(sudo dpkg -l | grep w3af)
+dhydra=$(sudo dpkg -l | grep hydra)
+dparos=$(sudo dpkg -l | grep paros )
+dophcrack=$(sudo dpkg -l | grep ophcrack)
+drainbowcrack=$(sudo dpkg -l | grep rainbowcrack)
+dmetasploitframework=$(sudo dpkg -l | grep metasploit-framework)
+dtelnet=$(sudo dpkg -l | grep telnet)
+dopenvas=$(sudo dpkg -l | grep openvas)
+dopenVAS=$(sudo dpkg -l | grep openVAS)
+dnetStumbler=$(sudo dpkg -l | grep netStumbler)
+dnetstumbler=$(sudo dpkg -l | grep netstumbler)
+damap=$(sudo dpkg -l | grep amap)
+dAmap=$(sudo dpkg -l | grep Amap)
+dskipfish=$(sudo dpkg -l | grep skipfish)
+dSkipFish=$(sudo dpkg -l | grep SkipFish)
+dWapiti=$(sudo dpkg -l | grep Wapiti)
+dwapiti=$(sudo dpkg -l | grep wapiti)
+dWfuzz=$(sudo dpkg -l | grep Wfuzz)
+dwfuzz=$(sudo dpkg -l | grep wfuzz)
+dNemisis=$(sudo dpkg -l | grep Nemisis)
+dnemisis=$(sudo dpkg -l | grep nemisis)
+dyersinia=$(sudo dpkg -l | grep yersinia )
+ddsniff=$(sudo dpkg -l | grep dsniff)
+dDsniff=$(sudo dpkg -l | grep Dsniff)
+dEtherApe=$(sudo dpkg -l | grep EtherApe)
+dethrape=$(sudo dpkg -l | grep etherape)
+dinSSIDer=$(sudo dpkg -l | grep inSSIDer)
+dssider=$(sudo dpkg -l | grep inssider)
+dKismac=$(sudo dpkg -l | grep KisMAC)
+dKisMac=$(sudo dpkg -l | grep KisMac)
+dKismca=$(sudo dpkg -l | grep Kismac)
+dNetworkMiner=$(sudo dpkg -l | grep NetworkMiner)
+dnetworkminer=$(sudo dpkg -l | grep networkminer)
+dNgrep=$(sudo dpkg -l | grep Ngrep)
+dngrep=$(sudo dpkg -l | grep ngrep)
+dNtop=$(sudo dpkg -l | grep Ntop )
+dntop=$(sudo dpkg -l | grep ntop)
+dP0f=$(sudo dpkg -l | grep P0f)
+dp0f=$(sudo dpkg -l | grep p0f)
+dBrutus=$(sudo dpkg -l | grep Brutus)
+dbrutus=$(sudo dpkg -l | grep brutus)
+dFgdump=$(sudo dpkg -l | grep Fgdump)
+dfgdump=$(sudo dpkg -l | grep fgdump)
+dL0phtCrack=$(sudo dpkg -l | grep L0phtCrack) 
+dl0phtcrack=$(sudo dpkg -l | grep l0phtcrack)
+dMedusa=$(sudo dpkg -l | grep Medusa )
+dmedusa=$(sudo dpkg -l | grep medusa )
+dSolarWinds=$(sudo dpkg -l | grep SolarWinds)
+dsolarwinds=$(sudo dpkg -l | grep solarwinds)
+dSuperScan=$(sudo dpkg -l | grep SuperScan)
+dSuperscan=$(sudo dpkg -l | grep Superscan)
+dsuperscan=$(sudo dpkg -l | grep superscan)
+echo "POSSIBLE_EXPLOITS most recent check was on $date" 
+echo ----------Possible Pen-tools---------- 
+echo "$jtr"  
+echo "$jnny" 
+echo "$XHDA" 
+echo "$ARM" 
+echo "$MSF" 
+echo "$nmp" 
+echo "$zmp" 
+echo "$wshk" 
+echo "$nssus" 
+echo "$acrk" 
+echo "$acrkng" 
+echo "$snt" 
+echo "$CAB" 
+echo "$BT" 
+echo "$nc" 
+echo "$tcpd" 
+echo "$ksmt" 
+echo "$nkto" 
+echo "$bsui" 
+echo "$hpng" 
+echo "$ecap" 
+echo "$sysints" 
+echo "$w3af" 
+echo "$scpy" 
+echo "$hyda" 
+echo "$pros" 
+echo "$oc" 
+echo "$rc" 
+echo "$msf" 
+echo "$tlnt" 
+echo "$ovas" 
+echo "$oVAS" 
+echo "$nstmblr" 
+echo "$nStmblr" 
+echo "$amp" 
+echo "$Amp" 
+echo "$sfh" 
+echo "$Sfh" 
+echo "$Wpiti" 
+echo "$wpiti" 
+echo "$Wfzz" 
+echo "$nmsis" 
+echo "$Nmsis" 
+echo "$Ysna" 
+echo "$ysna" 
+echo "$Dnsf" 
+echo "$dsnf" 
+echo "$EA" 
+echo "$ea" 
+echo "$isdr" 
+echo "$ksmc" 
+echo "$NM" 
+echo "$ngp" 
+echo "$ntp" 
+echo "$pof" 
+echo "$bts" 
+echo "$fgd" 
+echo "$l0ck" 
+echo "$mdsa" 
+echo "$SW" 
+echo "$SS"
+echo "$bsuit"
+echo "-----Possible-Remote-Exploits-----" 
+echo "$pvssh" 
+echo "$pvwww" 
+echo "$pvsamba" 
+echo "$pvvsftpd" 
+echo "$pvftp" 
+echo "$pvtcp" 
+echo "$pvphp" 
+echo "$pvsmtp" 
+echo "$pvhttp" 
+echo "$pvhttps" 
+echo "-----DPKG-----" 
+echo "$dopenVAS"
+echo "$dskipfish"
+echo "$dinSSIDer"
+echo "$dnetworkminer"
+echo "$dSuperscan"
+echo "$djohn" 
+echo "$djohnny" 
+echo "$dxhydra" 
+echo "$darmitage" 
+echo "$dmetasploit" 
+echo "$dnmap" 
+echo "$dzenmap" 
+echo "$dwireshark" 
+echo "$dnessus" 
+echo "$daircrack" 
+echo "$daircrackng" 
+echo "$dcain" 
+echo "$dbacktrack" 
+echo "$dnetcat" 
+echo "$dtcpdump" 
+echo "$dkismet" 
+echo "$dnikto" 
+echo "$dburpsuite" 
+echo "$dhping" 
+echo "$dettercap" 
+echo "$dsysinternals" 
+echo "$dw3af" 
+echo "$dhydra" 
+echo "$dparos" 
+echo "$dophcrack" 
+echo "$drainbowcrack" 
+echo "$dmetasploitframework" 
+echo "$dtelnet" 
+echo "$dopenvas" 
+echo "$vdopenVAS" 
+echo "$dnetStumbler" 
+echo "$dnetstumbler" 
+echo "$damap" 
+echo "$dAmap" 
+echo "$dskipfis" 
+echo "$dSkipFish" 
+echo "$dWapiti" 
+echo "$dwapiti" 
+echo "$dWfuzz" 
+echo "$dwfuzz" 
+echo "$dNemisis" 
+echo "$dnemisis" 
+echo "$dyersinia" 
+echo "$ddsniff" 
+echo "$dDsniff" 
+echo "$dEtherApe" 
+echo "$dethrape" 
+echo "$dinSSIDe" 
+echo "$dssider" 
+echo "$dKismac" 
+echo "$dKisMac" 
+echo "$dKismca" 
+echo "$dNetworkMiner" 
+echo "$dnetworkmine" 
+echo "$dNgrep" 
+echo "$dngrep" 
+echo "$dNtop" 
+echo "$dntop" 
+echo "$dP0f" 
+echo "$dp0f" 
+echo "$dBrutus" 
+echo "$dbrutus" 
+echo "$dFgdump" 
+echo "$dfgdump" 
+echo "$dL0phtCrack" 
+echo "$dl0phtcrack" 
+echo "$dMedusa" 
+echo "$dmedusa" 
+echo "$dSolarWinds" 
+echo "$dsolarwinds" 
+echo "$dSuperScan" 
+echo "$dsuperscan" 
+echo "Done"
 }
