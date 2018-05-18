@@ -64,15 +64,16 @@ mv prerm /bin/lib/sh/MK3S
 mv manual.txt /bin/lib/sh/MK3S
 
 rm -r /Framework
+echo -e '\e[32m'
 XX=$(cat /bin/lib/sh/MK3S/pwd.sh)
 rm -r $XX
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
 cd /bin/lib/sh/MK3S
-source ./Functions.sh
-echo "Program Library Installed"
+source Functions.sh
+echo -e "Program Library Installed"
 unalias -a
-check_for_updates()
-make_backup()
+check_for_updates
+make_backup
 echo -e "Installing Required Packages"
 apt update -y 
 apt full-upgrade -y
@@ -85,8 +86,8 @@ apt install nmap -y
 apt install clamav -y
 apt install git -y
 apt install lightdm -y 
-Install_Security_Packages()
-Install_Default_Packages_Debian()
+Install_Security_Packages
+Install_Default_Packages_Debian
 echo "Running Setup Scripts"
 ./Stealth-Mode.sh
 ./UFWC.sh
@@ -191,4 +192,5 @@ rm -r tools
 echo "Autoconfigure Complete"
 echo "Here is the remaining scripts that you can use in these directories"
 cat /bin/lib/sh/MK3S/manual.txt
+echo -e '\e[39m'
 echo "Done"
