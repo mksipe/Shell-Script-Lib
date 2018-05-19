@@ -1,4 +1,5 @@
 # Shell-Script-Lib
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/86b7f2606e3e4d2d8e0296534a057c14)](https://app.codacy.com/app/mksipe/Shell-Script-Lib?utm_source=github.com&utm_medium=referral&utm_content=mksipe/Shell-Script-Lib&utm_campaign=badger)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/3133583a0f174b6cba59a5f3885fc279)](https://app.codacy.com/app/mksipe/Shell-Script-Lib?utm_source=github.com&utm_medium=referral&utm_content=mksipe/Shell-Script-Lib&utm_campaign=badger)
 ## STATUS: ACTIVE
 
