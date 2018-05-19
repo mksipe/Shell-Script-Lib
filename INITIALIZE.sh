@@ -23,23 +23,26 @@ chmod 755 postinst
 chmod 755 postrm
 chmod 755 preinst
 chmod 755 prerm
+chmod 755 *.log
 mv *.sh /Framework
 mv *.md /Framework
 mv *.txt /Framework
 mv *.bash_aliases /Framework 2> /dev/null
 mv LICENSE /Framework
 mv *.conf /Framework
-mv *.pl
+mv *.pl /Framework
 mv conf /Framework
 mv default /Framework
 mv mod /Framework
 mv changelog /Framework
-mv conf /Framework
+mv config /Framework
 mv control /Framework
 mv postinst /Framework
 mv postrm /Framework
 mv preinst /Framework
 mv prerm /Framework
+mv *.log /Framework
+mv Makefile /Framework
 cd /Framework
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
@@ -65,16 +68,16 @@ mv manual.txt /bin/lib/sh/MK3S
 
 rm -r /Framework
 echo -e '\e[32m'
-XX=$(cat /bin/lib/sh/MK3S/pwd.sh)
+XX=$(cat /bin/lib/sh/MK3S/pwd.txt)
 rm -r $XX
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
 cd /bin/lib/sh/MK3S
-source Functions.sh
-echo -e "Program Library Installed"
+. .Functions.sh
+echo  "Program Library Installed"
 unalias -a
 check_for_updates
 make_backup
-echo -e "Installing Required Packages"
+echo  "Installing Required Packages"
 apt update -y 
 apt full-upgrade -y
 apt install ufw -y
@@ -88,6 +91,7 @@ apt install git -y
 apt install lightdm -y 
 Install_Security_Packages
 Install_Default_Packages_Debian
+echo -e '\e[32m'
 echo "Running Setup Scripts"
 ./Stealth-Mode.sh
 ./UFWC.sh
