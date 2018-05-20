@@ -680,3 +680,11 @@ function update_git()
 {
     for l in `find . -name .git | xargs -i dirname {}` ; do cd $l; pwd; git pull; cd -; done
 }
+function install_gui()
+{
+    apt install build-essential -y 
+    apt install libgt2.0-doc devhelp -y
+    gcc first.c -o first `pkg-config --cflags --libs gtk+-2.0`
+
+
+}

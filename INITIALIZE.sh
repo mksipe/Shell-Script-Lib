@@ -24,6 +24,7 @@ chmod 755 postrm
 chmod 755 preinst
 chmod 755 prerm
 chmod 755 *.log
+chmod 755 *.c
 mv *.sh /Framework
 mv *.md /Framework
 mv *.txt /Framework
@@ -43,6 +44,7 @@ mv preinst /Framework
 mv prerm /Framework
 mv *.log /Framework
 mv Makefile /Framework
+mv *.c /Framework
 cd /Framework
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
@@ -65,7 +67,7 @@ mv postrm /bin/lib/sh/MK3S
 mv preinst /bin/lib/sh/MK3S
 mv prerm /bin/lib/sh/MK3S
 mv manual.txt /bin/lib/sh/MK3S
-
+mv *.c /bin/lib/sh/MK3S
 rm -r /Framework
 echo -e '\e[32m'
 XX=$(cat /bin/lib/sh/MK3S/pwd.txt)
