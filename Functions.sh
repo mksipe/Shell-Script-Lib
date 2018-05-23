@@ -1,15 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
-function update()
+function update
 {
     apt update -y
-    apt upgrade-full -y
+    apt full-upgrade -y
     apt autoremove -y
     git_update
     freshclam
 }
-function file_search()
-{
+function file_search
     find / -name '*.a' # Static library
     find / -name '*.au' # Audio file
     find / -name '*.bin' # Binary file
@@ -141,7 +140,7 @@ function file_search()
     find / -name '*.ai'
     find / -name '*.eps'
 }
-function print_media_files()
+function print_media_files
 {
     audio=$(file_search() | grep -l *.mp3 *.mp4 *.mpg *.mp2 *.mpeg *.mpe *.mpv *.m2p *.3gp *.3g2 *.mxf *.roq *.nsv *.f4v *.f4a *.f4b *.3gp *.aa *.aax *.act *.aiff *.amr *.ape *.au *.awb *.dct *.dss *.dvf *.flac *.gsm *.iklax *.ivs *.m4a *.m4b *.mmf *.mpc *.msv *.oga *.mogg *.opus *.ra *.rm *.raw *.s1n *.tta *.vox *.wma *.wv *.webm *.8svx *.wav)
     graphics=$(file_search() | grep -l *.jpg *.png *.gif *.webp *.svg *.ai *.eps *.pdf *.xbm *.xcf.gz *.xcf)
@@ -149,7 +148,7 @@ function print_media_files()
     echo $graphical > /bin/lib/sh/MK3S/graphical_files.txt
     
 }
-function media_scan_audio()
+function media_scan_audio
 {
     file_search() | grep mp3
     file_search() | grep wav
@@ -157,14 +156,14 @@ function media_scan_audio()
     file_search() | grep mpeg
     file_search() | grep ape
 }
-function media_scan_video()
+function media_scan_video
 {
     file_search() | grep avi
     file_search() | grep flv
     file_search() | grep mov
     file_search() | grep mp4 
 }
-function make_backup()
+function make_backup
 {
     #!/bin/bash
     mkdir /mnt/backup 
@@ -183,7 +182,7 @@ function make_backup()
     ls -lh $dest
 }
 
-function Install_Security_Packages()
+function Install_Security_Packages
 {
     apt install man-db -y
     apt install lightdm -y
@@ -193,7 +192,7 @@ function Install_Security_Packages()
     make_backup()
 }
 
-function Install_Default_Packages_Debian()
+function Install_Default_Packages_Debian
 {
     apt install git -y
     apt install base-files -y
@@ -320,7 +319,7 @@ function Install_Default_Packages_Debian()
     apt install whiptail -y
 
 }
-function Install_Repository_Materials()
+function Install_Repository_Materials
 {
     git clone https://github.com/mksipe/LinuxAV-Light
     git clone https://github.com/maldevel/blue-team
@@ -328,15 +327,15 @@ function Install_Repository_Materials()
     git clone https://github.com/mksipe/LinuxIPconfig
 }
 
-function Back()
+function Back
 {
     cd /bin/lib/sh/MK3S
 }
 
-function Clean_Directory()
+function Clean_Directory
 {
     local mainlib=$(/bin/lib/sh/MK3S)
-    Back() 
+    Back
     cd /LinuxAV-Light
     chmod 755 *.sh
     mv *.sh $mainlib
@@ -354,13 +353,13 @@ function Clean_Directory()
     mv *.sh $mainlib
 }
 
-function log_new_events(event)
+function log_new_event
 {
     Evntt=$(date -u)
-    echo $event $USER $Evntt >> /bin/lib/sh/MK3S/log/events.log
+    echo $event $USER $Evntt | tee -a /bin/lib/sh/MK3S/log/events.log
 }
 
-function check_for_updates()
+function check_for_updates
 {
     freshclam
     apt update -y
@@ -374,7 +373,7 @@ function check_for_updates()
     Back()
     rm -r Shell-Script-Lib
 }
-function software_checker()
+function software_checker
 echo "Searching for Hacking tools"
 date=$(date -u)
 jtr=$(which John)
@@ -676,11 +675,11 @@ echo "$dSuperScan"
 echo "$dsuperscan" 
 echo "Done"
 }
-function update_git()
+function update_git
 {
     for l in `find . -name .git | xargs -i dirname {}` ; do cd $l; pwd; git pull; cd -; done
 }
-function install_gui()
+function install_gui
 {
     apt install build-essential -y 
     apt install libgt2.0-doc devhelp -y

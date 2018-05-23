@@ -1,5 +1,5 @@
 #!/bin/sh
-if [[ $(/usr/bin/id -u) -ne 0 ]]; then
+if [ $(/usr/bin/id -u) -ne 0 ]; then
     echo "You must be root."
     exit
 fi
@@ -45,11 +45,13 @@ mv prerm /Framework
 mv *.log /Framework
 mv Makefile /Framework
 mv *.c /Framework
+mv ip_blacklist.txt /Framework
 cd /Framework
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
 mkdir /bin/lib/sh/MK3S
 mkdir /bin/lib/sh/MK3S/logs
+mkdir /bin/lib/sh/MK3S/data
 mv *.log /bin/lib/MK3S/logs
 mv *.sh /bin/lib/sh/MK3S
 mv *.conf /bin/lib/sh/MK3S
@@ -68,12 +70,14 @@ mv preinst /bin/lib/sh/MK3S
 mv prerm /bin/lib/sh/MK3S
 mv manual.txt /bin/lib/sh/MK3S
 mv *.c /bin/lib/sh/MK3S
+mv ip_blacklist.txt /bin/lib/sh/MK3S/data
 rm -r /Framework
 echo -e '\e[32m'
 XX=$(cat /bin/lib/sh/MK3S/pwd.txt)
 rm -r $XX
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
 cd /bin/lib/sh/MK3S
+. ./Functions.sh
 echo  "Program Library Installed"
 unalias -a
 check_for_updates
@@ -194,6 +198,7 @@ rm -r LinuxIPconfig
 rm -r CyberPatriotScripts
 rm -r cyberpatriot
 rm -r tools
+chmod 551 /bin/lib/sh/MK3S
 echo "Autoconfigure Complete"
 echo "Here is the remaining scripts that you can use in these directories"
 cat /bin/lib/sh/MK3S/manual.txt
