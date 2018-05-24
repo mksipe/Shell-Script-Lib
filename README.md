@@ -7,6 +7,28 @@
 
 >This repository Shell-Script-Lib is meant to be used as a command line tool that will hopefully be deemed as useful while hardening your Linux system. I cannot guarantee this to be the most stable source for your system but it has been tested and is regularly checked for new ways to improve and to become more stable. Unfortunately, this type of repository doesn't have command setting on your system. They are all shell scripts. I'm working on ways to make this a thing but I need more time to work on this. I would appreciate the support from other people who are willing to make this a better program and to help make it more user-friendly.
 
+## What Does it do?
+
+>Creates a library of Shell Scripts. 
+
+>Includes Pre-Made Software.
+
+>Installs Firewall.
+
+>Sets System Backups.
+
+>Installs Anti-Intrusion Software and Antiviruses.
+
+>Has Searching Programs that find "Hacking Tools"
+
+>Has an Audit Checking Program to find vulns.
+
+>Can help find your System Information.
+
+>Install Default Debian Packages.
+
+>Make a Full System Update.
+
 ## REQUIREMENTS
 
 Shell Script Lib repository and contents were meant to run on a Linux system. Such as Ubuntu, Debian or Kali. This will not work with CentOS or any other kind of Redhat or sun system.
@@ -53,8 +75,7 @@ The System Information file gives out information about your system. (duh) Keep 
 
 Shell-Script-Lib Uses outside resources to help improve its quality. It uses the LinuxAV-Light repository to help configure antivirus programs on the system as well as the Linux-tor-incog repository to help make your system use more secure ways to browse the internet and to remain anonymous. 
 
-
-### Additional Source Credit
+## Additional Source Credit
 
 >Other Software Repositories
 
@@ -63,3 +84,10 @@ Thank you @maldevel for allowing a portion of your shell software to be used in 
 Thank you @Blizzo for allowing a portion of your shell and configuration software to be used in this program. (Origional Source: https://github.com/Blizzo/tools)
 
 Thank you @i80and for allowing your perl repository software to be used in this program. (Origional Source: https://github.com/i80and/ubuntu-linux-grsecurity)
+
+## Contact Information
+>Creator
+
+Here is my contact information for support on this project.
+
+Email: masonsipe0513@gmail.com
