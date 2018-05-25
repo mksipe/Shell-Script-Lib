@@ -4,3 +4,6 @@ description: Shell Script Library
 safe: BOOL
 timezone: central
 encoding: UTF-8
+show_downloads: true
+plugins: - jekyll-seo-tag
+author: Mason Sipe
