@@ -8,3 +8,4 @@ show_downloads: true
 author: Mason Sipe
 minimal_mistakes_skin: "contrast"
 repository: "mksipe/Shell-Script-Lib"
+search: true
