@@ -9,25 +9,19 @@
 
 ## What Does it do?
 
->Creates a library of Shell Scripts. 
+>Creates a library of shell scripts. 
 
->Includes Pre-Made Software.
+>Installs firewall.
 
->Installs Firewall.
+>Sets up system backups.
 
->Sets System Backups.
+>Installs Anti-Instusion software and Antivirus.
 
->Installs Anti-Intrusion Software and Antiviruses.
+>Has search programs to find "hacking tools"
 
->Has Searching Programs that find "Hacking Tools"
+>Installs default debian packages.
 
->Has an Audit Checking Program to find vulns.
-
->Can help find your System Information.
-
->Install Default Debian Packages.
-
->Make a Full System Update.
+>Makes system wide update.
 
 ## REQUIREMENTS
 
@@ -75,7 +69,8 @@ The System Information file gives out information about your system. (duh) Keep 
 
 Shell-Script-Lib Uses outside resources to help improve its quality. It uses the LinuxAV-Light repository to help configure antivirus programs on the system as well as the Linux-tor-incog repository to help make your system use more secure ways to browse the internet and to remain anonymous. 
 
-## Additional Source Credit
+
+### Additional Source Credit
 
 >Other Software Repositories
 
@@ -84,10 +79,3 @@ Thank you @maldevel for allowing a portion of your shell software to be used in 
 Thank you @Blizzo for allowing a portion of your shell and configuration software to be used in this program. (Origional Source: https://github.com/Blizzo/tools)
 
 Thank you @i80and for allowing your perl repository software to be used in this program. (Origional Source: https://github.com/i80and/ubuntu-linux-grsecurity)
-
-## Contact Information
->Creator
-
-Here is my contact information for support on this project.
-
-Email: masonsipe0513@gmail.com

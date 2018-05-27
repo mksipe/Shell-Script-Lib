@@ -139,6 +139,7 @@ mv *.sh /bin/lib/sh/MK3S
 cd /bin/lib/sh/MK3S
 ./Daemonconf.sh
 ./Snortconf.sh
+./Clamconf.sh
 apt autoremove -y
 cd /bin/lib/sh/MK3S
 git clone https://github.com/mksipe/LinuxIPconfig
