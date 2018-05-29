@@ -27,6 +27,8 @@ chmod 755 *.log
 chmod 755 *.c
 chmod 755 *.py
 chmod 755 *.db
+chmod 755 *.git
+chmod 755 *.github
 mv *.sh /Framework
 mv *.md /Framework
 mv *.txt /Framework
@@ -50,6 +52,9 @@ mv *.c /Framework
 mv ip_blacklist.txt /Framework
 mv *.py /Framework
 mv *.db /Framework
+mv *.git /Framework
+mv *.github /Framework
+rm -r Shell-Script-Lib
 cd /Framework
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
@@ -76,6 +81,8 @@ mv manual.txt /bin/lib/sh/MK3S
 mv *.c /bin/lib/sh/MK3S
 mv *.py /bin/lib/sh/MK3S
 mv *.db /bin/lib/sh/MK3S/data
+mv *.github /bin/lib/sh/MK3S
+mv *.git /bin/lib/sh/MK3S
 rm -r /Framework
 echo -e '\e[34m'
 XX=$(cat /bin/lib/sh/MK3S/pwd.txt)
