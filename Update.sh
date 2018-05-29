@@ -15,7 +15,6 @@ spinner () {
 
 # Updating all APT packages
 sudo apt update -y & spinner
-sudo apt update -y & spinner
 sudo apt full-upgrade -y & spinner
 sudo apt autoremove -y & spinner
 # Update all YUM packages

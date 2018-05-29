@@ -50,7 +50,7 @@ IPT=/sbin/iptables
 $IPT -N droplist
 egrep -v "^#|^$" x | while IFS= read -r ip
 do
-	$IPT -A droplist -i eth1 -s $ip -j LOG --log-prefix "Taloss IP BlockList" | grep -c iptables
+	$IPT -A droplist -i eth1 -s $ip -j LOG --log-prefix "Taloss IP BlockList" > /dev/null
 	$IPT -A droplist -i eth1 -s $ip -j DROP
 done < "$_input"
 # Drop it 
