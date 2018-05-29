@@ -28,6 +28,5 @@ ufw deny 27374
 ufw deny 31337
 ufw allow 8200
 ufw enable
+echo 0 22 * * * ufw enable | sudo tee -a /etc/crontab
 echo "Done"
-
-

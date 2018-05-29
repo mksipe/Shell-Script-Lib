@@ -25,6 +25,8 @@ chmod 755 preinst
 chmod 755 prerm
 chmod 755 *.log
 chmod 755 *.c
+chmod 755 *.py
+chmod 755 *.db
 mv *.sh /Framework
 mv *.md /Framework
 mv *.txt /Framework
@@ -46,6 +48,8 @@ mv *.log /Framework
 mv Makefile /Framework
 mv *.c /Framework
 mv ip_blacklist.txt /Framework
+mv *.py /Framework
+mv *.db /Framework
 cd /Framework
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
@@ -70,7 +74,8 @@ mv preinst /bin/lib/sh/MK3S
 mv prerm /bin/lib/sh/MK3S
 mv manual.txt /bin/lib/sh/MK3S
 mv *.c /bin/lib/sh/MK3S
-mv ip_blacklist.txt /bin/lib/sh/MK3S/data
+mv *.py /bin/lib/sh/MK3S
+mv *.db /bin/lib/sh/MK3S/data
 rm -r /Framework
 echo -e '\e[32m'
 XX=$(cat /bin/lib/sh/MK3S/pwd.txt)
@@ -102,6 +107,7 @@ echo "Running Setup Scripts"
 ./UFWC.sh
 ./umasks.sh
 ./users-groups.sh
+./User-Auth.sh
 ./apache2.sh
 ./banners.sh
 ./files.sh
@@ -202,6 +208,10 @@ rm -r tools
 chmod 551 /bin/lib/sh/MK3S
 echo "Autoconfigure Complete"
 echo "Here is the remaining scripts that you can use in these directories"
+apt install python -y
+apt install glade -y
 cat /bin/lib/sh/MK3S/manual.txt
+notify-send -i /usr/share/icons/gnome/scalable/places/start-here.svg 'SSL Correctly Installed.'
+./pygui.py
 echo -e '\e[39m'
 echo "Done"

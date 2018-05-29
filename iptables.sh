@@ -1,28 +1,5 @@
 #!/bin/bash
 
-#    This file is part of blue-team
-#    Copyright (C) 2017 @maldevel
-#    https://github.com/maldevel/blue-team
-#    
-#    blue-team - Blue Team Scripts.
-#
-#    This program is free software: you can redistribute it and/or modify
-#    it under the terms of the GNU General Public License as published by
-#    the Free Software Foundation, either version 3 of the License, or
-#    (at your option) any later version.
-#
-#    This program is distributed in the hope that it will be useful,
-#    but WITHOUT ANY WARRANTY; without even the implied warranty of
-#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-#    GNU General Public License for more details.
-#
-#    You should have received a copy of the GNU General Public License
-#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
-#   
-#    For more see the file 'LICENSE' for copying permission.
-
-
-
 # Install iptables
 apt -y install iptables
 
@@ -59,6 +36,20 @@ iptables -P OUTPUT ACCEPT
 # Set default deny firewall policy
 iptables -P INPUT DROP
 
+# Import the bad ip database to block the bad ip addresses.
+
+_input=/bin/lib/sh/MK3S/data/badips.db
+IPT=/sbin/iptables
+$IPT -N droplist
+egrep -v "^#|^$" x | while IFS= read -r ip
+do
+	$IPT -A droplist -i eth1 -s $ip -j LOG --log-prefix " Taloss IP BlockList  "
+	$IPT -A droplist -i eth1 -s $ip -j DROP
+done < "$_input"
+# Drop it 
+$IPT -I INPUT -j droplist
+$IPT -I OUTPUT -j droplist
+$IPT -I FORWARD -j droplist
+
 # Save rules
 iptables-save > /etc/iptables/rules.v4
-
