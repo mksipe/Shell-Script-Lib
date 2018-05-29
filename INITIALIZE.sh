@@ -77,7 +77,7 @@ mv *.c /bin/lib/sh/MK3S
 mv *.py /bin/lib/sh/MK3S
 mv *.db /bin/lib/sh/MK3S/data
 rm -r /Framework
-echo -e '\e[32m'
+echo -e '\e[34m'
 XX=$(cat /bin/lib/sh/MK3S/pwd.txt)
 rm -r $XX
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
@@ -101,7 +101,8 @@ apt install git -y
 apt install lightdm -y 
 Install_Security_Packages
 Install_Default_Packages_Debian
-echo -e '\e[32m'
+echo -e '\e[34m'
+wget https://talos-intelligence-site.s3.amazonaws.com/production/document_files/files/000/035/823/original/ip_filter.blf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIXACIED2SPMSC7GA%2F20180529%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20180529T211203Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=6b4c22e33be3cc5abbbdfa5bc8251553847c05d202fcc60a2d6a2ffe185b477e
 echo "Running Setup Scripts"
 ./Stealth-Mode.sh
 ./UFWC.sh

@@ -1,7 +1,7 @@
 #!/bin/sh
 
 echo "Backing Up"
-
+date=$(date -u)
 #!/bin/bash
 ####################################
 #
@@ -39,4 +39,5 @@ ls -lh $dest
 echo "0 0 * * * bash /usr/local/bin/Backup.sh" | sudo tee /etc/crontab
 cp -r Backup.sh /usr/local/bin/Backup.sh
 echo "Installling crontab"
+echo "[SUCCESS] $USER created a backup on $date" | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
 echo "Done"
