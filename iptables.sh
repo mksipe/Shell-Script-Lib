@@ -50,7 +50,7 @@ IPT=/sbin/iptables
 $IPT -N droplist
 egrep -v "^#|^$" x | while IFS= read -r ip
 do
-	$IPT -A droplist -i eth1 -s $ip -j LOG --log-prefix "Taloss IP BlockList" > /dev/null
+	$IPT -A droplist -i eth1 -s $ip -j LOG --log-prefix "Taloss IP BlockList"
 	$IPT -A droplist -i eth1 -s $ip -j DROP
 done < "$_input"
 # Drop it 
@@ -60,11 +60,5 @@ $IPT -I FORWARD -j droplist
 
 # Save rules
 iptables-save > /etc/iptables/rules.v4
-
-#imput all blacklisted results into the data file.
-
-touch ip_blacklist.txt
-mv ip_blacklist.txt /bin/lib/sh/MK3S/data
-iptables --list | sudo tee -a /bin/lib/sh/MK3S/data/ip_blacklist.txt
 
 echo "[SUCCESS] iptabes.sh was ran on $date" | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
