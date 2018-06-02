@@ -51,7 +51,6 @@ mv *.py /Framework
 mv *.db /Framework
 mv *.git /Framework
 mv *.github /Framework
-rm -r Shell-Script-Lib
 cd /Framework
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
@@ -80,6 +79,54 @@ mv *.py /bin/lib/sh/MK3S
 mv *.db /bin/lib/sh/MK3S/data
 mv *.github /bin/lib/sh/MK3S
 mv *.git /bin/lib/sh/MK3S
+git clone https://github.com/mksipe/LinuxIPconfig
+git clone https://github.com/mksipe/CyberPatriotScripts
+git clone https://github.com/mksipe/cyberpatriot
+git clone https://github.com/mksipe/tools
+cd LinuxIPconfig
+chmod 755 *.sh
+mv *.sh /bin/lib/sh/MK3S
+cd /Framework/CyberPatriotScripts/Linux
+chmod 755 *.sh
+mv *.sh /bin/lib/sh/MK3S
+cd /Framework/cyberpatriot
+chmod 755 *.sh
+mv *.sh /bin/lib/sh/MK3S
+cd /Framework/tools/blue
+chmod 755 *.sh
+chmod 755 *.pl
+mv *.pl /bin/lib/sh/MK3S
+mv *.sh /bin/lib/sh/MK3S
+cd /Framework/tools/blue/apache2
+chmod 755 *.sh
+chmod 755 *.pl
+mv *.sh /bin/lib/sh/MK3S
+mv *.pl /bin/lib/sh/MK3S
+cd /Framework/tools/blue/ftp
+chmod 755 *.sh
+chmod 755 *.pl
+mv *.sh /bin/lib/sh/MK3S
+mv *.pl /bin/lib/sh/MK3S
+cd /Framework/tools/blue/httpd
+chmod 755 *.sh
+chmod 755 *.pl
+mv *.sh /bin/lib/sh/MK3S
+mv *.pl /bin/lib/sh/MK3S
+cd /Framework/tools/red
+chmod 755 *.sh
+chmod 755 *.pl
+mv *.sh /bin/lib/sh/MK3S
+mv *.pl /bin/lib/sh/MK3S
+cd /Framework/tools/red/SE
+chmod 755 *.sh
+chmod 755 *.pl
+mv *.pl /bin/lib/sh/MK3S
+mv *.sh /bin/lib/sh/MK3S
+cd /Framework/red/bombs
+chmod 755 *.sh
+chmod 755 *.pl
+mv *.pl /bin/lib/sh/MK3S
+mv *.sh /bin/lib/sh/MK3S
 rm -r /Framework
 echo -e '\e[34m'
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
@@ -142,73 +189,17 @@ cd LinuxAV-Light
 chmod 755 *.sh
 mv *.sh /bin/lib/sh/MK3S
 cd /bin/lib/sh/MK3S
-./Daemonconf.sh
-./Snortconf.sh
-./Clamconf.sh
 apt autoremove -y
 cd /bin/lib/sh/MK3S
-git clone https://github.com/mksipe/LinuxIPconfig
-git clone https://github.com/mksipe/CyberPatriotScripts
-git clone https://github.com/mksipe/cyberpatriot
-git clone https://github.com/mksipe/tools
 chmod 755 LinuxIPconfig
-chmod 755 CyberPatriotScripts & chmod 755 CyberPatriotScripts/Linux
+chmod 755 CyberPatriotScripts
+chmod 755 CyberPatriotScripts/Linux
 chmod 755 cyberpatriot
 chmod 755 tools
-cd LinuxIPconfig
-chmod 755 *.sh
-mv *.sh /bin/lib/sh/MK3S
-cd /bin/lib/sh/MK3S/CyberPatriotScripts/Linux
-chmod 755 *.sh
-mv *.sh /bin/lib/sh/MK3S
-cd /bin/lib/sh/MK3S/cyberpatriot
-chmod 755 *.sh
-mv *.sh /bin/lib/sh/MK3S
-cd /bin/lib/sh/MK3S/tools/blue
-chmod 755 *.sh
-chmod 755 *.pl
-mv *.pl /bin/lib/sh/MK3S
-mv *.sh /bin/lib/sh/MK3S
-cd /bin/lib/sh/MK3S/tools/blue/apache2
-chmod 755 *.sh
-chmod 755 *.pl
-mv *.sh /bin/lib/sh/MK3S
-mv *.pl /bin/lib/sh/MK3S
-cd /bin/lib/sh/MK3S/tools/blue/ftp
-chmod 755 *.sh
-chmod 755 *.pl
-mv *.sh /bin/lib/sh/MK3S
-mv *.pl /bin/lib/sh/MK3S
-cd /bin/lib/sh/MK3S/tools/blue/httpd
-chmod 755 *.sh
-chmod 755 *.pl
-mv *.sh /bin/lib/sh/MK3S
-mv *.pl /bin/lib/sh/MK3S
-cd /bin/lib/sh/MK3S/tools/red
-chmod 755 *.sh
-chmod 755 *.pl
-mv *.sh /bin/lib/sh/MK3S
-mv *.pl /bin/lib/sh/MK3S
-cd /bin/lib/sh/MK3S/tools/red/SE
-chmod 755 *.sh
-chmod 755 *.pl
-mv *.pl /bin/lib/sh/MK3S
-mv *.sh /bin/lib/sh/MK3S
-cd /bin/lib/sh/MK3S/tools/red/bombs
-chmod 755 *.sh
-chmod 755 *.pl
-mv *.pl /bin/lib/sh/MK3S
-mv *.sh /bin/lib/sh/MK3S
-cd /bin/lib/sh/MK3S
-rm -r LinuxIPconfig
-rm -r CyberPatriotScripts
-rm -r cyberpatriot
-rm -r tools
-chmod 551 /bin/lib/sh/MK3S
 ./Daemonconf.sh
 ./Clamconf.sh
 ./Snortconf.sh
-
+chmod 551 /bin/lib/sh/MK3S
 echo "Autoconfigure Complete"
 echo "Here is the remaining scripts that you can use in these directories"
 apt install python -y
