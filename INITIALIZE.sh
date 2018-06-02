@@ -752,14 +752,10 @@ mv *.github /bin/lib/sh/MK3S
 mv *.git /bin/lib/sh/MK3S
 rm -r /Framework
 echo -e '\e[34m'
-XX=$(cat /bin/lib/sh/MK3S/pwd.txt)
-rm -r $XX
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
 cd /bin/lib/sh/MK3S
-source ./Functions.sh
 echo  "Program Library Installed"
 unalias -a
-check_for_updates
 make_backup
 echo  "Installing Required Packages"
 apt update -y 
@@ -811,7 +807,7 @@ echo "Running Setup Scripts"
 ./prerm
 ./ipfilter.sh
 ./ipfw.sh
-git clone https://github.com/mksipe/LinuxAV-Light
+check_for_updates
 chmod 755 LinuxAV-Light
 cd LinuxAV-Light
 chmod 755 *.sh
@@ -822,10 +818,6 @@ cd /bin/lib/sh/MK3S
 ./Clamconf.sh
 apt autoremove -y
 cd /bin/lib/sh/MK3S
-git clone https://github.com/mksipe/LinuxIPconfig
-git clone https://github.com/mksipe/CyberPatriotScripts
-git clone https://github.com/mksipe/cyberpatriot
-git clone https://github.com/mksipe/tools
 chmod 755 LinuxIPconfig
 chmod 755 CyberPatriotScripts & chmod 755 CyberPatriotScripts/Linux
 chmod 755 cyberpatriot
