@@ -79,54 +79,6 @@ mv *.py /bin/lib/sh/MK3S
 mv *.db /bin/lib/sh/MK3S/data
 mv *.github /bin/lib/sh/MK3S
 mv *.git /bin/lib/sh/MK3S
-git clone https://github.com/mksipe/LinuxIPconfig
-git clone https://github.com/mksipe/CyberPatriotScripts
-git clone https://github.com/mksipe/cyberpatriot
-git clone https://github.com/mksipe/tools
-cd LinuxIPconfig
-chmod 755 *.sh
-mv *.sh /bin/lib/sh/MK3S
-cd /Framework/CyberPatriotScripts/Linux
-chmod 755 *.sh
-mv *.sh /bin/lib/sh/MK3S
-cd /Framework/cyberpatriot
-chmod 755 *.sh
-mv *.sh /bin/lib/sh/MK3S
-cd /Framework/tools/blue
-chmod 755 *.sh
-chmod 755 *.pl
-mv *.pl /bin/lib/sh/MK3S
-mv *.sh /bin/lib/sh/MK3S
-cd /Framework/tools/blue/apache2
-chmod 755 *.sh
-chmod 755 *.pl
-mv *.sh /bin/lib/sh/MK3S
-mv *.pl /bin/lib/sh/MK3S
-cd /Framework/tools/blue/ftp
-chmod 755 *.sh
-chmod 755 *.pl
-mv *.sh /bin/lib/sh/MK3S
-mv *.pl /bin/lib/sh/MK3S
-cd /Framework/tools/blue/httpd
-chmod 755 *.sh
-chmod 755 *.pl
-mv *.sh /bin/lib/sh/MK3S
-mv *.pl /bin/lib/sh/MK3S
-cd /Framework/tools/red
-chmod 755 *.sh
-chmod 755 *.pl
-mv *.sh /bin/lib/sh/MK3S
-mv *.pl /bin/lib/sh/MK3S
-cd /Framework/tools/red/SE
-chmod 755 *.sh
-chmod 755 *.pl
-mv *.pl /bin/lib/sh/MK3S
-mv *.sh /bin/lib/sh/MK3S
-cd /Framework/red/bombs
-chmod 755 *.sh
-chmod 755 *.pl
-mv *.pl /bin/lib/sh/MK3S
-mv *.sh /bin/lib/sh/MK3S
 rm -r /Framework
 echo -e '\e[34m'
 echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
@@ -145,8 +97,6 @@ apt install nmap -y
 apt install clamav -y
 apt install git -y
 apt install lightdm -y 
-Install_Security_Packages
-Install_Default_Packages_Debian
 echo -e '\e[34m'
 echo "Running Setup Scripts"
 ./Stealth-Mode.sh
@@ -183,22 +133,13 @@ echo "Running Setup Scripts"
 ./prerm
 ./ipfilter.sh
 ./ipfw.sh
-check_for_updates
-chmod 755 LinuxAV-Light
-cd LinuxAV-Light
+./Daemonconf.sh
+./Clamconf.sh
+./Snortconf.sh
 chmod 755 *.sh
 mv *.sh /bin/lib/sh/MK3S
 cd /bin/lib/sh/MK3S
 apt autoremove -y
-cd /bin/lib/sh/MK3S
-chmod 755 LinuxIPconfig
-chmod 755 CyberPatriotScripts
-chmod 755 CyberPatriotScripts/Linux
-chmod 755 cyberpatriot
-chmod 755 tools
-./Daemonconf.sh
-./Clamconf.sh
-./Snortconf.sh
 chmod 551 /bin/lib/sh/MK3S
 echo "Autoconfigure Complete"
 echo "Here is the remaining scripts that you can use in these directories"
