@@ -1,6 +1,6 @@
 theme: jekyll-theme-midnight
 title: MK3SL Homepage
-description: MK3SL is a resource repository that you can use at your disposal. It was made to help keep your system secure while being able to maintain tools that can be useful to developing in other scripts.
+description: Mksipe Shell Script Library
 safe: BOOL
 timezone: central
 encoding: UTF-8
