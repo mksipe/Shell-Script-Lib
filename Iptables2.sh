@@ -1,32 +1,11 @@
 #!/bin/sh
 
-apt-get install -y iptables
-	apt-get install -y iptables-persistent
 	#Backup
 	mkdir /iptables/
 	touch /iptables/rules.v4.bak
 	touch /iptables/rules.v6.bak
 	iptables-save > /iptables/rules.v4.bak
 	ip6tables-save > /iptables/rules.v6.bak
-	#Clear out and default iptables
-	iptables -t nat -F
-	iptables -t mangle -F
-	iptables -t nat -X
-	iptables -t mangle -X
-	iptables -F
-	iptables -X
-	iptables -P INPUT DROP
-	iptables -P FORWARD DROP
-	iptables -P OUTPUT ACCEPT
-	ip6tables -t nat -F
-	ip6tables -t mangle -F
-	ip6tables -t nat -X
-	ip6tables -t mangle -X
-	ip6tables -F
-	ip6tables -X
-	ip6tables -P INPUT DROP
-	ip6tables -P FORWARD DROP
-	ip6tables -P OUTPUT DROP
 	#Block Bogons
 	printf "\033[1;31mEnter primary internet interface: \033[0m\n"
 	read interface

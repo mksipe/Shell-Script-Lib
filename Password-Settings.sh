@@ -5,11 +5,12 @@ apt install auditd -y
 
 sudo echo "auth  required  pam_tally2.so  deny=5  onerr=fail  unlock_time=1800" | sudo tee -a /etc/pam.d/common-auth
 
-sudo sed -i '/PASS_MAX_DAYS  99999/c\PASS_MAX_DAYS   90' | sudo tee -a /etc/login.defs
-sudo sed -i '/PASS_MIN_DAYS  0/c\PASS_MIN_DAYS   7' | sudo tee -a /etc/login.defs
-sudo sed -i '/PASS_WARN_AGE  7/C\PASS_WARN_AGE   14' | sudo tee -a /etc/login.defs
 
-echo "This part must be done manually. Open another terminal and do this command."
+sed 's/^PASS_MAX_DAYS.*99999/PASS_MAX_DAYS 90/' /etc/login.defs | grep'^PASS_MAX_DAYS.*90'
+sed 's/^PASS_MIN_DAYS.*99999/PASS_MIN_DAYS 7/' /etc/login.defs | grep'^PASS_MAX_DAYS.*7'
+sed 's/^PASS_WARN_AGE.*99999/PASS_WARN_AGE 14/' /etc/login.defs | grep'^PASS_MAX_DAYS.*14'
+
+echo "This part must be done manually. Open another terminal and run this command."
 echo "In the /etc/pam.d/common-password file find the line that begins with 'password [sucess=1 default=ignore] pam_unix.so...'"
 echo "Add this to the end of the line: remember=5 minlen=8"
 echo "continue?"

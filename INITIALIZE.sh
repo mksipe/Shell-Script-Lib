@@ -3,6 +3,7 @@ if [ $(/usr/bin/id -u) -ne 0 ]; then
     echo "You must be root."
     exit
 fi
+DATE=$(date -u)
 echo -e "Initializing Directories"
 mkdir /Framework
 chmod 755 *.sh
@@ -24,8 +25,6 @@ chmod 755 *.log
 chmod 755 *.c
 chmod 755 *.py
 chmod 755 *.db
-chmod 755 *.git
-chmod 755 *.github
 mv *.sh /Framework
 mv *.md /Framework
 mv *.txt /Framework
@@ -46,11 +45,9 @@ mv prerm /Framework
 mv *.log /Framework
 mv Makefile /Framework
 mv *.c /Framework
-mv ip_blacklist.txt /Framework
 mv *.py /Framework
 mv *.db /Framework
-mv *.git /Framework
-mv *.github /Framework
+rm -r $(pwd)/Shell-Script-Lib
 cd /Framework
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
@@ -81,7 +78,7 @@ mv *.github /bin/lib/sh/MK3S
 mv *.git /bin/lib/sh/MK3S
 rm -r /Framework
 echo -e '\e[34m'
-echo "Software installed by $USER on $DATE in $PATH" | sudo tee /bin/lib/sh/MK3S/Version.txt
+echo "Software installed by $USER on $DATE in $(pwd)" | sudo tee /bin/lib/sh/MK3S/Version.txt
 cd /bin/lib/sh/MK3S
 echo  "Program Library Installed"
 unalias -a
@@ -108,6 +105,7 @@ echo "Running Setup Scripts"
 ./banners.sh
 ./files.sh
 ./iptables.sh
+./iptables2.sh
 ./network.sh
 ./nginx.sh
 ./services.sh

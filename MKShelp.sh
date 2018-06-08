@@ -1,7 +1,5 @@
 #!/bin/sh
-    echo "MKS_clamAVvonf - Configures Clam Antivirus to be enabled on the system and scan for threats daily."
-    echo "MKS_clamfullscan - Scans the entire system for threats on demand. This process takes a while."
-    echo "MKS_clamsmartscan - Scans for malicious software in places they tend to hide. This is quicker than the full scan. It may still take a while to complete."
+    echo "MKS_clamconf - Configures Clam Antivirus to be enabled on the system and scan for threats daily."
     echo "MKS_Current-Connections - Scans your ports to see what current services are connected to your system. As well as active user sessions alongside with active service connection."
     echo "MKS_Exploit-Search - Searches the system for known software that can be consitered \"Dangerous\" or \" Prohibited\"."
     echo "MKS_Network-Spoof-Prevention - Sets new rules to the sysctl.conf file that is supposed to prevent ACK, SYN, ICMP, ping, and Martian log attacks."

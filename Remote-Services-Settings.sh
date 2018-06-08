@@ -4,21 +4,21 @@ echo "Changing Remote Logon Settings"
 
 # SSH
 
-sudo sed -i '/PermitRootLogin yes/c\PermitRootLogin no' | sudo tee -a /etc/ssh/sshd_config
-sudo sed -i '/Protocol/c\Protocol 2' | sudo tee -a /etc/ssh/sshd_config
-sudo sed -i 'PermitEmptyPasswords yes/c\PermitEmptyPasswords no' | sudo tee -a /etc/ssh/sshd_config
-sudo sed -i 'LoginGraceTime/c\LoginGraceTime 1m' | sudo tee -a /etc/ssh/sshd_config
+sudo sed  's/^PermitRootLogin.*yes/PermitRootLogin no' | sudo tee -a /etc/ssh/sshd_config
+sudo sed  's/^Protocol.*/Protocol 2' | sudo tee -a /etc/ssh/sshd_config
+sudo sed  's/^PermitEmptyPasswords.*yes/PermitEmptyPasswords no' | sudo tee -a /etc/ssh/sshd_config
+sudo sed  's/^LoginGraceTime.*/LoginGraceTime 1m' | sudo tee -a /etc/ssh/sshd_config
 echo "DO NOT NAME THE KEY"
 sudo ssh-keygen -t rsa
 sudo service ssh restart 
 
 # VSFTPD
 
-sudo sed -i '/anonymous_enable=YES/c\anonymous_enable=NO' | sudo tee -a /etc/vsftpd.conf
-sudo sed -i '/local_enable=YES/c\local_enable=NO' | sudo tee -a /etc/vsftpd.conf
-sudo sed -i '/write_enable=YES/c\write_enable=NO' | sudo tee -a /etc/vsftpd.conf
-sudo sed -i '/chroot_local_user=YES/c\chroot_local_user=NO' | sudo tee -a /etc/vsftpd.conf
-sudo sed -i '/local_max_rate=*/c\local_max_rate=131072' | sudo tee -a /etc/vsftpd.conf
+sudo sed  's/^anonymous_enable=.*YES/anonymous_enable=NO' | sudo tee -a /etc/vsftpd.conf
+sudo sed  's/^local_enable=.*YES/local_enable=NO' | sudo tee -a /etc/vsftpd.conf
+sudo sed  's/^write_enable=.*YES/write_enable=NO' | sudo tee -a /etc/vsftpd.conf
+sudo sed  's/^chroot_local_user=.*YES/chroot_local_user=NO' | sudo tee -a /etc/vsftpd.conf
+sudo sed  's/^local_max_rate=.*/local_max_rate=131072' | sudo tee -a /etc/vsftpd.conf
 sudo service vsftpd restart 
 
 # Apache PHP 

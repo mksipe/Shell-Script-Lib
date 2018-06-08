@@ -18,9 +18,11 @@ echo "write_enable=YES" >> /etc/vsftpd-anon.conf
 echo "anon_root=/home/anon_user" >> /etc/vsftpd-anon.conf
 echo "anon_max_rate=2048000" >> /etc/vsftpd-anon.conf
 echo "xferlog_enable=YES" >> /etc/vsftpd-anon.conf
-echo "listen_address=<<HOST IP ADDRESS HERE>>" >> /etc/vsftpd-anon.conf
+echo "listen_address= $(hostname -I)" >> /etc/vsftpd-anon.conf
 echo "listen_port=21" >> /etc/vsftpd-anon.conf
 
 #adding config file to the vsftpd instance
 vsftpd /etc/vsftpd-anon.conf
 service vsftpd start
+
+echo [SUCCESS] anon.sh ran by $USER on $(date -u) | tee -a /bin/lib/sh/MK3S/data/MK3S.log

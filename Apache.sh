@@ -118,3 +118,5 @@ echo "Header set Content-Security-Policy \"default-src 'self';\"" >> /etc/apache
 sed -i "s/Timeout 300/Timeout 60/" /etc/apache2/apache2.conf
 
 service apache2 restart
+
+echo [SUCCESS] apache.sh audit ran by $USER on $(date -u). Though apache appears to be: $(service apache2 status | grep ok) $(service apache2 status | grep fail) | tee -a /bin/lib/sh/MK3S/data/MK3S.log

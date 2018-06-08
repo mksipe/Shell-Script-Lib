@@ -2,7 +2,7 @@
 touch defalultUFW.txt
 cp /etc/ufw/before.rules >> defalultUFW.txt
 mv defalultUFW.txt /bin/lib/sh
--A ufw-before-input -p icmp --icmp-type echo-request -j DROP >> /etc/ufw/before.rules
+iptables -A ufw-before-input -p icmp --icmp-type echo-request -j DROP >> /etc/ufw/before.rules
 sudo ufw disable
 sudo ufw enable
 iptables -A OUTPUT -p icmp -o eth0 -j ACCEPT          

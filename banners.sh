@@ -35,3 +35,4 @@ chown root:root /etc/issue.net
 chmod 644 /etc/issue.net
 echo "Authorized uses only. All activity may be monitored and reported." > /etc/issue.net
 
+echo [SUCCESS] banners.sh ran by $USER on $(date -u) | tee -a /bin/lib/sh/MK3S/data/MK3S.log
