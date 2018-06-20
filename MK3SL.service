@@ -1,0 +1,12 @@
+[Unit]
+Description= System Hardening Profile - Automatically reenables packages that should be enabled.
+
+[Service]
+ExecStart= /bin/lib/sh/MK3S/proc/proc.sh
+Restart=always
+WorkingDirectory=/bin/lib/sh/MK3S
+User=Mksipe
+Group=Proc
+
+[Install]
+WantedBy=multi-user.target

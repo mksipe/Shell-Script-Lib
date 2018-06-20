@@ -1,12 +1,12 @@
-
-Product: Shell-Script-Lib
-
-Author: MK3S
-
-Version: 3.7.0
-
-License: GPL-3.0 (General Public License v3.0)
-
-Last Updated on 6/5/18
-
-Software Installation:
+=================================================
+* Software: Shell-Script-Lib                    |
+=================================================
+* Author: MK3S                                  |
+=================================================
+* Version: 3.8.6                                |
+=================================================
+* License: GPL-3.0 (General Public License v3.0)|
+=================================================
+* Last Updated on 6/5/18                        |
+=================================================
+Software Installation:                          |

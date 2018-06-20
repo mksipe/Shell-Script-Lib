@@ -1,5 +1,4 @@
 #!/usr/bin/perl
-#Jackson Sadowski
 #Directory Monitor
 
 my $initialTime = `date +"%Y-%m-%d %T"`;

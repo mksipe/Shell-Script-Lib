@@ -1,0 +1,52 @@
+#!/bin/sh
+# Text Colors
+function RED         { echo "\[\e[0;91m\]$1\[\e[0m\]"; }
+function DARK_RED    { echo "\[\e[0;31m\]$1\[\e[0m\]"; }
+function YELLOW      { echo "\[\e[0;93m\]$1\[\e[0m\]"; }
+function DARK_YELLOW { echo "\[\e[0;33m\]$1\[\e[0m\]"; }
+function GREEN       { echo "\[\e[0;92m\]$1\[\e[0m\]"; }
+function DARK_GREEN  { echo "\[\e[0;32m\]$1\[\e[0m\]"; }
+function CYAN        { echo "\[\e[0;96m\]$1\[\e[0m\]"; }
+function DARK_CYAN   { echo "\[\e[0;36m\]$1\[\e[0m\]"; }
+function BLUE        { echo "\[\e[0;94m\]$1\[\e[0m\]"; }
+function DARK_BLUE   { echo "\[\e[0;34m\]$1\[\e[0m\]"; }
+function MAGENTA     { echo "\[\e[0;95m\]$1\[\e[0m\]"; }
+function PURPLE      { echo "\[\e[0;35m\]$1\[\e[0m\]"; }
+function BLACK       { echo "\[\e[0;30m\]$1\[\e[0m\]"; }
+function GRAY        { echo "\[\e[0;90m\]$1\[\e[0m\]"; }
+function LIGHT_GRAY  { echo "\[\e[0;37m\]$1\[\e[0m\]"; }
+function WHITE       { echo "\[\e[0;97m\]$1\[\e[0m\]"; }
+# Black on Background Color
+function B_ON_RED         { echo "\[\e[0;30;101m\]$1\[\e[0m\]"; }
+function B_ON_DARK_RED    { echo "\[\e[0;30;41m\]$1\[\e[0m\]"; }
+function B_ON_YELLOW      { echo "\[\e[0;30;103m\]$1\[\e[0m\]"; }
+function B_ON_DARK_YELLOW { echo "\[\e[0;30;43m\]$1\[\e[0m\]"; }
+function B_ON_GREEN       { echo "\[\e[0;30;102m\]$1\[\e[0m\]"; }
+function B_ON_DARK_GREEN  { echo "\[\e[0;30;42m\]$1\[\e[0m\]"; }
+function B_ON_CYAN        { echo "\[\e[0;30;106m\]$1\[\e[0m\]"; }
+function B_ON_DARK_CYAN   { echo "\[\e[0;30;46m\]$1\[\e[0m\]"; }
+function B_ON_BLUE        { echo "\[\e[0;30;104m\]$1\[\e[0m\]"; }
+function B_ON_DARK_BLUE   { echo "\[\e[0;30;44m\]$1\[\e[0m\]"; }
+function B_ON_MAGENTA     { echo "\[\e[0;30;105m\]$1\[\e[0m\]"; }
+function B_ON_PURPLE      { echo "\[\e[0;30;45m\]$1\[\e[0m\]"; }
+function B_ON_BLACK       { echo "\[\e[0;30;40m\]$1\[\e[0m\]"; }
+function B_ON_DARK_GRAY   { echo "\[\e[0;30;100m\]$1\[\e[0m\]"; }
+function B_ON_GRAY        { echo "\[\e[0;30;47m\]$1\[\e[0m\]"; }
+function B_ON_LIGHT_GRAY  { echo "\[\e[0;30;107m\]$1\[\e[0m\]"; }
+# White on Background Color
+function W_ON_RED         { echo "\[\e[0;97;101m\]$1\[\e[0m\]"; }
+function W_ON_DARK_RED    { echo "\[\e[0;97;41m\]$1\[\e[0m\]"; }
+function W_ON_YELLOW      { echo "\[\e[0;97;103m\]$1\[\e[0m\]"; }
+function W_ON_DARK_YELLOW { echo "\[\e[0;97;43m\]$1\[\e[0m\]"; }
+function W_ON_GREEN       { echo "\[\e[0;97;102m\]$1\[\e[0m\]"; }
+function W_ON_DARK_GREEN  { echo "\[\e[0;97;42m\]$1\[\e[0m\]"; }
+function W_ON_CYAN        { echo "\[\e[0;97;106m\]$1\[\e[0m\]"; }
+function W_ON_DARK_CYAN   { echo "\[\e[0;97;46m\]$1\[\e[0m\]"; }
+function W_ON_BLUE        { echo "\[\e[0;97;104m\]$1\[\e[0m\]"; }
+function W_ON_DARK_BLUE   { echo "\[\e[0;97;44m\]$1\[\e[0m\]"; }
+function W_ON_MAGENTA     { echo "\[\e[0;97;105m\]$1\[\e[0m\]"; }
+function W_ON_PURPLE      { echo "\[\e[0;97;45m\]$1\[\e[0m\]"; }
+function W_ON_BLACK       { echo "\[\e[0;97;40m\]$1\[\e[0m\]"; }
+function W_ON_DARK_GRAY   { echo "\[\e[0;97;100m\]$1\[\e[0m\]"; }
+function W_ON_GRAY        { echo "\[\e[0;97;47m\]$1\[\e[0m\]"; }
+function W_ON_LIGHT_GRAY  { echo "\[\e[0;97;107m\]$1\[\e[0m\]"; }
