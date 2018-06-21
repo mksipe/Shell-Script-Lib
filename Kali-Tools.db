@@ -1,5 +1,4 @@
 # Information Gathering
-
 acccheck
 ace-voip
 Amap
@@ -69,10 +68,7 @@ URLCrazy
 Wireshark
 WOL-E
 Xplico
-
 # Vulnerability Analysis
- 
-
 BBQSQL
 BED
 cisco-auditing-tool
@@ -102,10 +98,7 @@ THC-IPV6
 tnscmd10g
 unix-privesc-check
 Yersinia
-
 # Exploitation Tools
- 
-
 Armitage
 Backdoor Factory
 BeEF
@@ -127,10 +120,7 @@ ShellNoob
 sqlmap
 THC-IPV6
 Yersinia
-
 # Wireless Attacks
- 
-
 Airbase-ng
 Aircrack-ng
 Airdecap-ng and Airdecloak-ng
@@ -184,10 +174,7 @@ wifiphisher
 Wifitap
 Wifite
 wpaclean
-
 # Forensics Tools
- 
-
 Binwalk
 bulk-extractor
 Capstone
@@ -211,10 +198,7 @@ peepdf
 RegRipper
 Volatility
 Xplico
-
 # Web Applications
- 
-
 apache-users
 Arachni
 BBQSQL
@@ -259,10 +243,7 @@ WhatWeb
 WPScan
 XSSer
 zaproxy
-
 # Stress Testing
- 
-
 DHCPig
 FunkLoad
 iaxflood
@@ -277,10 +258,7 @@ t50
 Termineter
 THC-IPV6
 THC-SSL-DOS
-
 # Sniffing & Spoofing
- 
-
 Burp Suite
 DNSChef
 fiked
@@ -313,10 +291,7 @@ Wireshark
 xspy
 Yersinia
 zaproxy
-
 # Password Attacks
- 
-
 acccheck
 BruteSpray
 Burp Suite
@@ -358,10 +333,7 @@ TrueCrack
 WebScarab
 wordlists
 zaproxy
-
 # Maintaining Access
- 
-
 CryptCat
 Cymothoa
 dbd
@@ -380,20 +352,14 @@ U3-Pwn
 Webshells
 Weevely
 Winexe
-
 # Hardware Hacking
- 
-
 android-sdk
 apktool
 Arduino
 dex2jar
 Sakis3G
 smali
-
 # Reverse Engineering
- 
-
 apktool
 dex2jar
 diStorm3
@@ -405,10 +371,7 @@ OllyDbg
 smali
 Valgrind
 YARA
-
 # Reporting Tools
- 
-
 CaseFile
 cherrytree
 CutyCapt

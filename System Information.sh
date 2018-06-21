@@ -10,35 +10,37 @@ H=$(hostname)
 IP=$(hostname -i)
 bit=$(lscpu)
 krt=$(/sbin/route -n)
-echo "Gathering System Volumes"
-echo "_________________________________________________________________________________________________________________"
+touch /bin/lib/sh/MK3S/data/SYSINF.txt
+sudo cat /dev/null > /bin/lib/sh/MK3S/data/SYSINF.txt
+echo "Gathering System Volumes" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
+echo "_________________________________________________________________________________________________________________" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
 echo "-----------------------------------------------------------------------------------------------------------------
-System Host:"
-echo "$H"
+System Host:" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
+echo "$H" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
 echo "-----------------------------------------------------------------------------------------------------------------
-You'r IP address is:"
-echo "$IP"
+You'r IP address is:" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
+echo "$IP" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
 echo "-----------------------------------------------------------------------------------------------------------------
-Latest Check was on:"
-echo "$now"
+Latest Check was on:" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
+echo "$now" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
 echo "-----------------------------------------------------------------------------------------------------------------
-The System Uptime is currently:"
-echo "$ut"
+The System Uptime is currently:" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
+echo "$ut" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
 echo "-----------------------------------------------------------------------------------------------------------------
-The System OS is:"
-echo "$un"
+The System OS is:" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
+echo "$un" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
 echo "-----------------------------------------------------------------------------------------------------------------
-Here is the System's Free Memory:"
-echo "$fe"
+Here is the System's Free Memory:" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
+echo "$fe" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
 echo "-----------------------------------------------------------------------------------------------------------------
-Here is a summary of all of the System's activity:" 
-echo "$stat"
+Here is a summary of all of the System's activity:"  | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
+echo "$stat" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
 echo "-----------------------------------------------------------------------------------------------------------------
-This is the avaliable amount of space on your disk:"
-echo "$disk_space" 
+This is the avaliable amount of space on your disk:" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
+echo "$disk_space"  | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
 echo "-----------------------------------------------------------------------------------------------------------------
-Here is your CPU information:"
-echo "$bit" 
+Here is your CPU information:" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
+echo "$bit"  | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
 echo "-----------------------------------------------------------------------------------------------------------------
-Here is your kernel routing table"
-echo "$krt"
+Here is your kernel routing table" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
+echo "$krt" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
