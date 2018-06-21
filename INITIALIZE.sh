@@ -73,7 +73,5 @@ mv prerm /bin/lib/sh/MK3S
 mv *.c /bin/lib/sh/MK3S
 mv *.py /bin/lib/sh/MK3S
 mv *.db /bin/lib/sh/MK3S/data
-mv *.github /bin/lib/sh/MK3S
-mv *.git /bin/lib/sh/MK3S
 rm -r /Framework
 echo "Software installed by $USER on $DATE in $(pwd)" | sudo tee /bin/lib/sh/MK3S/Version.txt
