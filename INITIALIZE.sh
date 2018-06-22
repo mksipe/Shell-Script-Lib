@@ -74,4 +74,6 @@ mv *.c /bin/lib/sh/MK3S
 mv *.py /bin/lib/sh/MK3S
 mv *.db /bin/lib/sh/MK3S/data
 rm -r /Framework
+touch /bin/lib/sh/MK3S/data/progs.txt
+compgen -c | sudo tee -a /bin/lib/sh/MK3S/data/progs.txt
 echo "Software installed by $USER on $DATE in $(pwd)" | sudo tee /bin/lib/sh/MK3S/Version.txt

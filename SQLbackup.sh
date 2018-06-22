@@ -22,10 +22,10 @@ until [ -z "$1" ]; do
       shift
       ;;
     --user=*)
-      user=`echo $1|cut -f 2 -d '='`
+      user=$(echo $1|cut -f 2 -d '=')
       ;;
     -p*)
-      password=`echo $1|sed -e s/"^-p"//g`
+      password=$(echo $1|sed -e s/"^-p"//g)
       ;;
     --password)
       echo -n "Enter password: "
@@ -34,7 +34,7 @@ until [ -z "$1" ]; do
       stty echo
       ;;
     --password=*)
-      password=`echo $1|cut -f 2 -d '='`
+      password=$(echo $1|cut -f 2 -d '=')
       ;;
     -d)
       [ -z "$2" ] && usage
@@ -42,7 +42,7 @@ until [ -z "$1" ]; do
       shift
       ;;
     --dest=*)
-      dstdir=`echo $1|cut -f 2 -d '='`
+      dstdir=$(echo $1|cut -f 2 -d '=')
       ;;
     -t)
       [ -z "$2" ] && usage

@@ -65,17 +65,3 @@ The script used in this command is optional. The command to run this updates pac
 
 The System Information file gives out information about your system. (duh) Keep it in a secured location on your file system. The scripts can now alter information on a system. So be aware of this.
 
-## Outside Resources
-
-Shell-Script-Lib Uses outside resources to help improve its quality. It uses the LinuxAV-Light repository to help configure antivirus programs on the system as well as the Linux-tor-incog repository to help make your system use more secure ways to browse the internet and to remain anonymous. 
-
-
-### Additional Source Credit
-
->Other Software Repositories
-
-Thank you @maldevel for allowing a portion of your shell software to be used in my program. (Origional Source: https://github.com/maldevel/blue-team) 
-
-Thank you @Blizzo for allowing a portion of your shell and configuration software to be used in this program. (Origional Source: https://github.com/Blizzo/tools)
-
-Thank you @i80and for allowing your perl repository software to be used in this program. (Origional Source: https://github.com/i80and/ubuntu-linux-grsecurity)
