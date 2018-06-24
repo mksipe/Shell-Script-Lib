@@ -1,4 +1,5 @@
 # Shell-Script-Lib
+<img align="left" width="300" height="320" src="https://github.com/mksipe/Shell-Script-Lib/blob/master/.github/logo.jpeg">
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d6934421469b40dc9f14a3f8df98ad74)](https://www.codacy.com/app/mksipe/Shell-Script-Lib?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=mksipe/Shell-Script-Lib&amp;utm_campaign=Badge_Grade)
 [![CodeFactor](https://www.codefactor.io/repository/github/mksipe/shell-script-lib/badge)](https://www.codefactor.io/repository/github/mksipe/shell-script-lib)
