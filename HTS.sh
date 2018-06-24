@@ -4,7 +4,6 @@ if [ $(/usr/bin/id -u) -ne 0 ]; then
     echo "[FAIL] $USER attempted to run the search on $date." | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
     exit
 fi
-echo "POSSIBLE_EXPLOITS most recent check was on $date"
 echo "HTS.sh started on $date" | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
 touch /bin/lib/sh/MK3S/data/Exploit-Search.txt
 chmod 511 /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -394,3 +393,4 @@ whereis Metagoofil | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Nipper-ng | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis pipal | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis RDPY | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+echo "[SUCCESS] HTS.sh was ran on $date" | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
