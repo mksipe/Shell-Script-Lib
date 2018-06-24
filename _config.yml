@@ -10,3 +10,7 @@ minimal_mistakes_skin: "contrast"
 repository: "mksipe/Shell-Script-Lib"
 search: true
 images: true
+google_analytics:
+email: masonsipe0513@gmail.com
+logo: "https://github.com/mksipe/Shell-Script-Lib/blob/master/.github/logo.jpeg"
+url: "https://mksipe.gitub.io" 
