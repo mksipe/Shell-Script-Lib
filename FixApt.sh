@@ -4,4 +4,8 @@ if [ $(/usr/bin/id -u) -ne 0 ]; then
     echo "[FAIL] $USER attempted to run the search on $date." | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
     exit
 fi
-awk -F':' '$3 == 28 {print $4}' /etc/group
+echo "This will forcefully reinitialize apt to fix broken or corrupted packages. Are you sure you want to continue?"
+read continue
+sudo apt install -f -y
+sudo apt update -y
+sudo apt full-upgrade -y
