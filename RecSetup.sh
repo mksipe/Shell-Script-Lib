@@ -67,5 +67,6 @@ apt install glade -y
 notify-send -i /usr/share/icons/gnome/scalable/places/start-here.svg 'SSL Correctly Installed.'
 ./pygui.py
 # Starting MK3SL service file
+mv /bin/lib/sh/MK3S/data/MK3SL.service /etc/systemd/system
 systemctl start MK3SL
 echo "Done"
