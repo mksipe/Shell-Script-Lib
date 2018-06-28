@@ -18,11 +18,11 @@ apt install git -y
 apt install lightdm -y 
 echo "Running Setup Scripts"
 ./Stealth-Mode.sh
-./UFWC.sh
+./UFWC2.sh
 ./umasks.sh
 ./users-groups.sh
 ./User-Auth.sh
-./apache2.sh
+./apache.sh
 ./banners.sh
 ./files.sh
 ./iptables.sh
