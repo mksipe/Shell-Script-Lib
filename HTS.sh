@@ -5,14 +5,12 @@ if [ $(/usr/bin/id -u) -ne 0 ]; then
     echo "[FAIL] $USER attempted to run the search on $date." | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
     exit
 fi
-RED=$(echo "\e[91m")
-WHITE=$(echo -e "\e[97m")
 echo "HTS.sh started on $date" | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
 touch /bin/lib/sh/MK3S/data/Exploit-Search.txt
 chmod 511 /bin/lib/sh/MK3S/data/Exploit-Search.txt
 cat /dev/null > /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "----------Information Gathering-----------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-$RED
+echo "\e[91m"
 whereis acccheck | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis ace-voip | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Amap | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -83,7 +81,7 @@ whereis Wireshark | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis WOL-E | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Xplico | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "\e[0m----------Vulnerability Analysis----------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-$RED
+echo "\e[91m"
 whereis BBQSQL | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis BED | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis cisco-auditing-tool | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -114,7 +112,7 @@ whereis tnscmd10g | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis unix-privesc-check | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Yersinia | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "\e[0m----------Exploitation Tools--------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-$RED
+echo "\e[91m"
 whereis Armitage | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Backdoor Factory | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis BeEF | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -137,7 +135,7 @@ whereis sqlmap | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis THC-IPV6 | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Yersinia | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "\e[0m----------Wireless Attacks----------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-$RED
+echo "\e[91m"
 whereis Airbase-ng | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Aircrack-ng | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Airdecap-ng | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -193,7 +191,7 @@ whereis Wifitap | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Wifite | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis wpaclean | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "\e[0m----------Forensics Tools-----------------|"  | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-$GREY
+echo "\e[91m"
 whereis Binwalk | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis bulk-extractor | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Capstone | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -218,7 +216,7 @@ whereis RegRipper | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Volatility | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Xplico | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "\e[0m----------Web Applications----------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-$RED
+echo "\e[91m"
 whereis apache-users | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Arachni | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis BBQSQL | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -264,7 +262,7 @@ whereis WPScan | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis XSSer | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis zaproxy | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "\e[0m----------Stress Testing------------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-$RED
+echo "\e[91m"
 whereis DHCPig | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis FunkLoad | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis iaxflood | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -280,7 +278,7 @@ whereis Termineter | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis THC-IPV6 | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis THC-SSL-DOS | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "\e[0m----------Sniffing & Spoofing-------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-$RED
+echo "\e[91m"
 whereis Burp Suite | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis DNSChef | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis fiked | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -314,7 +312,7 @@ whereis xspy | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Yersinia | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis zaproxy | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "\e[0m----------Password Attacks----------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-$RED
+echo "\e[91m"
 whereis acccheck | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis BruteSpray | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Burp Suite | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -357,7 +355,7 @@ whereis WebScarab | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis wordlists | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis zaproxy | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "\e[0m----------Maintaining Access--------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-$RED
+echo "\e[91m"
 whereis CryptCat | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Cymothoa | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis dbd | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -377,7 +375,7 @@ whereis Webshells | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Weevely | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Winexe | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "\e[0m----------Hardware Hacking----------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-$RED
+echo "\e[91m"
 whereis android-sdk | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis apktool | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Arduino | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -385,7 +383,7 @@ whereis dex2jar | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Sakis3G | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis smali | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "\e[0m----------Reverse Engineering-------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-$RED
+echo "\e[91m"
 whereis apktool | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis dex2jar | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis diStorm3 | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -398,7 +396,7 @@ whereis smali | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Valgrind | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis YARA | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "\e[0m----------Reporting Tools-----------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-$RED
+echo "\e[91m"
 whereis CaseFile | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis cherrytree | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis CutyCapt | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -409,5 +407,5 @@ whereis Metagoofil | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis Nipper-ng | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis pipal | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis RDPY | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-$WHITE
+echo "\e[0m"
 echo "[SUCCESS] HTS.sh was ran on $date" | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
