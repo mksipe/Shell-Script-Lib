@@ -394,4 +394,13 @@ which metagoofil | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which nipper-ng | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which pipal | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which rdpy | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+echo "----------Other Exploit Devices-----------|" | sudo tee -a bin/lib/sh/MK3S/data/Exploit-Search.txt
+which netcat | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which ssh | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which samba | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which vsftpd | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+whereis postgresql | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which mysql | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+whereis wordpress | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which apache | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "[SUCCESS] HTS.sh was ran on $date" | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
