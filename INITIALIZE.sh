@@ -27,6 +27,8 @@ chmod 755 *.py
 chmod 755 *.db
 chmod 755 *.ksh
 chmod 755 *.service
+chmod 755 *.map
+chmod 755 *.rules
 mv *.sh /Framework
 mv *.md /Framework
 mv *.txt /Framework
@@ -51,6 +53,8 @@ mv *.py /Framework
 mv *.db /Framework
 mv *.ksh /Framework
 mv *.service /Framework
+mv *.map /Framework
+mv *.rules /Framework
 rm -r $(pwd)/Shell-Script-Lib
 cd /Framework
 mkdir /bin/lib 
@@ -78,7 +82,9 @@ mv *.c /bin/lib/sh/MK3S
 mv *.py /bin/lib/sh/MK3S
 mv *.db /bin/lib/sh/MK3S/data
 mv *.ksh /bin/lib/sh/MK3S
-mv *.service /bin/lib/sh/MK3S/data.
+mv *.service /bin/lib/sh/MK3S/data
+mv *.map /bin/lib/sh/MK3S/data
+mv *.rules /bin/lib/sh/MK3S/data
 rm -r /Framework
 touch /bin/lib/sh/MK3S/data/progs.txt
 touch /bin/lib/sh/MK3S/data/AllProcesses.txt
