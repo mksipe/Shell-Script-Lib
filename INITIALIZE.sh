@@ -57,6 +57,8 @@ mv *.map /Framework
 mv *.rules /Framework
 rm -r $(pwd)/Shell-Script-Lib
 cd /Framework
+wget https://www.talosintelligence.com/documents/ip-blacklist
+cat ip-blacklist > badips.db
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
 mkdir /bin/lib/sh/MK3S
