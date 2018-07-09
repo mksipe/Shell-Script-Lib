@@ -58,7 +58,10 @@ mv *.rules /Framework
 rm -r $(pwd)/Shell-Script-Lib
 cd /Framework
 wget https://www.talosintelligence.com/documents/ip-blacklist
+wget https://cve.mitre.org/data/downloads/allitems.csv
 cat ip-blacklist > badips.db
+touch cve.db
+cat allitems.csv > cve.db
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
 mkdir /bin/lib/sh/MK3S
