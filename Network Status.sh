@@ -1,6 +1,6 @@
 #!/bin/sh
 
-Dns=$(cat /etc/resolv.conf)
+Dns=$(cat /etc/resolv.conf | grep name)
 DGW=$(netstat -nr)
 IP=$(hostname -I)
 date=$(date -u)

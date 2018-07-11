@@ -59,6 +59,12 @@ rm -r $(pwd)/Shell-Script-Lib
 cd /Framework
 wget https://www.talosintelligence.com/documents/ip-blacklist
 wget https://cve.mitre.org/data/downloads/allitems.csv
+wget https://www.snort.org/downloads/community/snort3-community-rules.tar.gz
+tar -xzf snort3-community-rules.tar.gz
+touch Snort.db
+cd snort3-community-rules
+cat snort3-community.rules > /Framework/Snort.db
+cd /Framework
 cat ip-blacklist > badips.db
 touch cve.db
 cat allitems.csv > cve.db

@@ -7,7 +7,7 @@ fe=$(free)
 stat=$(vmstat)
 disk_space=$(df)
 H=$(hostname)
-IP=$(hostname -i)
+IP=$(hostname -I)
 bit=$(lscpu)
 krt=$(/sbin/route -n)
 touch /bin/lib/sh/MK3S/data/SYSINF.txt
