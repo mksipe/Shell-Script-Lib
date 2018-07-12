@@ -77,5 +77,5 @@ $IPT -I FORWARD -j droplist
 
 # Save rules
 iptables-save > /etc/iptables/rules.v4
-
+sed -e 's/^/ALL: /' /bin/lib/sh/MK3S/data/badips.db >> /etc/hosts.deny
 echo "[SUCCESS] iptabes.sh was ran on $date" | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
