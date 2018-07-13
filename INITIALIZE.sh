@@ -60,6 +60,7 @@ cd /Framework
 wget https://www.talosintelligence.com/documents/ip-blacklist
 wget https://cve.mitre.org/data/downloads/allitems.csv
 wget https://www.snort.org/downloads/community/snort3-community-rules.tar.gz
+git clone https://github.com/berzerk0/Probable-Wordlists
 tar -xzf snort3-community-rules.tar.gz
 touch Snort.db
 cd snort3-community-rules
@@ -68,6 +69,22 @@ cd /Framework
 cat ip-blacklist > badips.db
 touch cve.db
 cat allitems.csv > cve.db
+touch wordlist.db
+cd Probable-Wordlists
+cd /Dictionary-Style/Technical_and_Default
+cat Domains_ProbWL.txt >> /Framework/wordlist.db
+cat Password_Default_ProbWl.txt >> /Framework/Wordlists.db
+cat tld.txt >> /Framework/Wordlists.db
+cat Username_Default_ProbWL.txt >> /Framework/wordlist.db
+cd /Framework/Probable-Wordlists/Real-Passwords
+cat Top12Thousand-probable-v2.txt >> /Framework/wordlist.db
+cat Top304Thousand-probable-v2.txt >> /Framework/wordlist.db
+cat Top207-probable-v2.txt >> /Framework/wordlist.db
+cd /WPA-Length
+cat Top447-WPA-probable-v2.txt >> /Framework/wordlist.db
+cat Top204Thousand-WPA-Probable-v2.txt >> /Framework/wordlist.db
+cat Top4800-WPA-probable-v2.txt >> /Framework/wordlist.db
+cat Top62-WPA-probable-v2.txt >> /Framework/wordlist.db
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
 mkdir /bin/lib/sh/MK3S

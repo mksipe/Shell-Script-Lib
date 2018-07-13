@@ -27,8 +27,7 @@ ufw deny 31337
 ufw allow 8200
 #!/bin/sh
 touch defalultUFW.txt
-cp /etc/ufw/before.rules >> defalultUFW.txt
-mv defalultUFW.txt /bin/lib/sh
+cp /etc/ufw/before.rules >> /bin/lib/sh/MK3S/data/UFW.old
 -A ufw-before-input -p icmp --icmp-type echo-request -j DROP >> /etc/ufw/before.rules
 sudo ufw disable
 sudo ufw enable
