@@ -73,8 +73,8 @@ touch wordlist.db
 cd Probable-Wordlists
 cd /Dictionary-Style/Technical_and_Default
 cat Domains_ProbWL.txt >> /Framework/wordlist.db
-cat Password_Default_ProbWl.txt >> /Framework/Wordlists.db
-cat tld.txt >> /Framework/Wordlists.db
+cat Password_Default_ProbWl.txt >> /Framework/wordlist/.db
+cat tld.txt >> /Framework/wordlist.db
 cat Username_Default_ProbWL.txt >> /Framework/wordlist.db
 cd /Framework/Probable-Wordlists/Real-Passwords
 cat Top12Thousand-probable-v2.txt >> /Framework/wordlist.db
@@ -85,6 +85,7 @@ cat Top447-WPA-probable-v2.txt >> /Framework/wordlist.db
 cat Top204Thousand-WPA-Probable-v2.txt >> /Framework/wordlist.db
 cat Top4800-WPA-probable-v2.txt >> /Framework/wordlist.db
 cat Top62-WPA-probable-v2.txt >> /Framework/wordlist.db
+rm -r /bin/lib/sh/MK3S
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
 mkdir /bin/lib/sh/MK3S
