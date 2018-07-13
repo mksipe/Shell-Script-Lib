@@ -5,6 +5,7 @@ if [ $(/usr/bin/id -u) -ne 0 ]; then
 fi
 DATE=$(date -u)
 echo -e "Initializing Directories"
+rm -r /bin/lib/sh/MK3S
 mkdir /Framework
 chmod 755 *.sh
 chmod 755 *.md
@@ -85,12 +86,13 @@ cat Top447-WPA-probable-v2.txt >> /Framework/wordlist.db
 cat Top204Thousand-WPA-Probable-v2.txt >> /Framework/wordlist.db
 cat Top4800-WPA-probable-v2.txt >> /Framework/wordlist.db
 cat Top62-WPA-probable-v2.txt >> /Framework/wordlist.db
-rm -r /bin/lib/sh/MK3S
+cd /Framework
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
 mkdir /bin/lib/sh/MK3S
 mkdir /bin/lib/sh/MK3S/logs
 mkdir /bin/lib/sh/MK3S/data
+chmod 755 *.db
 mv *.log /bin/lib/MK3S/logs
 mv *.sh /bin/lib/sh/MK3S
 mv *.conf /bin/lib/sh/MK3S
@@ -116,7 +118,7 @@ mv *.map /bin/lib/sh/MK3S/data
 mv *.rules /bin/lib/sh/MK3S/data
 rm -r /Framework
 touch /bin/lib/sh/MK3S/data/progs.txt
-touch /bin/lib/sh/MK3S/data/AllProcesses.txt
+touch /bin/lib/sh/MK3Scd //data/AllProcesses.txt
 compgen -c | sudo tee -a /bin/lib/sh/MK3S/data/progs.txt
 ps -aux | sudo tee -a /bin/lib/sh/MK3S/data/AllProcesses.txt
 clear
