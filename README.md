@@ -55,14 +55,20 @@ The script used in this command is optional. The command to run this updates pac
 
 >UPDATE
  
-1 `git pull`
+1 `cd /bin/lib/sh/MK3S/maintain`
 
-2 `chmod 755 INITIALIZE.sh`
+2 `git pull`
 
-3 `./INITIALIZE.sh`
+3 `chmod 755 INITIALIZE.sh`
 
+4 `./INITIALIZE.sh`
+ 
+ OR 
+
+1 `cd /bin/lib/sh/MK3S`
+
+2 `./Update.sh`
 
 # BE AWARE!
 
 The System Information file gives out information about your system. (duh) Keep it in a secured location on your file system. The scripts can now alter information on a system. So be aware of this.
-

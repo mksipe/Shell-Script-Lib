@@ -42,4 +42,4 @@ echo "Installling crontab"
 echo "[SUCCESS] $USER created a backup on $date" | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
 echo "Done"
 
-echo [SUCCESS] Backup.sh was ran by $USER on $(date -u) | tee -a /bin/lib/sh/MK3S/data/MK3S.log
+echo [SUCCESS] Backup.sh was ran by $USER on $(date -u) | tee -a /bin/lib/sh/MK3S/logs/MK3S.log

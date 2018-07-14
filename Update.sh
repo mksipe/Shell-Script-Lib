@@ -29,4 +29,7 @@ aptitude upgrade & spinner
 # Update Repos
 
 
-git pull & spinner
+cd /bin/lib/sh/MK3S/maintain 
+git pull 
+chmod 755 INITAILIZE.sh
+./INITAILIZE.sh & spinner

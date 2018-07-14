@@ -1,208 +1,213 @@
 #!/bin/sh
-echo 'Results'
-find / -name '*.mp3'
-find / -name '*.mp4'
-find / -name '*.aac'
-find / -name '*.mebm'
-find / -name '*.mkv'
-find / -name '*.flv'
-find / -name '*.vob'
-find / -name '*.ogv'
-find / -name '*.ogg'
-find / -name '*.drc'
-find / -name '*.gif'
-find / -name '*.gifv'
-find / -name '*.mng'
-find / -name '*.avi'
-find / -name '*.mov'
-find / -name '*.qt'
-find / -name '*.wmv'
-find / -name '*.yuv'
-find / -name '*.rm'
-find / -name '*.rmvb'
-find / -name '*.asf'
-find / -name '*.amv'
-find / -name '*.m4p'
-find / -name '*.mpg'
-find / -name '*.mp2'
-find / -name '*.mpeg'
-find / -name '*.mpe'
-find / -name '*.mpv'
-find / -name '*.m2p'
-find / -name '*.3gp'
-find / -name '*.3g2'
-find / -name '*.mxf'
-find / -name '*.roq'
-find / -name '*.nsv'
-find / -name '*.f4v'
-find / -name '*.f4p'
-find / -name '*.f4a'
-find / -name '*.f4b'
-find / -name '*.3gp'
-find / -name '*.aa'
-find / -name '*.aax'
-find / -name '*.act'
-find / -name '*.aiff'
-find / -name '*.amr'
-find / -name '*.ape'
-find / -name '*.au'
-find / -name '*.awb'
-find / -name '*.dct'
-find / -name '*.dss'
-find / -name '*.dvf'
-find / -name '*.flac'
-find / -name '*.gsm'
-find / -name '*.iklax'
-find / -name '*.ivs'
-find / -name '*.m4a'
-find / -name '*.m4b'
-find / -name '*.mmf'
-find / -name '*.mpc'
-find / -name '*.msv'
-find / -name '*.oga'
-find / -name '*.mogg'
-find / -name '*.opus'
-find / -name '*.ra'
-find / -name '*.rm'
-find / -name '*.raw'
-find / -name '*.s1n'
-find / -name '*.tta'
-find / -name '*.vox'
-find / -name '*.wma'
-find / -name '*.wv'
-find / -name '*.webm'
-find / -name '*.8svx'
-find / -name '*.wav'
+echo "Results"
+if [ $# -ne 1 ] ; then
+    echo "Usage: ./Mediascan.sh <File Extension (.mp3, .mov, etc.)> "
+    echo " Will search system for file extension given."
+exit 255
+fi
+find / -name "*.mp3" | grep $1
+find / -name "*.mp4" | grep $1
+find / -name "*.aac" | grep $1
+find / -name "*.mebm" | grep $1
+find / -name "*.mkv" | grep $1
+find / -name "*.flv" | grep $1
+find / -name "*.vob" | grep $1
+find / -name "*.ogv" | grep $1
+find / -name "*.ogg" | grep $1
+find / -name "*.drc" | grep $1
+find / -name "*.gif" | grep $1
+find / -name "*.gifv" | grep $1
+find / -name "*.mng" | grep $1
+find / -name "*.avi" | grep $1
+find / -name "*.mov" | grep $1
+find / -name "*.qt" | grep $1
+find / -name "*.wmv" | grep $1
+find / -name "*.yuv" | grep $1
+find / -name "*.rm" | grep $1
+find / -name "*.rmvb" | grep $1
+find / -name "*.asf" | grep $1
+find / -name "*.amv" | grep $1
+find / -name "*.m4p" | grep $1
+find / -name "*.mpg" | grep $1
+find / -name "*.mp2" | grep $1
+find / -name "*.mpeg" | grep $1
+find / -name "*.mpe" | grep $1
+find / -name "*.mpv" | grep $1
+find / -name "*.m2p" | grep $1
+find / -name "*.3gp" | grep $1
+find / -name "*.3g2" | grep $1
+find / -name "*.mxf" | grep $1
+find / -name "*.roq" | grep $1
+find / -name "*.nsv" | grep $1
+find / -name "*.f4v" | grep $1
+find / -name "*.f4p" | grep $1
+find / -name "*.f4a" | grep $1
+find / -name "*.f4b" | grep $1
+find / -name "*.3gp" | grep $1
+find / -name "*.aa" | grep $1
+find / -name "*.aax" | grep $1
+find / -name "*.act" | grep $1
+find / -name "*.aiff" | grep $1
+find / -name "*.amr" | grep $1
+find / -name "*.ape" | grep $1
+find / -name "*.au" | grep $1
+find / -name "*.awb" | grep $1
+find / -name "*.dct" | grep $1
+find / -name "*.dss" | grep $1
+find / -name "*.dvf" | grep $1
+find / -name "*.flac" | grep $1
+find / -name "*.gsm" | grep $1
+find / -name "*.iklax" | grep $1
+find / -name "*.ivs" | grep $1
+find / -name "*.m4a" | grep $1
+find / -name "*.m4b" | grep $1
+find / -name "*.mmf" | grep $1
+find / -name "*.mpc" | grep $1
+find / -name "*.msv" | grep $1
+find / -name "*.oga" | grep $1
+find / -name "*.mogg" | grep $1
+find / -name "*.opus" | grep $1
+find / -name "*.ra" | grep $1
+find / -name "*.rm" | grep $1
+find / -name "*.raw" | grep $1
+find / -name "*.s1n" | grep $1
+find / -name "*.tta" | grep $1
+find / -name "*.vox" | grep $1
+find / -name "*.wma" | grep $1
+find / -name "*.wv" | grep $1
+find / -name "*.webm" | grep $1
+find / -name "*.8svx" | grep $1
+find / -name "*.wav" | grep $1
 echo "Search from functions file"
-    find / -name '*.a' # Static library
-    find / -name '*.au' # Audio file
-    find / -name '*.bin' # Binary file
-    find / -name '*.bz2' # File compressed with bzip2
-    find / -name '*.c' # A C source file
-    find / -name '*.conf' # A configuration file extension
-    find / -name '*.cpp' # C++ source file
-    find / -name '*.deb' # Debian package
-    find / -name '*.diff' # A file containing instructions to apply a patch from a base version to another from a single file or project
-    find / -name '*.dsc' # A Debian source information file
-    find / -name '*.ebuild' # Bash script used to install programs through the portage system
-    find / -name '*.el' # Emacs lisp code file
-    find / -name '*.elc' # compiled emacs lisp code file
-    find / -name '*.gif' # a graphical or image file
-    find / -name '*.h' # Header file
-    find / -name '*.html' # hypertext markup language file
-    find / -name '*.htm' # hypertext markup language file
-    find / -name '*.iso' # Isolation file, usually used to act as a copy of CD-ROM or DVD in the ISO-9660 filesystem format
-    find / -name '*.jpg' # graphical image or file
-    find / -name '*.ko' # The kernel module extension for the 2.6.x series kernel
-    find / -name '*.la' # a file created by libtool to aide in using the library
-    find / -name '*.lo' # The intermediate file of a library that is being compiled
-    find / -name '*.lock' # Locked file that prevents the use of another file
-    find / -name '*.log' # A system or program's log file
-    find / -name '*.m4' # M4 macro code file
-    find / -name '*.o' # A profile that is being compiled
-    find / -name '*.pdf' # electronic image of a document
-    find / -name '*.php' # A php serverside script
-    find / -name '*.pid' # A file that contains a program's PID
-    find / -name '*.pl' # A perl script
-    find / -name '*.png' # A graphical image
-    find / -name '*.ps' # A postscript file
-    find / -name '*.py' # Python script
-    find / -name '*.rpm' # A rpm package
-    find / -name '*.s' # Assembly source code file
-    find / -name '*.sh' # shell script 
-    find / -name '*.so' # A shared object
-    find / -name '*.src' # A source code file
-    find / -name '*.sfs' # A squashfs filesystem 
-    find / -name '*.tar' # Zipped file using tar
-    find / -name '*.tar.bz2' # zipped with tar and bz2
-    find / -name '*.tbz2' # File zipped with tbz2
-    find / -name '*.tar.gz' # File zipped with tar and GZ
-    find / -name '*.tcl' # TCL script
-    find / -name '*.tgz' # Compressed file per file compression.
-    find / -name '*.txt' # Text file using ASCII 
-    find / -name '*.xbm' # xWindows Bitmap Image
-    find / -name '*.xpm' # image file
-    find / -name '*.xcf.gz' # GIMP image
-    find / -name '*.xcf' # GIMP image
-    find / -name '*.xwd' # A screenshot of a window taken with xwd
-    find / -name '*.zip' # A zipped file
-    find / -name '*.wav' # a wav file format
-    find / -name '*.mp3' # MP3 audio file
-    find / -name '*.mp4' # MP4 audio file
-    find / -name '*.aac' # Advanced Audio Cue File
-    find / -name '*.mebm'
-    find / -name '*.mkv'
-    find / -name '*.flv'
-    find / -name '*.vob'
-    find / -name '*.ogv'
-    find / -name '*.ogg'
-    find / -name '*.drc'
-    find / -name '*.gif'
-    find / -name '*.gifv'
-    find / -name '*.mng'
-    find / -name '*.avi'
-    find / -name '*.mov'
-    find / -name '*.qt'
-    find / -name '*.wmv'
-    find / -name '*.yuv'
-    find / -name '*.rm'
-    find / -name '*.rmvb'
-    find / -name '*.asf'
-    find / -name '*.amv'
-    find / -name '*.m4p'
-    find / -name '*.mpg'
-    find / -name '*.mp2'
-    find / -name '*.mpeg'
-    find / -name '*.mpe'
-    find / -name '*.mpv'
-    find / -name '*.m2p'
-    find / -name '*.3gp'
-    find / -name '*.3g2'
-    find / -name '*.mxf'
-    find / -name '*.roq'
-    find / -name '*.nsv'
-    find / -name '*.f4v'
-    find / -name '*.f4p'
-    find / -name '*.f4a'
-    find / -name '*.f4b'
-    find / -name '*.3gp'
-    find / -name '*.aa'
-    find / -name '*.aax'
-    find / -name '*.act'
-    find / -name '*.aiff'
-    find / -name '*.amr'
-    find / -name '*.ape'
-    find / -name '*.au'
-    find / -name '*.awb'
-    find / -name '*.dct'
-    find / -name '*.dss'
-    find / -name '*.dvf'
-    find / -name '*.flac'
-    find / -name '*.gsm'
-    find / -name '*.iklax'
-    find / -name '*.ivs'
-    find / -name '*.m4a'
-    find / -name '*.m4b'
-    find / -name '*.mmf'
-    find / -name '*.mpc'
-    find / -name '*.msv'
-    find / -name '*.oga'
-    find / -name '*.mogg'
-    find / -name '*.opus'
-    find / -name '*.ra'
-    find / -name '*.rm'
-    find / -name '*.raw'
-    find / -name '*.s1n'
-    find / -name '*.tta'
-    find / -name '*.vox'
-    find / -name '*.wma'
-    find / -name '*.wv'
-    find / -name '*.webm'
-    find / -name '*.8svx'
-    find / -name '*.wav'
-    find / -name '*.webp'
-    find / -name '*.svg'
-    find / -name '*.ai'
-    find / -name '*.eps'
-echo 'Done'
+    find / -name "*.a" | grep $1 # Static library
+    find / -name "*.au" | grep $1 # Audio file
+    find / -name "*.bin" | grep $1 # Binary file
+    find / -name "*.bz2" | grep $1 # File compressed with bzip2
+    find / -name "*.c" | grep $1 # A C source file
+    find / -name "*.conf" | grep $1 # A configuration file extension
+    find / -name "*.cpp" | grep $1 # C++ source file
+    find / -name "*.deb" | grep $1 # Debian package
+    find / -name "*.diff" | grep $1 # A file containing instructions to apply a patch from a base version to another from a single file or project
+    find / -name "*.dsc" | grep $1 # A Debian source information file
+    find / -name "*.ebuild" | grep $1 # Bash script used to install programs through the portage system
+    find / -name "*.el" | grep $1 # Emacs lisp code file
+    find / -name "*.elc" | grep $1 # compiled emacs lisp code file
+    find / -name "*.gif" | grep $1 # a graphical or image file
+    find / -name "*.h" | grep $1 # Header file
+    find / -name "*.html" | grep $1 # hypertext markup language file
+    find / -name "*.htm" | grep $1 # hypertext markup language file
+    find / -name "*.iso" | grep $1 # Isolation file, usually used to act as a copy of CD-ROM or DVD in the ISO-9660 filesystem format
+    find / -name "*.jpg" | grep $1 # graphical image or file
+    find / -name "*.ko" | grep $1 # The kernel module extension for the 2.6.x series kernel
+    find / -name "*.la" | grep $1 # a file created by libtool to aide in using the library
+    find / -name "*.lo" | grep $1 # The intermediate file of a library that is being compiled
+    find / -name "*.lock" | grep $1 # Locked file that prevents the use of another file
+    find / -name "*.log" | grep $1 # A system or program" | grep $1s log file
+    find / -name "*.m4" | grep $1 # M4 macro code file
+    find / -name "*.o" | grep $1 # A profile that is being compiled
+    find / -name "*.pdf" | grep $1 # electronic image of a document
+    find / -name "*.php" | grep $1 # A php serverside script
+    find / -name "*.pid" | grep $1 # A file that contains a program" | grep $1s PID
+    find / -name "*.pl" | grep $1 # A perl script
+    find / -name "*.png" | grep $1 # A graphical image
+    find / -name "*.ps" | grep $1 # A postscript file
+    find / -name "*.py" | grep $1 # Python script
+    find / -name "*.rpm" | grep $1 # A rpm package
+    find / -name "*.s" | grep $1 # Assembly source code file
+    find / -name "*.sh" | grep $1 # shell script 
+    find / -name "*.so" | grep $1 # A shared object
+    find / -name "*.src" | grep $1 # A source code file
+    find / -name "*.sfs" | grep $1 # A squashfs filesystem 
+    find / -name "*.tar" | grep $1 # Zipped file using tar
+    find / -name "*.tar.bz2" | grep $1 # zipped with tar and bz2
+    find / -name "*.tbz2" | grep $1 # File zipped with tbz2
+    find / -name "*.tar.gz" | grep $1 # File zipped with tar and GZ
+    find / -name "*.tcl" | grep $1 # TCL script
+    find / -name "*.tgz" | grep $1 # Compressed file per file compression.
+    find / -name "*.txt" | grep $1 # Text file using ASCII 
+    find / -name "*.xbm" | grep $1 # xWindows Bitmap Image
+    find / -name "*.xpm" | grep $1 # image file
+    find / -name "*.xcf.gz" | grep $1 # GIMP image
+    find / -name "*.xcf" | grep $1 # GIMP image
+    find / -name "*.xwd" | grep $1 # A screenshot of a window taken with xwd
+    find / -name "*.zip" | grep $1 # A zipped file
+    find / -name "*.wav" | grep $1 # a wav file format
+    find / -name "*.mp3" | grep $1 # MP3 audio file
+    find / -name "*.mp4" | grep $1 # MP4 audio file
+    find / -name "*.aac" | grep $1 # Advanced Audio Cue File
+    find / -name "*.mebm" | grep $1
+    find / -name "*.mkv" | grep $1
+    find / -name "*.flv" | grep $1
+    find / -name "*.vob" | grep $1
+    find / -name "*.ogv" | grep $1
+    find / -name "*.ogg" | grep $1
+    find / -name "*.drc" | grep $1
+    find / -name "*.gif" | grep $1
+    find / -name "*.gifv" | grep $1
+    find / -name "*.mng" | grep $1
+    find / -name "*.avi" | grep $1
+    find / -name "*.mov" | grep $1
+    find / -name "*.qt" | grep $1
+    find / -name "*.wmv" | grep $1
+    find / -name "*.yuv" | grep $1
+    find / -name "*.rm" | grep $1
+    find / -name "*.rmvb" | grep $1
+    find / -name "*.asf" | grep $1
+    find / -name "*.amv" | grep $1
+    find / -name "*.m4p" | grep $1
+    find / -name "*.mpg" | grep $1
+    find / -name "*.mp2" | grep $1
+    find / -name "*.mpeg" | grep $1
+    find / -name "*.mpe" | grep $1
+    find / -name "*.mpv" | grep $1
+    find / -name "*.m2p" | grep $1
+    find / -name "*.3gp" | grep $1
+    find / -name "*.3g2" | grep $1
+    find / -name "*.mxf" | grep $1
+    find / -name "*.roq" | grep $1
+    find / -name "*.nsv" | grep $1
+    find / -name "*.f4v" | grep $1
+    find / -name "*.f4p" | grep $1
+    find / -name "*.f4a" | grep $1
+    find / -name "*.f4b" | grep $1
+    find / -name "*.3gp" | grep $1
+    find / -name "*.aa" | grep $1
+    find / -name "*.aax" | grep $1
+    find / -name "*.act" | grep $1
+    find / -name "*.aiff" | grep $1
+    find / -name "*.amr" | grep $1
+    find / -name "*.ape" | grep $1
+    find / -name "*.au" | grep $1
+    find / -name "*.awb" | grep $1
+    find / -name "*.dct" | grep $1
+    find / -name "*.dss" | grep $1
+    find / -name "*.dvf" | grep $1
+    find / -name "*.flac" | grep $1
+    find / -name "*.gsm" | grep $1
+    find / -name "*.iklax" | grep $1
+    find / -name "*.ivs" | grep $1
+    find / -name "*.m4a" | grep $1
+    find / -name "*.m4b" | grep $1
+    find / -name "*.mmf" | grep $1
+    find / -name "*.mpc" | grep $1
+    find / -name "*.msv" | grep $1
+    find / -name "*.oga" | grep $1
+    find / -name "*.mogg" | grep $1
+    find / -name "*.opus" | grep $1
+    find / -name "*.ra" | grep $1
+    find / -name "*.rm" | grep $1
+    find / -name "*.raw" | grep $1
+    find / -name "*.s1n" | grep $1
+    find / -name "*.tta" | grep $1
+    find / -name "*.vox" | grep $1
+    find / -name "*.wma" | grep $1
+    find / -name "*.wv" | grep $1
+    find / -name "*.webm" | grep $1
+    find / -name "*.8svx" | grep $1
+    find / -name "*.wav" | grep $1
+    find / -name "*.webp" | grep $1
+    find / -name "*.svg" | grep $1
+    find / -name "*.ai" | grep $1
+    find / -name "*.eps" | grep $1
+echo " | grep $1Done" | grep $1
 echo [SUCCESS] Mediascan.sh ran by $USER on $(date -u) | tee -a /bin/lib/sh/MK3S/data/MK3S.log

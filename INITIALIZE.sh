@@ -5,7 +5,6 @@ if [ $(/usr/bin/id -u) -ne 0 ]; then
 fi
 DATE=$(date -u)
 echo -e "Initializing Directories"
-rm -r /bin/lib/sh/MK3S
 mkdir /Framework
 chmod 755 *.sh
 chmod 755 *.md
@@ -60,6 +59,7 @@ mv *.map /Framework
 mv *.rules /Framework
 sudo mv .git /Framework
 sudo mv .github /Framework
+rm -r /bin/lib/sh/MK3S
 rm -r $(pwd)/Shell-Script-Lib
 cd /Framework
 wget https://www.talosintelligence.com/documents/ip-blacklist

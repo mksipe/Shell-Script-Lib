@@ -40,3 +40,4 @@ echo 1 | sudo tee /proc/sys/net/ipv4/icmp_echo_ignore_all
 echo "net.ipv4.icmp_echo_ignore_all = 1" | sudo tee /etc/sysctl.conf
 sudo sysctl -p
 ufw enable
+echo [SUCCESS] Backup.sh was ran by $USER on $(date -u) | tee -a /bin/lib/sh/MK3S/logs/MK3S.log
