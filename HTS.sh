@@ -412,5 +412,5 @@ which sysinternals | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which scapy | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which nemisis | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which www | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-echo "----------Status--------------------------|"
+echo "----------Status--------------------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "[SUCCESS] HTS.sh was ran on $date" | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log

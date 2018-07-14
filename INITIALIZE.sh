@@ -59,7 +59,6 @@ mv *.map /Framework
 mv *.rules /Framework
 sudo mv .git /Framework
 sudo mv .github /Framework
-rm -r /bin/lib/sh/MK3S
 rm -r $(pwd)/Shell-Script-Lib
 cd /Framework
 wget https://www.talosintelligence.com/documents/ip-blacklist

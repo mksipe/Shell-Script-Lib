@@ -62,12 +62,24 @@ The script used in this command is optional. The command to run this updates pac
 3 `chmod 755 INITIALIZE.sh`
 
 4 `./INITIALIZE.sh`
+
+5 `cd /bin/lib/sh/MK3S`
+
+6 `./INITIALIZE.sh` 
  
  OR 
 
 1 `cd /bin/lib/sh/MK3S`
 
 2 `./Update.sh`
+
+>Hard Reset
+
+1 `git reset --hard`
+
+2 `chmod 755 INITALIZE.sh`
+
+3 `./INITIALIZE.sh`
 
 # BE AWARE!
 

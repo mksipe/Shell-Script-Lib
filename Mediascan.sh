@@ -1,5 +1,5 @@
 #!/bin/sh
-echo "Results"
+echo "Results, This may take a while..."
 if [ $# -ne 1 ] ; then
     echo "Usage: ./Mediascan.sh <File Extension (.mp3, .mov, etc.)> "
     echo " Will search system for file extension given."
@@ -209,5 +209,5 @@ echo "Search from functions file"
     find / -name "*.svg" | grep $1
     find / -name "*.ai" | grep $1
     find / -name "*.eps" | grep $1
-echo " | grep $1Done" | grep $1
+echo "Done"
 echo [SUCCESS] Mediascan.sh ran by $USER on $(date -u) | tee -a /bin/lib/sh/MK3S/data/MK3S.log
