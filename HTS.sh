@@ -403,4 +403,14 @@ whereis postgresql | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which mysql | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis wordpress | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which apache | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which xhydra | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which ettercap | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which zenmap | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which tcpdump | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which BackTrack | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which sysinternals | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which scapy | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which nemisis | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which www | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+echo "----------Status--------------------------|"
 echo "[SUCCESS] HTS.sh was ran on $date" | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log

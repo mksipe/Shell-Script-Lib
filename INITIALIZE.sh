@@ -30,6 +30,8 @@ chmod 755 *.ksh
 chmod 755 *.service
 chmod 755 *.map
 chmod 755 *.rules
+chmod 755 .git 
+chmod 755 .github
 mv *.sh /Framework
 mv *.md /Framework
 mv *.txt /Framework
@@ -56,6 +58,8 @@ mv *.ksh /Framework
 mv *.service /Framework
 mv *.map /Framework
 mv *.rules /Framework
+sudo mv .git /Framework
+sudo mv .github /Framework
 rm -r $(pwd)/Shell-Script-Lib
 cd /Framework
 wget https://www.talosintelligence.com/documents/ip-blacklist
@@ -116,9 +120,12 @@ mv *.ksh /bin/lib/sh/MK3S
 mv *.service /bin/lib/sh/MK3S/data
 mv *.map /bin/lib/sh/MK3S/data
 mv *.rules /bin/lib/sh/MK3S/data
+mkdir /bin/lib/sh/MK3S/maintain
+sudo mv .git /bin/lib/sh/MK3S/maintain
+sudo mv .github /bin/lib/sh/MK3S/maintain
 rm -r /Framework
 touch /bin/lib/sh/MK3S/data/progs.txt
-touch /bin/lib/sh/MK3Scd //data/AllProcesses.txt
+touch /bin/lib/sh/MK3S/data/AllProcesses.txt
 compgen -c | sudo tee -a /bin/lib/sh/MK3S/data/progs.txt
 ps -aux | sudo tee -a /bin/lib/sh/MK3S/data/AllProcesses.txt
 clear
