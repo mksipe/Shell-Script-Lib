@@ -90,12 +90,34 @@ cat Top204Thousand-WPA-Probable-v2.txt >> /Framework/wordlist.db
 cat Top4800-WPA-probable-v2.txt >> /Framework/wordlist.db
 cat Top62-WPA-probable-v2.txt >> /Framework/wordlist.db
 cd /Framework
+touch auth.log.bak
+cat /var/log/auth.log > auth.log.bak
+touch messages.log.bak
+cat /var/log/messages.log > messages.log.bak
+touch boot.log.bak
+cat /var/log/boot.log > boot.log.bak
+touch dmesg.log.bak
+cat /var/log/dmesg > dmesg.log.bak
+touch kern.log.bak
+cat /var/log/kern.log > kern.log.bak
+touch faillog.log.bak
+cat /var/log/faillog > faillog.log.bak
+touch cron.log.bak
+cat /var/log/cron > cron.log.bak
+touch yum.log.bak
+cat /var/log/yum.log > yum.log.bak
+touch mail.log.bak
+cat /var/log/mail.log > mail.log.bak
+touch mysqld.log.bak 
+cat /var/log/mysqld.log > mysqld.log.bak
 mkdir /bin/lib 
 mkdir /bin/lib/sh 
 mkdir /bin/lib/sh/MK3S
 mkdir /bin/lib/sh/MK3S/logs
 mkdir /bin/lib/sh/MK3S/data
+mkdir /bin/lib/sh/MK3S/data/logfiles
 chmod 755 *.db
+chmod 755 *.bak
 mv *.log /bin/lib/MK3S/logs
 mv *.sh /bin/lib/sh/MK3S
 mv *.conf /bin/lib/sh/MK3S
@@ -119,6 +141,7 @@ mv *.ksh /bin/lib/sh/MK3S
 mv *.service /bin/lib/sh/MK3S/data
 mv *.map /bin/lib/sh/MK3S/data
 mv *.rules /bin/lib/sh/MK3S/data
+mv *.bak /bin/lib/sh/MK3S/data/logfiles
 mkdir /bin/lib/sh/MK3S/maintain
 sudo mv .git /bin/lib/sh/MK3S/maintain
 sudo mv .github /bin/lib/sh/MK3S/maintain

@@ -416,5 +416,5 @@ which setoolkit | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which tor | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which torsocks | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which BeEF | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-echo "----------Status--------------------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+echo "------------------------------------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "[SUCCESS] HTS.sh was ran on $date" | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
