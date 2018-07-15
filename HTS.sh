@@ -321,7 +321,7 @@ which hash-identifier | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which hashcat | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which hexorbase | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which THC-Hydra | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-which john the ripper | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which john | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which johnny | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which keimpx | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which maltego teeth | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -394,15 +394,20 @@ which metagoofil | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which nipper-ng | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which pipal | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which rdpy | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-echo "----------Other Exploit Devices-----------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+echo "----------Backdoors-----------------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which netcat | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which ssh | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-which samba | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which vsftpd | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+echo "----------Remote Share Services-----------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which samba | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+echo "----------Database Systems----------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis postgresql | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which mysql | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+echo "----------Web Services--------------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis wordpress | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which apache | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which www | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+echo "----------Other Known Tools---------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which xhydra | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which ettercap | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which zenmap | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -411,7 +416,6 @@ which BackTrack | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which sysinternals | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which scapy | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which nemisis | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-which www | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which setoolkit | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which tor | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which torsocks | grep / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
