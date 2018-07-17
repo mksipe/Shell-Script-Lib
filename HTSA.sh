@@ -395,9 +395,10 @@ which nipper-ng && man nipper-ng | cat | head -n 4 | grep -i nipper | tee -a /bi
 which pipal && man pipal | cat | head -n 4 | grep -i pipal | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which rdpy && man rdpy | cat | head -n 4 | grep -i rdpy | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "----------Backdoors-----------------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-which netcat && man netcat  | cat | head -n 4 | grep -i netcat | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which netcat && man netcat | cat | head -n 4 | grep -i netcat | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which ssh && man ssh  | cat | head -n 4 | grep -i ssh | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which vsftpd | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which telnet && man telnet | cat | head -n 4 | grep -i netcat | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "----------Remote Share Services-----------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which samba && man samba  | cat | head -n 4 | grep -i samba | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "----------Database Systems----------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -814,5 +815,6 @@ which setoolkit | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which tor | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which torsocks | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which BeEF | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which telnet | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "------------------------------------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "[SUCCESS] HTSA.sh was ran on $date" | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
