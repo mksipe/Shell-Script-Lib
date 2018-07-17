@@ -150,5 +150,6 @@ touch /bin/lib/sh/MK3S/data/progs.txt
 touch /bin/lib/sh/MK3S/data/AllProcesses.txt
 compgen -c | sudo tee -a /bin/lib/sh/MK3S/data/progs.txt
 ps -aux | sudo tee -a /bin/lib/sh/MK3S/data/AllProcesses.txt
+chmod 511 /bin/lib/sh
 clear
 echo "Software installed by $USER on $DATE" | sudo tee /bin/lib/sh/MK3S/Version.txt
