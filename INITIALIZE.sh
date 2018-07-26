@@ -116,6 +116,16 @@ mkdir /bin/lib/sh/MK3S
 mkdir /bin/lib/sh/MK3S/logs
 mkdir /bin/lib/sh/MK3S/data
 mkdir /bin/lib/sh/MK3S/data/logfiles
+cat /etc/passwd >> UserMGMT.conf 
+touch UserMGMT2.conf
+echo "# This is the configuration file for the mgmt program to function correctly.
+# Use this file in this set 
+# USER PRIVILAGE
+# Example: user1 administrator
+# Example: user2 standard
+##########################################################################
+# Groups" > UserMGMT2.conf
+cat /etc/group >> UserMGMT2.conf
 chmod 755 *.db
 chmod 755 *.bak
 mv *.log /bin/lib/MK3S/logs
@@ -142,6 +152,16 @@ mv *.service /bin/lib/sh/MK3S/data
 mv *.map /bin/lib/sh/MK3S/data
 mv *.rules /bin/lib/sh/MK3S/data
 mv *.bak /bin/lib/sh/MK3S/data/logfiles
+mkdir /bin/lib/sh/MK3S/data/ReferenceMaterial
+mv CyberSecurityReference.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
+mkdir /bin/lib/sh/MK3S/data/ReferenceMaterial/SSH
+mv SSH.txt /bin/lib/sh/MK3S/data/ReferenceMaterial/SSH
+mkdir /bin/lib/sh/MK3S/data/ReferenceMaterial/Apache2
+mv Apache2.txt /bin/lib/sh/MK3S/data/ReferenceMaterial/Apache2
+mkdir /bin/lib/sh/MK3S/data/ReferenceMaterial/PAM
+mv PAM.txt /bin/lib/sh/MK3S/data/ReferenceMaterial/PAM
+mkdir /bin/lib/sh/MK3S/data/ReferenceMaterial/LOGINDEFS
+mv LOGINDEFS.txt /bin/lib/sh/MK3S/data/ReferenceMaterial/LOGINDEFS
 mkdir /bin/lib/sh/MK3S/maintain
 sudo mv .git /bin/lib/sh/MK3S/maintain
 sudo mv .github /bin/lib/sh/MK3S/maintain

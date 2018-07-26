@@ -1,0 +1,67 @@
+#################################################
+#                                               #
+#             Reference Material                #
+#                                               #
+#################################################
+#   Last Updated on 6/24/18                     #
+#   Created by Mksipe                           #
+###################################################################################################
+#                                               #                                                 #
+#                Secure Shell                   # Type: Remote Logon Program                      #
+#                                               #                                                 #
+###################################################################################################
+#                                               #                                                 #
+#            /etc/ssh/sshd_config               #                       ._.                       #
+#                                               #                                                 #
+###################################################################################################
+#                                                                                                 #
+# Default File                                                                                    #
+# _____________                                                                                   #
+#                                                                                                 #
+# Port 22                                                                                         #
+# Protocol 2                                                                                      #
+# HostKey /etc/ssh/ssh_host_rsa_key                                                               #
+# HostKey /etc/ssh/ssh_host_dsa_key                                                               #
+# HostKey /etc/ssh/ssh_host_ecdsa_key                                                             #
+# UsePrivilegeSeparation yes                                                                      #
+# KeyRegenerationInterval 3600                                                                    #
+# ServerKeyBits 768                                                                               #
+# SyslogFacility AUTH                                                                             #
+# LogLevel INFO                                                                                   #
+# LoginGraceTime 120                                                                              #
+# PermitRootLogin yes                                                                             #
+# StrictModes yes                                                                                 #
+# RSAAuthentication yes                                                                           #
+# PubkeyAuthentication yes                                                                        #
+# IgnoreRhosts yes                                                                                #
+# RhostsRSAAuthentication no                                                                      #
+# HostbasedAuthentication no                                                                      #
+# PermitEmptyPasswords no                                                                         #
+# ChallengeResponseAuthentication no                                                              #
+# X11Forwarding yes                                                                               #
+# X11DisplayOffset 10                                                                             #
+# PrintMotd no                                                                                    #
+# PrintLastLog yes                                                                                #
+# TCPKeepAlive yes                                                                                #
+# AcceptEnv LANG LC_*                                                                             #
+# Subsystem sftp /usr/lib/openssh/sftp-server                                                     #
+# UsePAM yes                                                                                      #
+#                                                                                                 #
+# Modified File                                                                                   #
+# _____________                                                                                   #
+#                                                                                                 #
+# X11Forwarding no                                                                                #
+# IgnoreRhosts yes                                                                                #
+# UseDNS yes                                                                                      #
+# PermitEmptyPasswords no                                                                         #
+# MaxAuthTries 3                                                                                  #
+# PermitRootLogin no                                                                              #
+# Protocol 2                                                                                      #
+# LoginGraceTime 3m                                                                               #
+# (not Required but is recommended to help retain port guessing) Port <anything but 22>           #
+#                                                                                                 #
+#################################################                                                 #
+#                                               #                                                 #
+#                     EOF                       #                                                 #
+#                                               #                                                 #
+###################################################################################################

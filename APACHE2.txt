@@ -1,0 +1,133 @@
+#################################################
+#                                               #
+#             Reference Material                #
+#                                               #
+#################################################
+#   Last Updated on 6/24/18                     #
+#   Created by Mksipe                           #
+###################################################################################################
+#                                               # Type: Web Server                                #
+#                   Apache2                     # Default Port: http-80 TCP https-443 TCP         #
+#                                               # hosted file: /var/www/index.html                #
+###################################################################################################
+#                                               #
+#           /etc/apache2/apache2.conf           #
+#                                               #
+#################################################
+#
+# Default File
+# _____________
+# 
+# ServerRoot "/etc/apache2"
+# LockFile /var/lock/apache2/accept.lock
+# PidFile ${APACHE_PID_FILE}
+# Timeout 300
+# KeepAlive On
+# MaxKeepAliveRequests 100
+# KeepAliveTimeout 15
+#
+# <IfModule mpm_prefork_module>
+#    StartServers          5
+#    MinSpareServers       5
+#    MaxSpareServers      10
+#    MaxClients          150
+#    MaxRequestsPerChild   0
+# </IfModule>
+#
+# <IfModule mpm_worker_module>
+#    StartServers          2
+#    MaxClients          150
+#    MinSpareThreads      25
+#    MaxSpareThreads      75 
+#    ThreadsPerChild      25
+#    MaxRequestsPerChild   0
+# </IfModule>
+#
+# User ${APACHE_RUN_USER}
+# Group ${APACHE_RUN_GROUP}
+# AccessFileName .htaccess
+# 
+# <Files ~ "^\.ht">
+#    Order allow,deny
+#    Deny from all
+# </Files>
+#
+# DefaultType text/plain
+# HostnameLookups Off
+# ErrorLog /var/log/apache2/error.log
+# LogLevel warn
+# Include /etc/apache2/mods-enabled/*.load
+# Include /etc/apache2/mods-enabled/*.conf
+# Include /etc/apache2/httpd.conf
+# Include /etc/apache2/ports.conf
+# LogFormat "%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\"" combined
+# LogFormat "%h %l %u %t \"%r\" %>s %b" common
+# LogFormat "%{Referer}i -> %U" referer
+# LogFormat "%{User-agent}i" agent
+# ServerTokens Prod
+# ServerSignature Off
+# Include /etc/apache2/conf.d/
+# Include /etc/apache2/sites-enabled/
+#
+# Modified File 
+# _____________
+#
+# The default file given had this already set. This result may have been changed so check to make sure that this is still set correctly.
+#
+# ServerSiginature Off
+# ServerTokens Prod
+#
+# <Directory /var/www/html>
+#   Options -Indexes
+# </Directory>
+# 
+# <Directory />
+#   Options None
+#   Order deny,allow
+#   Deny from all
+# </Directory>
+# 
+# Options -FollowSymLinks
+# Options -Includes
+# Options -ExecGCI
+#
+# <Directory "/var/www/html/web1">
+#   Options -Includes -ExecCGI
+# </Directory>
+#
+# <Directory "/var/www/myweb1/user_uploads">
+#   LimitRequestBody 512000
+# </Directory>
+#
+# <VirtualHost *:80>
+# DocumentRoot /var/www/html/example.com/
+# ServerName www.example.com
+# DirectoryIndex index.htm index.html index.php
+# ServerAlias example.com
+# ErrorDocument 404 /story.php
+# ErrorLog /var/log/httpd/example.com_error_log
+# CustomLog /var/log/httpd/example.com_access_log combined
+# </VirtualHost>
+#
+#
+# SIDE-NOTE: it is recommended to run apache as its own NON privileged group. this way files that require privilage cant be seen and if an attack is launched the account will not have privilege.
+# ALSO: create SSL key 
+# openssl genrsa -des3 -out example.com.key 1024
+# openssl req -new -key example.com.key -out exmaple.csr
+# openssl x509 -req -days 365 -in example.com.com.csr -signkey example.com.com.key -out example.com.com.crt
+# <VirtualHost 172.16.25.125:443>
+# SSLEngine on
+# SSLCertificateFile /etc/pki/tls/certs/example.com.crt
+# SSLCertificateKeyFile /etc/pki/tls/certs/example.com.key
+# SSLCertificateChainFile /etc/pki/tls/certs/sf_bundle.crt
+# ServerAdmin ravi.saive@example.com
+# ServerName example.com
+# DocumentRoot /var/www/html/example/
+# ErrorLog /var/log/httpd/example.com-error_log
+# CustomLog /var/log/httpd/example.com-access_log common
+# </VirtualHost>
+#################################################
+#                                               #
+#                     EOF                       #
+#                                               #
+#################################################

@@ -144,7 +144,7 @@ which airolib-ng && man airolib-ng | cat | head -n 4 | grep -i airolib | tee -a 
 which airserv-ng && man airserv-ng | cat | head -n 4 | grep -i airserv | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which airtun-ng && man airtun-ng | cat | head -n 4 | grep -i airtun | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which asleap && man asleap | cat | head -n 4 | grep -i asleap | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-which besside-ng & man besside-ng | cat | head -n 4 | grep -i besside | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which besside-ng && man besside-ng | cat | head -n 4 | grep -i besside | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which bluelog && man bluelog | cat | head -n 4 | grep -i bluelog | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which bluemaho && man bluemaho | cat | head -n 4 | grep -i bluemaho | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which bluepot && man bluepot | cat | head -n 4 | grep -i bluepot | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -320,7 +320,7 @@ which gpp-decrypt && man gpp-decrypt | cat | head -n 4 | grep -i gpp-decrypt | t
 which hash-identifier && man hash-identifier | cat | head -n 4 | grep -i hash-identifier | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which hashcat && man hashcat | cat | head -n 4 | grep -i hashcat | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which hexorbase && man hexorbase | cat | head -n 4 | grep -i hexorbase | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-which THC-Hydra && man THC-hydra | cat | head -n 4 | grep -i hydra | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which hydra && man hydra | cat | head -n 4 | grep -i hydra | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which john && man john| cat | head -n 4 | grep -i john | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which johnny && man johnny | cat | head -n 4 | grep -i johnny | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which keimpx && man keimpx | cat | head -n 4 | grep -i keimpx | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -397,8 +397,8 @@ which rdpy && man rdpy | cat | head -n 4 | grep -i rdpy | tee -a /bin/lib/sh/MK3
 echo "----------Backdoors-----------------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which netcat && man netcat | cat | head -n 4 | grep -i netcat | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which ssh && man ssh  | cat | head -n 4 | grep -i ssh | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-which vsftpd | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-which telnet && man telnet | cat | head -n 4 | grep -i netcat | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which vsftpd && man vsftpd | cat | head -n 4 | grep -i vsftpd | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which telnet && man telnet | cat | head -n 4 | grep -i telnet | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "----------Remote Share Services-----------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which samba && man samba  | cat | head -n 4 | grep -i samba | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "----------Database Systems----------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -408,6 +408,7 @@ echo "----------Web Services--------------------|" | sudo tee -a /bin/lib/sh/MK3
 whereis wordpress | grep -i / && man wordpress| cat | head -n 4 | grep -i wordpress | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which apache && man apache  | cat | head -n 4 | grep -i apache | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which www && man www  | cat | head -n 4 | grep -i www | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which apache2 && man apache2  | cat | head -n 4 | grep -i apache2 | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "----------Other Known Tools---------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which xhydra && man xhydra | cat | head -n 4 | grep -i xhydra | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which ettercap && man ettercap  | cat | head -n 4 | grep -i ettercap | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -802,6 +803,7 @@ whereis postgresql | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which mysql | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 whereis wordpress | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which apache | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which apache2 | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which www | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which xhydra | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which ettercap | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
@@ -816,5 +818,6 @@ which tor | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which torsocks | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which BeEF | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which telnet | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which hydra | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "------------------------------------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "[SUCCESS] HTSA.sh was ran on $date" | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log

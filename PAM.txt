@@ -1,0 +1,288 @@
+#################################################
+#                                               #
+#             Reference Material                #
+#                                               #
+#################################################
+#   Last Updated on 6/24/18                     #
+#   Created by Mksipe                           #
+###################################################################################################
+#                                               #                                                 #
+#    Pluggable Authentication Modules (PAM)     # Type: Password and account hardening            #
+#                                               #                                                 #
+###################################################################################################
+#                                               #
+#              /etc/pam.d/passwd                #
+#                                               #
+#################################################
+# 
+# Default File
+# ______________
+#
+# auth      required        /lib/security/pam_pwdb.so       shadow
+# account   required        /lib/security/pam_pwdb.so
+# password  required        /lib/security/pam_cracklib.so   retry=3
+# password  required        /lib/security/pam_owdb.so       use_authtok     md5     shadow
+#
+# Options Avaliable
+# 
+# Option        Function
+# ______________
+#
+# debug         Used to write module information to syslog.
+# type=string   Replaces the string UNIX with "STRING" when a user uses the passwd command.
+# retry=n       Specifies how many times a user may retry to change a password.
+# difok=n	    Specifies the number of characters in the new password that must be different from the current password. A new password with at least half the characters different from the current password is accepted.
+# minlen=n	    Specifies the minimum password length +1. A minlen value of 9 would actually set a minimum password length of 10 characters.
+# icredit=n	    Specifies the number of characters by which the minlen value is reduced by having at least one lowercase character in the new password. If minlen is 7, the minimum password length would be 4 + 1, or 5 characters. Disabled by setting icredit to 0.
+# Ucredit	    Specifies the number of characters by which the password length is reduced by having at least one uppercase character in the new password.
+# dcredit=n	    Specifies the number of characters by which the password length is reduced by having at least one numeric character in the new password.
+# ocredit=n	    Specifies the number of characters by which the password length is reduced by having at least one numeric character in the new password.
+#
+#################################################
+#                                               #
+#               /etc/pam.d/login                #
+#                                               #
+#################################################
+#
+# Default File
+# ______________
+#
+# auth      required        /lib/security/pam_securetty.so
+# auth      required        /lib/security/pam_pwdb.so       shadow      nullok 
+# auth      required        /lib/security/pam_nologin.so
+# account   required        /lib/security/pam_pwdb.so 
+# password  required        /lib/security/pam_cracklib.so 
+# password  required        /lib/security/pam_pwdb.so nullok use_authtok md5 shadow
+# session   required        /lib/security/pam_pwdb.so 
+# session   optional        /lib/security/pam_console.so
+#
+#################################################
+#                                               #
+#           /etc/pam.d/common-auth              #
+#                                               #
+#################################################
+#
+# Default File
+# ______________
+#
+# auth    [success=1 default=ignore]      pam_unix.so nullok_secure
+# auth    requisite                       pam_deny.so
+# auth    required                        pam_permit.so
+# auth    optional                        pam_ecryptfs.so unwrap
+#
+#################################################
+#                                               #
+#          /etc/pam.d/common-account            #
+#                                               #
+#################################################
+#
+# Default File
+# ______________
+#
+# account [success=1 new_authtok_reqd=done default=ignore]    pam_unix.so
+# account requisite       pam_deny.so
+# account requisite       pam_permit.so
+#
+#################################################
+#                                               #
+#    /etc/pam.d/common-session-noninteractive   #
+#                                               #
+#################################################
+#
+# Default File
+# ______________
+#
+# session [default=1]         pam_permit.so
+# session requisite           pam_deny.so
+# session required            pam_permit.so
+# session optional            pam_umask.so
+# session required            pam_unix.so
+# session optional            pam_ecryptfs.so unwrap
+#
+#################################################
+#                                               #
+#          /etc/pam.d/common-password           # 
+#                                               #
+#################################################
+#
+# Default File
+# ______________
+#
+# password    requisite     pam_cracklib.so try_first_pass retry=3
+# password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_authtok
+# password    required      pam_deny.so
+#
+# Modified File
+# ______________
+#
+# password    requisite     pam_cracklib.so try_first_pass retry=3 minlength=16 lcredit=-1 ucredit=-1 dcredit=-1 ocredit=-1 difok=4
+# password    sufficient    pam_unix.so md5 shadow nullok try_first_pass use_authtok sha512
+# password    required      pam_deny.so
+#
+#
+#################################################
+#                                               #
+#               /etc/pam.d/other                # 
+#                                               #
+#################################################
+#
+# This will allow unauthorized programs to not be able to be authenticate.
+#
+# auth required /lib/security/pam_deny.so
+# auth required /lib/security/pam_warn.so
+# account required /lib/security/pam_deny.so
+# account required /lib/security/pam_warn.so
+# password required /lib/security/pam_deny.so
+# password required /lib/security/pam_warn.so
+# session required /lib/security/pam_deny.so
+# session required /lib/security/pam_warn.so
+#
+#################################################
+#                                               #
+#          Other Reference Materials            # 
+#                                               #
+#################################################
+Linux-PAM Benefit
+There are many programs on your system that use PAM modules like su, passwd, ssh and login and other services, we will discuss some of them.
+PAM main focus is to authenticate your users.
+Authentication in Linux is done by matching the encrypted password in /etc/shadow file with the entered one.
+We have many services on our systems that require authentication like SSH, FTP, TELNET, IMAP and many other services, so we will have a lot of authentication files besides /etc/shadow file to maintain, and it could be a serious problem if there is any inconsistent data between these authentication files.
+Here comes PAM. Linux-PAM offers a unified login system for your services.
+To check if your program uses Linux-PAM or not:
+$ ldd /bin/su
+linux PAM check pam usability
+You should see libpam.so library.
+Linux-PAM Configuration
+The configuration of Linux-PAM is in the directory /etc/pam.d/.
+Some PAM modules require configuration files with the PAM configuration to operate. You can find the configuration files in /etc/security
+If PAM is misconfigured, this could lead to serious problems.
+PAM Services
+The four types of PAM services:
+Authentication service modules.
+Account management modules.
+Session management modules.
+Password management modules.
+Any application requires authentication can register with PAM using a service name.
+You can list Linux services that use Linux-PAM.
+$ ls /etc/pam.d/
+Linux PAM services
+If you open any service file, you will see that the file is divided into three columns. The first column is management group, the second column is for control flags and the third column is the module (so file) used.
+$ cat /etc/pam.d/sshd
+account    required     pam_nologin.so
+The account is the management group, required is the control flag and the used module is pam_nologin.so.
+You may find a fourth column which is for module parameters.
+Management Groups
+There are four Management Groups you will see in PAM services files:
+Auth Group: it can validate users
+Account Group: controls the access to the service like how many times you should use this service.
+Session Group: responsible for the service environment.
+Password Group: for password updating.
+Control Flags
+We have four control flags in services files:
+Requisite: the strongest flag. If the requisite not found or failed to load, it will stop loading other modules and return failure.
+Required: The same as requisite, but if the module failed to load for any reason, it continues loading other modules and returns failure at the end of execution.
+Sufficient: if the module return success, the processing of other modules no longer needed.
+Optional: In the case of failure, the stack of modules continues execution and the return code is ignored.
+Modules Order
+The order is important because each module depends on the previous module on the stack.
+If you try a configuration like the following to log in:
+auth required pam_unix.so
+auth optional pam_deny.so
+auth required pam_unix.so
+auth optional pam_deny.so
+That will work correctly, but what will happen if we change the order like this:
+auth optional pam_deny.so
+auth required pam_unix.so
+auth optional pam_deny.so
+auth required pam_unix.so
+No one can log in, so the order matters.
+PAM Modules
+There are PAM built-in modules on your system that you should know about, so you can use them perfectly.
+pam_succeed_if Module
+This module allows access for the specified groups. You can validate user accounts like this:
+auth required pam_succeed_if.so gid=1000,2000
+The above line states that only users in the group whose ID 1000 or 2000 are allowed to log in.
+You can use uid as user id instead.
+auth requisite pam_succeed_if.so uid >= 1000
+In this example, any user id greater than or equal 1000 can log in.
+You can also use it with ingroup parameter like this:
+auth required pam_succeed_if.so user ingroup mygroup
+Only people in the group named mygroup can log in.
+pam_nologin Module
+This module allows root only to log in if /etc/nologin file is available.
+auth required pam_nologin.so
+You can modify login service file with this line and create /etc/nologin file, so root only can log in.
+This module used with auth, account management groups.
+pam_access Module
+This module works like the pam_succeed_if module except the pam_access module checks logging from networked hosts, while the pam_succeed_if module doesn’t care.
+account required pam_access.so accessfile=/etc/security/access.conf
+You can type your rules in the /etc/security/access.conf  file like this:
++:mygroup
+-:ALL:ALL
++:mygroup
+-:ALL:ALL
+The above rules state that only mygroup users are allowed to log in while others can’t.
+Where plus sign means allow and minus sign means deny.
+This module is used with auth, account, session, password management groups.
+pam_deny Module
+The module is used to restricting access. It will always return a non-OK.
+You can use it at the end of your module stack to protect yourself from any misconfiguration.
+If you use it at the beginning of module stack, your service will be disabled:
+auth required pam_deny.so
+auth required pam_unix.so
+auth required pam_deny.so
+auth required pam_unix.so
+This module is used with auth, account, session, password management groups.
+pam_unix Module
+This module is used to check user’s credentials against /etc/shadow file.
+auth required pam_unix.so
+You will see this module used in many services in your system.
+This module is used with auth, session, password management groups.
+pam_localuser Module
+This module is used to check if the user is listed in /etc/passwd.
+account sufficient pam_localuser.so
+This module is used with auth, session, password, account management groups.
+pam_mysql Module
+Instead of checking user’s credentials against/etc/shadow, you can use a MySQL database as a backend using the pam_mysql module.
+It can be used like this:
+auth sufficient pam_mysql.so user=myuser passwd=mypassword host=localhost db=mydb table=users usercolumn=username passwdcolumn=password
+auth sufficient pam_mysql.so user=myuser passwd=mypassword host=localhost db=mydb table=users usercolumn=username passwdcolumn=password
+The parameters for pam_mysql is used to validate the user.
+You can install if it is not on your system like this:
+$ yum install libpam-mysql
+This module is used with auth, session, password, account management groups.
+pam_cracklib module
+Strong passwords are a must these days. This module ensures that you will use strong passwords.
+password required pam_cracklib.so retry=4 minlen=12 difok=6
+This example ensures that:
+Password minimum length = 12
+Four times to pick a string password, otherwise, it will exit.
+Your new password must have 6 new characters from the old password.
+This module is used with password management group.
+pam_rootok Module
+This module checks if the user ID is 0 that means only root users can run this service.
+auth sufficient   pam_rootok.so
+You can use this module to ensure that a specific service is allowed for root users only.
+This module is used with auth management group.
+pam_limits Module
+This module is used to set limits on the system resources, even root users are affected by these limits.
+The limits configuration are in the /etc/security/limits.conf and  /etc/security/limits.d/  directory.
+session  required  pam_limits.so
+You can use this module to protect your system resources.
+This module is used with session management group.
+The limits in /etc/security/limits.conf file could be hard or soft.
+Hard: The user cannot change its value, but root can.
+Soft: normal user can change it.
+The limits could be fsize, cpu, nproc, nproc, data and many other limits.
+@mygroup        hard    nproc           50
+myuser          hard    cpu           5000
+@mygroup        hard    nproc           50
+myuser          hard    cpu           5000
+The first limit for mygroup members which sets the number of processes for each one of them to be 50.
+The second limit for the user named myuser which limits the CPU time to 5000 minutes.
+You can edit any PAM service file in /etc/pam.d/ and use the module you want to protect your services the way you want.
+#################################################
+#                                               #
+#                      EOF                      # 
+#                                               #
+#################################################

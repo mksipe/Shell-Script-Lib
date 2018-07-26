@@ -1,5 +1,5 @@
 #!/bin/sh
-apt install Thunderbird -y
+apt install thunderbird -y
 #From the guys that brought us Firefox, Thunderbird is Mozilla’s email client. While it technically is still maintained and various bug fixes continue to be released, there hasn’t been a major update in quite some time. But really, how “updated” does an email client need to be? Can it send and receive email? Yes? Okay, then it’s purpose is fulfilled. ​
 apt install geary -y
 #The default email client that comes with the GNOME 3 Desktop environment. Distros that use the pure GNOME 3 desktop environment (such as Fedora) will likely have this installed by default. ​
