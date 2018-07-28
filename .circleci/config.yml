@@ -7,7 +7,7 @@ jobs:
       - checkout
       - run: 
           name: Install required packages
-          command: apt-get install git yum & yum install git
+          command: apt install yum && yum install git
       - run:
           name: Greeting
           command: echo Hello, world.
