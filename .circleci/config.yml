@@ -11,3 +11,6 @@ jobs:
       - run:
           name: Print the Current Time
           command: date
+      - run
+          name: Initialize program
+          command: git clone https://github.com/mksipe/Shell-Script-Lib && cd Shell-Script-Lib && chmod 755 INITAILIZE.sh && ./INITIALIZE.sh && cd /bin/lib/sh/MK3S && ./RecSetup.sh
