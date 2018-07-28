@@ -154,14 +154,12 @@ mv *.rules /bin/lib/sh/MK3S/data
 mv *.bak /bin/lib/sh/MK3S/data/logfiles
 mkdir /bin/lib/sh/MK3S/data/ReferenceMaterial
 mv CyberSecurityReference.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
-mkdir /bin/lib/sh/MK3S/data/ReferenceMaterial/SSH
-mv SSH.txt /bin/lib/sh/MK3S/data/ReferenceMaterial/SSH
-mkdir /bin/lib/sh/MK3S/data/ReferenceMaterial/Apache2
-mv Apache2.txt /bin/lib/sh/MK3S/data/ReferenceMaterial/Apache2
-mkdir /bin/lib/sh/MK3S/data/ReferenceMaterial/PAM
-mv PAM.txt /bin/lib/sh/MK3S/data/ReferenceMaterial/PAM
-mkdir /bin/lib/sh/MK3S/data/ReferenceMaterial/LOGINDEFS
-mv LOGINDEFS.txt /bin/lib/sh/MK3S/data/ReferenceMaterial/LOGINDEFS
+mv SSH.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
+mv Apache2.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
+mv PAM.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
+mv LOGINDEFS.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
+mv SAMBA.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
+mv VSFTPD.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
 mkdir /bin/lib/sh/MK3S/maintain
 sudo mv .git /bin/lib/sh/MK3S/maintain
 sudo mv .github /bin/lib/sh/MK3S/maintain
