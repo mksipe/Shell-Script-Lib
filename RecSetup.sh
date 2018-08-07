@@ -5,6 +5,9 @@ mv proc.sh /proc
 echo  "Program Library Installed"
 unalias -a
 echo  "Installing Required Packages"
+cd data/
+git clone https://github.com/mksipe/LCRF
+echo "2" >> /proc/sys/kernel/randomize_va_space
 apt update -y 
 apt full-upgrade -y
 apt install ufw -y
@@ -16,9 +19,11 @@ apt install nmap -y
 apt install clamav -y
 apt install git -y
 apt install lightdm -y 
+apt install chkrootkit -y 
 echo "Running Setup Scripts"
 ./Stealth-Mode.sh
 ./UFWC2.sh
+ufw enable 
 ./umasks.sh
 ./users-groups.sh
 ./User-Auth.sh
@@ -65,8 +70,5 @@ echo "Here is the remaining scripts that you can use in these directories"
 apt install python -y
 apt install glade -y
 notify-send -i /usr/share/icons/gnome/scalable/places/start-here.svg 'SSL Correctly Installed.'
-./pygui.py
-# Starting MK3SL service file
-mv /bin/lib/sh/MK3S/data/MK3SL.service /etc/systemd/system
-systemctl start MK3SL
+chkrootkit
 echo "Done"
