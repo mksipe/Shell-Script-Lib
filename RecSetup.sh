@@ -1,12 +1,16 @@
 #!/bin/sh
 cd /bin/lib/sh/MK3S
 mkdir /proc
-mv proc.sh /proc
 echo  "Program Library Installed"
 unalias -a
 echo  "Installing Required Packages"
 cd data/
 git clone https://github.com/mksipe/LCRF
+cd LCRF/
+mkdir /bin/lib/sh/MK3S/ReferenceMaterial
+chmod 755 *.txt
+mv *.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
+cd /bin/lib/sh/MK3S
 echo "2" >> /proc/sys/kernel/randomize_va_space
 apt update -y 
 apt full-upgrade -y
