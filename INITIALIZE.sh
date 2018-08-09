@@ -64,7 +64,7 @@ sudo mv .git /Framework
 sudo mv .github /Framework
 rm -r $(pwd)/Shell-Script-Lib
 cd /Framework
-wget -i src.db
+wget -i src1.db
 git clone https://github.com/berzerk0/Probable-Wordlists
 tar -xzf snort3-community-rules.tar.gz
 touch Snort.db
