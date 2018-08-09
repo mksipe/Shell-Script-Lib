@@ -3,7 +3,8 @@ if [ $(/usr/bin/id -u) -ne 0 ]; then
     echo "You must be root."
     exit
 fi
-# Version 4.5.3
+# Version 4.5.4
+apt install xterm -y 
 DATE=$(date -u)
 echo -e "Initializing Directories"
 apt install make -y 
@@ -63,9 +64,7 @@ sudo mv .git /Framework
 sudo mv .github /Framework
 rm -r $(pwd)/Shell-Script-Lib
 cd /Framework
-wget https://www.talosintelligence.com/documents/ip-blacklist
-wget https://cve.mitre.org/data/downloads/allitems.csv
-wget https://www.snort.org/downloads/community/snort3-community-rules.tar.gz
+wget -i src.db
 git clone https://github.com/berzerk0/Probable-Wordlists
 tar -xzf snort3-community-rules.tar.gz
 touch Snort.db
@@ -79,7 +78,7 @@ touch wordlist.db
 cd Probable-Wordlists
 cd /Dictionary-Style/Technical_and_Default
 cat Domains_ProbWL.txt >> /Framework/wordlist.db
-cat Password_Default_ProbWl.txt >> /Framework/wordlist/.db
+cat Password_Default_ProbWl.txt >> /Framework/wordlist.db
 cat tld.txt >> /Framework/wordlist.db
 cat Username_Default_ProbWL.txt >> /Framework/wordlist.db
 cd /Framework/Probable-Wordlists/Real-Passwords
@@ -154,4 +153,13 @@ compgen -c | sudo tee -a /bin/lib/sh/MK3S/data/progs.txt
 ps -aux | sudo tee -a /bin/lib/sh/MK3S/data/AllProcesses.txt
 chmod 511 /bin/lib/sh
 clear
-echo "Software installed by $USER on $DATE" | sudo tee /bin/lib/sh/MK3S/Version.txt
+echo "Downloading optional files. Open another terminal while these files are being downloaded."
+mkdir /Framework
+cd /Framework
+wget -i /bin/lib/sh/MK3S/data/src2.db
+tar -xzf crackstation.txt.gz
+cat crackstation.txt >> /bin/lib/sh/MK3S/data/pwhash.db
+tar -xzf crackstation-human-only.txt.gz
+cat crackstation-human-only.txt >> /bin/lib/sh/MK3S/data/wordlist.db
+rm -r /Framework 
+cd /bin/lib/sh/MK3S
