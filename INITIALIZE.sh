@@ -120,6 +120,8 @@ mkdir /bin/lib/sh/MK3S/data
 mkdir /bin/lib/sh/MK3S/data/logfiles
 chmod 755 *.db
 chmod 755 *.bak
+chmod 755 *.html
+chmod 755 *.css
 mv *.log /bin/lib/MK3S/logs
 mv *.sh /bin/lib/sh/MK3S
 mv *.conf /bin/lib/sh/MK3S
@@ -164,4 +166,6 @@ touch /bin/lib/sh/MK3S/data/AllProcesses.txt
 compgen -c | sudo tee -a /bin/lib/sh/MK3S/data/progs.txt
 ps -aux | sudo tee -a /bin/lib/sh/MK3S/data/AllProcesses.txt
 chmod 511 /bin/lib/sh
+touch /bin/lib/sh/MK3S/data/Exploit-Search.txt
+echo "No scans have been ran. To run a scan AS AN ADMINISTRATOR do (./bin/lib/sh/MK3S/HTSA.sh) then check back here." >> /bin/lib/sh/MK3S/data/Exploit-Search.txt
 clear
