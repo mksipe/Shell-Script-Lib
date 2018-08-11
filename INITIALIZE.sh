@@ -34,6 +34,8 @@ chmod 755 *.map
 chmod 755 *.rules
 chmod 755 .git 
 chmod 755 .github
+chmod 755 *.html
+chmod 755 *.css
 mv *.sh /Framework
 mv *.md /Framework
 mv *.txt /Framework
@@ -60,9 +62,10 @@ mv *.ksh /Framework
 mv *.service /Framework
 mv *.map /Framework
 mv *.rules /Framework
+mv *.html /Framework
+mv *.css /Framework
 sudo mv .git /Framework
 sudo mv .github /Framework
-rm -r $(pwd)/Shell-Script-Lib
 cd /Framework
 wget -i src1.db
 git clone https://github.com/berzerk0/Probable-Wordlists
@@ -117,8 +120,12 @@ mkdir /bin/lib/sh/MK3S
 mkdir /bin/lib/sh/MK3S/logs
 mkdir /bin/lib/sh/MK3S/data
 mkdir /bin/lib/sh/MK3S/data/logfiles
+mkdir /bin/lib/sh/MK3S/data/web
 chmod 755 *.db
 chmod 755 *.bak
+mv *.html /bin/lib/sh/MK3S/data/web
+mv *.css /bin/lib/sh/MK3S/data/web
+ln -s /bin/lib/sh/MK3S/data/web/HTSA.html /home/$USER/Desktop
 mv *.log /bin/lib/MK3S/logs
 mv *.sh /bin/lib/sh/MK3S
 mv *.conf /bin/lib/sh/MK3S
@@ -138,7 +145,6 @@ mv prerm /bin/lib/sh/MK3S
 mv *.c /bin/lib/sh/MK3S
 mv *.py /bin/lib/sh/MK3S
 mv *.db /bin/lib/sh/MK3S/data
-mv *.ksh /bin/lib/sh/MK3S
 mv *.service /bin/lib/sh/MK3S/data
 mv *.map /bin/lib/sh/MK3S/data
 mv *.rules /bin/lib/sh/MK3S/data
