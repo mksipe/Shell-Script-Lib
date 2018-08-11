@@ -3,11 +3,9 @@ if [ $(/usr/bin/id -u) -ne 0 ]; then
     echo "You must be root."
     exit
 fi
-# Version 4.5.4
-apt install xterm -y 
+# Version 4.5.10
 DATE=$(date -u)
 echo -e "Initializing Directories"
-apt install make -y 
 mkdir /Framework
 chmod 755 *.sh
 chmod 755 *.md
@@ -32,10 +30,10 @@ chmod 755 *.ksh
 chmod 755 *.service
 chmod 755 *.map
 chmod 755 *.rules
-chmod 755 .git 
-chmod 755 .github
 chmod 755 *.html
 chmod 755 *.css
+chmod 755 .git 
+chmod 755 .github
 mv *.sh /Framework
 mv *.md /Framework
 mv *.txt /Framework
@@ -66,9 +64,9 @@ mv *.html /Framework
 mv *.css /Framework
 sudo mv .git /Framework
 sudo mv .github /Framework
+rm -r $(pwd)/Shell-Script-Lib
 cd /Framework
 wget -i src1.db
-git clone https://github.com/berzerk0/Probable-Wordlists
 tar -xzf snort3-community-rules.tar.gz
 touch Snort.db
 cd snort3-community-rules
@@ -81,7 +79,7 @@ touch wordlist.db
 cd Probable-Wordlists
 cd /Dictionary-Style/Technical_and_Default
 cat Domains_ProbWL.txt >> /Framework/wordlist.db
-cat Password_Default_ProbWl.txt >> /Framework/wordlist.db
+cat Password_Default_ProbWl.txt >> /Framework/wordlist/.db
 cat tld.txt >> /Framework/wordlist.db
 cat Username_Default_ProbWL.txt >> /Framework/wordlist.db
 cd /Framework/Probable-Wordlists/Real-Passwords
@@ -120,12 +118,8 @@ mkdir /bin/lib/sh/MK3S
 mkdir /bin/lib/sh/MK3S/logs
 mkdir /bin/lib/sh/MK3S/data
 mkdir /bin/lib/sh/MK3S/data/logfiles
-mkdir /bin/lib/sh/MK3S/data/web
 chmod 755 *.db
 chmod 755 *.bak
-mv *.html /bin/lib/sh/MK3S/data/web
-mv *.css /bin/lib/sh/MK3S/data/web
-ln -s /bin/lib/sh/MK3S/data/web/HTSA.html /home/$USER/Desktop
 mv *.log /bin/lib/MK3S/logs
 mv *.sh /bin/lib/sh/MK3S
 mv *.conf /bin/lib/sh/MK3S
@@ -145,10 +139,22 @@ mv prerm /bin/lib/sh/MK3S
 mv *.c /bin/lib/sh/MK3S
 mv *.py /bin/lib/sh/MK3S
 mv *.db /bin/lib/sh/MK3S/data
+mv *.ksh /bin/lib/sh/MK3S
 mv *.service /bin/lib/sh/MK3S/data
 mv *.map /bin/lib/sh/MK3S/data
 mv *.rules /bin/lib/sh/MK3S/data
 mv *.bak /bin/lib/sh/MK3S/data/logfiles
+mkdir /bin/lib/sh/MK3S/data/ReferenceMaterial
+mv CyberSecurityReference.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
+mv SSH.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
+mv Apache2.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
+mv PAM.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
+mv LOGINDEFS.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
+mv SAMBA.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
+mv VSFTPD.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
+mkdir /bin/lib/sh/MK3S/data/web
+mv *.html /bin/lib/sh/MK3S/data/web
+mv *.css /bin/lib/sh/MK3S/data/web
 mkdir /bin/lib/sh/MK3S/maintain
 sudo mv .git /bin/lib/sh/MK3S/maintain
 sudo mv .github /bin/lib/sh/MK3S/maintain
