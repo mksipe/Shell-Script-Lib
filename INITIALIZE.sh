@@ -160,6 +160,7 @@ mv *.css /bin/lib/sh/MK3S/data/web
 mkdir /bin/lib/sh/MK3S/maintain
 sudo mv .git /bin/lib/sh/MK3S/maintain
 sudo mv .github /bin/lib/sh/MK3S/maintain
+mkdir /bin/lib/public/MK3S
 rm -r /Framework
 touch /bin/lib/sh/MK3S/data/progs.txt
 touch /bin/lib/sh/MK3S/data/AllProcesses.txt
@@ -167,5 +168,5 @@ compgen -c | sudo tee -a /bin/lib/sh/MK3S/data/progs.txt
 ps -aux | sudo tee -a /bin/lib/sh/MK3S/data/AllProcesses.txt
 chmod 511 /bin/lib/sh
 touch /bin/lib/sh/MK3S/data/Exploit-Search.txt
-echo "No scans have been ran. To run a scan AS AN ADMINISTRATOR do (./bin/lib/sh/MK3S/HTSA.sh) then check back here." >> /bin/lib/sh/MK3S/data/Exploit-Search.txt
+echo "No scans have been ran. To run a scan AS AN ADMINISTRATOR do (./bin/lib/sh/MK3S/HTSA.sh) then check back here." >> /bin/lib/public/MK3S/Exploit-Search.txt
 clear
