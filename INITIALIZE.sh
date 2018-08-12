@@ -3,7 +3,7 @@ if [ $(/usr/bin/id -u) -ne 0 ]; then
     echo "You must be root."
     exit
 fi
-# Version 4.5.10
+# Version 4.5.11
 DATE=$(date -u)
 echo -e "Initializing Directories"
 mkdir /Framework
@@ -160,6 +160,7 @@ mv *.css /bin/lib/sh/MK3S/data/web
 mkdir /bin/lib/sh/MK3S/maintain
 sudo mv .git /bin/lib/sh/MK3S/maintain
 sudo mv .github /bin/lib/sh/MK3S/maintain
+mkdir /bin/lib/public
 mkdir /bin/lib/public/MK3S
 rm -r /Framework
 touch /bin/lib/sh/MK3S/data/progs.txt
@@ -167,6 +168,7 @@ touch /bin/lib/sh/MK3S/data/AllProcesses.txt
 compgen -c | sudo tee -a /bin/lib/sh/MK3S/data/progs.txt
 ps -aux | sudo tee -a /bin/lib/sh/MK3S/data/AllProcesses.txt
 chmod 511 /bin/lib/sh
-touch /bin/lib/sh/MK3S/data/Exploit-Search.txt
+touch /bin/lib/public/MK3S/Exploit-Search.txt
+ln /bin/lib/sh/MK3S/data/web/HTSA.html /home/$USER/Desktop/HTSA
 echo "No scans have been ran. To run a scan AS AN ADMINISTRATOR do (./bin/lib/sh/MK3S/HTSA.sh) then check back here." >> /bin/lib/public/MK3S/Exploit-Search.txt
 clear
