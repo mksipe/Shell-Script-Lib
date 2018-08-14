@@ -5,12 +5,14 @@ body {
     font-family: 'Courier New', Courier, monospace;
     text-align: center;
     border-spacing: none;
+    color: 
 }
 
 iframe {
     border: none;
     width: 100%;
-    height: fit-content;
+    height: 590px;
+    overflow-y: 'scroll';
+    overflow-X: 'hidden';
     display: block;
-    text-decoration-color: orangered;
 }

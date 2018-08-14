@@ -21,5 +21,5 @@ echo "Ransom/Malware Attributes" | tee -a $1-Analysis
 echo "####################" | tee -a $1-Analysis
 echo "ClamAV:" ; clamscan $1 | tee -a $1-Analysis
 echo "####################" | tee -a $1-Analysis
-mkdir /bin/lib/sh/MK3S/data/Analysis
+mkdir /bin/lib/sh/MK3S/data/Analysis > /dev/null
 mv $1-Analysis /bin/lib/sh/MK3S/data/Analysis/

@@ -3,7 +3,7 @@ if [ $(/usr/bin/id -u) -ne 0 ]; then
     echo "You must be root."
     exit
 fi
-# Version 4.5.11
+# Version 4.5.12
 DATE=$(date -u)
 echo -e "Initializing Directories"
 mkdir /Framework
@@ -160,6 +160,8 @@ mv *.css /bin/lib/sh/MK3S/data/web
 mkdir /bin/lib/sh/MK3S/maintain
 sudo mv .git /bin/lib/sh/MK3S/maintain
 sudo mv .github /bin/lib/sh/MK3S/maintain
+mkdir /bin/lib/public
+mkdir /bin/lib/public/MK3S
 mkdir /bin/lib/public
 mkdir /bin/lib/public/MK3S
 rm -r /Framework
