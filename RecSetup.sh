@@ -24,6 +24,15 @@ apt install clamav -y
 apt install git -y
 apt install lightdm -y 
 apt install chkrootkit -y 
+apt install libpam-tmpdir -y
+apt install libpam-usb -y 
+apt install cryptsetup -y 
+apt install cryptmount -y 
+apt install apt-listbugs -y 
+apt install needrestart -y 
+apt install debsecan -y 
+apt install debsums -y 
+apt install fail2ban -y 
 echo "Running Setup Scripts"
 ./Stealth-Mode.sh
 ./UFWC2.sh

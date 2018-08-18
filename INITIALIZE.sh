@@ -160,10 +160,6 @@ mv *.css /bin/lib/sh/MK3S/data/web
 mkdir /bin/lib/sh/MK3S/maintain
 sudo mv .git /bin/lib/sh/MK3S/maintain
 sudo mv .github /bin/lib/sh/MK3S/maintain
-mkdir /bin/lib/public
-mkdir /bin/lib/public/MK3S
-mkdir /bin/lib/public
-mkdir /bin/lib/public/MK3S
 rm -r /Framework
 touch /bin/lib/sh/MK3S/data/progs.txt
 touch /bin/lib/sh/MK3S/data/AllProcesses.txt
