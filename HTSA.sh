@@ -5,10 +5,13 @@ if [ $(/usr/bin/id -u) -ne 0 ]; then
     echo "[FAIL] $USER attempted to run the search on $date." | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
     exit
 fi
-echo "HTS.sh started on $date" | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
+echo "HTSA.sh started on $date" | sudo tee -a /bin/lib/sh/MK3S/logs/MK3S.log
 touch /bin/lib/sh/MK3S/data/Exploit-Search.txt
 chmod 755 /bin/lib/sh/MK3S/data/Exploit-Search.txt 
 cat /dev/null > /bin/lib/sh/MK3S/data/Exploit-Search.txt
+touch /bin/lib/sh/MK3S/data/Exploit-Search-whereis.txt
+cat /dev/null > /bin/lib/sh/MK3S/data/Exploit-Search-whereis.txt
+
 echo "----------Information Gathering-----------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which acccheck && man acccheck | cat | head -n 4 | grep -i acccheck | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which ace-voip && man ace-voip | cat | head -n 4 | grep -i ace-voip | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt

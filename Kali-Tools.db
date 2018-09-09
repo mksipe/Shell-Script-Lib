@@ -80,7 +80,7 @@ DBPwAudit
 Doona
 DotDotPwn
 HexorBase
-Inguma
+Inguma 
 jSQL Injection
 Lynis
 Nmap
@@ -93,7 +93,7 @@ SidGuesser
 SIPArmyKnife
 sqlmap
 Sqlninja
-sqlsus
+sqlsus 
 THC-IPV6
 tnscmd10g
 unix-privesc-check
@@ -154,7 +154,7 @@ ivstools
 kalibrate-rtl
 KillerBee
 Kismet
-makeivs-ng
+makeivs-ng 
 mdk3
 mfcuk
 mfoc
@@ -162,7 +162,7 @@ mfterm
 Multimon-NG
 Packetforge-ng
 PixieWPS
-Pyrit
+Pyrit 
 Reaver
 redfang
 RTLSDR Scanner

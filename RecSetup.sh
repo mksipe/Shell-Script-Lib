@@ -33,6 +33,8 @@ apt install needrestart -y
 apt install debsecan -y 
 apt install debsums -y 
 apt install fail2ban -y 
+apt install snort -y
+apt install clamsmtp -y
 echo "Running Setup Scripts"
 ./Stealth-Mode.sh
 ./UFWC2.sh
@@ -40,7 +42,7 @@ ufw enable
 ./umasks.sh
 ./users-groups.sh
 ./User-Auth.sh
-./apache.sh
+./Apache.sh
 ./banners.sh
 ./files.sh
 ./iptables.sh
@@ -84,4 +86,7 @@ apt install python -y
 apt install glade -y
 notify-send -i /usr/share/icons/gnome/scalable/places/start-here.svg 'SSL Correctly Installed.'
 chkrootkit
+mkdir /bin/lib/MK3S/data/Analysis
+cd /bin/lib/sh/MK3S/data/Analysis
+git clone https://mksipe@bitbucket.org/mksipevdb.git
 echo "Done"
