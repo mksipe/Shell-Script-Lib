@@ -14,27 +14,7 @@ cd /bin/lib/sh/MK3S
 echo "2" >> /proc/sys/kernel/randomize_va_space
 apt update -y 
 apt full-upgrade -y
-apt install ufw -y
-apt install cron -y 
-apt install nano -y
-apt install locate -y
-apt install iptables -y
-apt install nmap -y
-apt install clamav -y
-apt install git -y
-apt install lightdm -y 
-apt install chkrootkit -y 
-apt install libpam-tmpdir -y
-apt install libpam-usb -y 
-apt install cryptsetup -y 
-apt install cryptmount -y 
-apt install apt-listbugs -y 
-apt install needrestart -y 
-apt install debsecan -y 
-apt install debsums -y 
-apt install fail2ban -y 
-apt install snort -y
-apt install clamsmtp -y
+apt install $(cat /bin/lib/sh/MK3S/data/apkg.db) -y 
 echo "Running Setup Scripts"
 ./Stealth-Mode.sh
 ./UFWC2.sh
@@ -88,5 +68,4 @@ notify-send -i /usr/share/icons/gnome/scalable/places/start-here.svg 'SSL Correc
 chkrootkit
 mkdir /bin/lib/MK3S/data/Analysis
 cd /bin/lib/sh/MK3S/data/Analysis
-git clone https://mksipe@bitbucket.org/mksipevdb.git
 echo "Done"
