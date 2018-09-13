@@ -14,7 +14,10 @@ cd /bin/lib/sh/MK3S
 echo "2" >> /proc/sys/kernel/randomize_va_space
 apt update -y 
 apt full-upgrade -y
-apt install $(cat /bin/lib/sh/MK3S/data/apkg.db) -y 
+apt install -y $(cat /bin/lib/sh/MK3S/data/apkg.db)
+apt install -y $(cat /bin/lib/sh/MK3S/data/apkg2.db)
+apt install -f --fix-missing
+apt autoremove -y
 echo "Running Setup Scripts"
 ./Stealth-Mode.sh
 ./UFWC2.sh
