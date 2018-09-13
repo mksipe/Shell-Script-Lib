@@ -1,1 +1,1 @@
-ufw cron nano locate iptables nmap clamav clamsmtp git lightdm chkrootkit libpam-tmpdir libpam-usb libpam-cracklib cryptsetup cryptmount apt-listbugs apt-listchanges needrestart debsecan debsums fail2ban snort
+ufw cron nano locate iptables nmap clamav clamsmtp git lightdm chkrootkit libpam-tmpdir libpam-cracklib cryptsetup cryptmount apt-listbugs apt-listchanges needrestart debsecan debsums fail2ban snort
