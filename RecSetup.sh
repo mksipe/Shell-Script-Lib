@@ -36,6 +36,8 @@ apt install -y debsecan
 apt install -y debsums 
 apt install -y fail2ban 
 apt install -y snort
+apt install -y whois
+apt install -y aide 
 apt install -f --fix-missing
 apt autoremove -y
 echo "Running Setup Scripts"
@@ -78,6 +80,7 @@ ufw enable
 ./Daemonconf.sh
 ./Clamconf.sh
 ./Snortconf.sh
+./AIDE.sh
 chmod 755 *.sh
 mv *.sh /bin/lib/sh/MK3S
 cd /bin/lib/sh/MK3S
