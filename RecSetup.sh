@@ -13,9 +13,29 @@ mv *.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
 cd /bin/lib/sh/MK3S
 echo "2" >> /proc/sys/kernel/randomize_va_space
 apt update -y 
-apt full-upgrade -y
-apt install -y $(cat /bin/lib/sh/MK3S/data/apkg.db)
-apt install -y $(cat /bin/lib/sh/MK3S/data/apkg2.db)
+apt full-upgrade -y 
+apt install -y ufw 
+apt install -y cron 
+apt install -y nano 
+apt install -y locate 
+apt install -y iptables 
+apt install -y nmap 
+apt install -y clamav 
+apt install -y clamsmtp 
+apt install -y git 
+apt install -y lightdm 
+apt install -y chkrootkit 
+apt install -y libpam-tmpdir 
+apt install -y libpam-cracklib 
+apt install -y cryptsetup 
+apt install -y cryptmount 
+apt install -y apt-listbugs 
+apt install -y apt-listchanges 
+apt install -y needrestart 
+apt install -y debsecan 
+apt install -y debsums 
+apt install -y fail2ban 
+apt install -y snort
 apt install -f --fix-missing
 apt autoremove -y
 echo "Running Setup Scripts"
