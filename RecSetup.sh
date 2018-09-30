@@ -38,7 +38,6 @@ apt install -y fail2ban
 apt install -y snort
 apt install -y whois
 apt install -y aide 
-apt install -f --fix-missing
 apt autoremove -y
 echo "Running Setup Scripts"
 ./Stealth-Mode.sh

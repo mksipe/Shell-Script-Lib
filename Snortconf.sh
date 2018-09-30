@@ -6,4 +6,4 @@ systemctl enable snort
 systemctl start snort
 systemctl status snort
 echo "Snort Installed"
-echo "0 12 * * * snort" | sudo tee -a /etc/crontab
+echo "0 12 * * * snort -vc /etc/snort/snort.conf " | sudo tee -a /etc/crontab

@@ -186,8 +186,8 @@ which tkiptun-ng && man tkiptun | cat | head -n 4 | grep -i tkiptun | tee -a /bi
 which wesside-ng && man wesside-ng  | cat | head -n 4 | grep -i wesside | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which wifi honey && wifi honey  | cat | head -n 4 | grep -i wifi | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which wifiphisher && man wifiphisher | cat | head -n 4 | grep -i wifiphisher | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-which Wifitap && man wifitap  | cat | head -n 4 | grep -i wifitap | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
-which Wifite && man wifite  | cat | head -n 4 | grep -i wifite | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which wifitap && man wifitap  | cat | head -n 4 | grep -i wifitap | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which wifite && man wifite  | cat | head -n 4 | grep -i wifite | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which wpaclean && man wpaclean  | cat | head -n 4 | grep -i wpaclean | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "----------Forensics Tools-----------------|"  | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which binwalk && man binwalk  | cat | head -n 4 | grep -i binwalk | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt

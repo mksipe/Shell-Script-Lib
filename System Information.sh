@@ -5,11 +5,12 @@ ut=$(uptime)
 un=$(uname -a)
 fe=$(free)
 stat=$(vmstat)
-disk_space=$(df)
+disk_space=$(df -h)
 H=$(hostname)
 IP=$(hostname -I)
 bit=$(lscpu)
 krt=$(/sbin/route -n)
+nstt=$(netstat -lntpa)
 touch /bin/lib/sh/MK3S/data/SYSINF.txt
 sudo cat /dev/null > /bin/lib/sh/MK3S/data/SYSINF.txt
 echo "Gathering System Volumes" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
@@ -44,3 +45,6 @@ echo "$bit"  | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
 echo "-----------------------------------------------------------------------------------------------------------------
 Here is your kernel routing table" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
 echo "$krt" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
+echo "-----------------------------------------------------------------------------------------------------------------
+Active port connections" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
+echo "$nstt" | tee -a /bin/lib/sh/MK3S/data/SYSINF.txt
