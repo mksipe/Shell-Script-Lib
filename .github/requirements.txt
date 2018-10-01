@@ -1,1 +1,5 @@
-https://github.com/mksipe/LCRF
+-e https://github.com/mksipe/LCRF
+-e https://gnu.org/
+-e https://talosintelligence.com/
+-e https://snort.org/
+-e https://cve.com/
