@@ -8,6 +8,3 @@ sudo /etc/init.d/apparmor stop
 apt purge apparmor -y 
 apt update -y && upgrade -yuf
 apt install selinux -y 
-echo "The system needs to reboot to make changes. Reboot now?"
-read continue
-done

@@ -412,6 +412,7 @@ whereis wordpress | grep -i / && man wordpress| cat | head -n 4 | grep -i wordpr
 which apache && man apache  | cat | head -n 4 | grep -i apache | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which www && man www  | cat | head -n 4 | grep -i www | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which apache2 && man apache2  | cat | head -n 4 | grep -i apache2 | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which nginx && man nginx  | cat | head -n 4 | grep -i nginx | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "----------Other Known Tools---------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which xhydra && man xhydra | cat | head -n 4 | grep -i xhydra | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which ettercap && man ettercap  | cat | head -n 4 | grep -i ettercap | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
