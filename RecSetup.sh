@@ -42,23 +42,23 @@ apt autoremove -y
 echo "Running Setup Scripts"
 ./Stealth-Mode.sh
 ./UFWC2.sh
-ufw enable 
 ./umasks.sh
 ./users-groups.sh
 ./User-Auth.sh
-./Apache.sh
+if [ $(which apache2 | grep / -c) = 1; then ./Apache.sh; else echo "Skipping Apache2 Installation"; fi]
 ./banners.sh
 ./files.sh
 ./iptables.sh
 ./iptables2.sh
 ./network.sh
-./nginx.sh
+if [ $(which nginx | grep / -c) = 1; then ./nginx.sh; else echo "Skipping Apache2 Installation"; fi ]
 ./services.sh
 ./ssh.sh
 ./sudo-su.sh
 ./ssl.sh
 ./proftpd.sh
 ./users-linux.sh
+ufw enable
 ./A:apache2.sh
 ./A:banners.sh
 ./A:files.sh
@@ -76,6 +76,7 @@ ufw enable
 ./prerm
 ./ipfilter.sh
 ./ipfw.sh
+./SElinux.sh
 ./Daemonconf.sh
 ./Clamconf.sh
 ./Snortconf.sh
