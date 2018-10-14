@@ -1,3 +1,4 @@
+#!/bin/sh
 mkdir /Framework
 cd /Framework
 wget -i /bin/lib/sh/MK3S/data/src2.db

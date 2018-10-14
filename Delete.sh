@@ -1,3 +1,4 @@
+#!/bin/sh
 if [ $# -ne 1 ] ; then
  echo "Usage: Delete.sh <Filename>"
  echo " Will delete a file agressively with SHRED."
