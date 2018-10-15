@@ -45,13 +45,13 @@ echo "Running Setup Scripts"
 ./umasks.sh
 ./users-groups.sh
 ./User-Auth.sh
-if [ $(which apache2 | grep / -c) = 1; then ./Apache.sh; else echo "Skipping Apache2 Installation"; fi ]
+if [ $(which apache2 | grep / -c) = 1 ]; then ./Apache.sh; else echo "Skipping Apache2 Installation"; fi
 ./banners.sh
 ./files.sh
 ./iptables.sh
 ./iptables2.sh
 ./network.sh
-if [ $(which nginx | grep / -c) = 1; then ./nginx.sh; else echo "Skipping Apache2 Installation"; fi ]
+if [ $(which nginx | grep / -c) = 1 ]; then ./nginx.sh; else echo "Skipping NGINX Installation"; fi 
 ./services.sh
 ./ssh.sh
 ./sudo-su.sh
