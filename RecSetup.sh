@@ -1,6 +1,5 @@
 #!/bin/sh
 cd /bin/lib/sh/MK3S
-mkdir /proc
 echo  "Program Library Installed"
 unalias -a
 echo  "Installing Required Packages"
@@ -38,6 +37,8 @@ apt install -y fail2ban
 apt install -y snort
 apt install -y whois
 apt install -y aide 
+apt install -y build-essential
+apt install -y inotify-tools
 apt autoremove -y
 echo "Running Setup Scripts"
 ./Stealth-Mode.sh
@@ -45,13 +46,13 @@ echo "Running Setup Scripts"
 ./umasks.sh
 ./users-groups.sh
 ./User-Auth.sh
-if [ $(which apache2 | grep / -c) = 1 ]; then ./Apache.sh; else echo "Skipping Apache2 Installation"; fi
+if [ $(which apache2 | grep / -c) = 1 ];  then ./Apache.sh ; else echo "Skipping Apache2 Installation" ; fi
 ./banners.sh
 ./files.sh
 ./iptables.sh
 ./iptables2.sh
 ./network.sh
-if [ $(which nginx | grep / -c) = 1 ]; then ./nginx.sh; else echo "Skipping NGINX Installation"; fi 
+if [ $(which nginx | grep / -c) = 1 ]; then ./nginx.sh ; else echo "Skipping Nginx Installation" ; fi
 ./services.sh
 ./ssh.sh
 ./sudo-su.sh
@@ -81,6 +82,7 @@ ufw enable
 ./Clamconf.sh
 ./Snortconf.sh
 ./AIDE.sh
+./OSSEC.sh
 chmod 755 *.sh
 mv *.sh /bin/lib/sh/MK3S
 cd /bin/lib/sh/MK3S

@@ -32,6 +32,16 @@ Shell Script Lib repository and contents were meant to run on a Linux system. Su
 
 The contents of Shell Script Lib can change and alter certain files on your computer. Use them at your own risk. Since this repository is going to mostly be under maintenance for improvement it is hard to say that these files will change your system in a harmful way. Though it is an unlikely possibility it is not likely that it would happen.
 
+## REPOSITORY CONTENTS
+
+| Type 	| Amount 	|
+|-------------	|--------	|
+| Hardening 	| 56 	|
+| Stealth 	| 14 	|
+| Debugging 	| 12 	|
+| Information 	| 20 	|
+| Database 	| 4 	|
+
 ### INSTALLATION
 
 To install these shell scripts  via command line use these commands-

@@ -3,7 +3,7 @@ if [ $(/usr/bin/id -u) -ne 0 ]; then
     echo "You must be root."
     exit
 fi
-# Version 4.7.1
+# Version 4.6.8
 DATE=$(date -u)
 echo -e "Initializing Directories"
 mkdir /Framework

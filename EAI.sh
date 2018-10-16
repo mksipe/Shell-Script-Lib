@@ -96,4 +96,7 @@ apt install recordmydesktop -y
 apt install kazam -y
 #Another screen recording/screencasting application.
 apt install winff -y 
-#Video converter, super helpful if you have a video in one format but you need it to be in a different format
+#Video converter, super helpful if you have a video in one format but you need it to be in a different format.
+apt install gnome -y 
+#Gnome is a desktop environment that is very simple and powerful but is sleek for its type.
+apt install 
