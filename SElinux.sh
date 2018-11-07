@@ -6,5 +6,5 @@ if [ $(/usr/bin/id -u) -ne 0 ]; then
 fi
 sudo /etc/init.d/apparmor stop
 apt purge apparmor -y 
-apt update -y && upgrade -yuf
+apt update -y && upgrade -y
 apt install selinux -y 
