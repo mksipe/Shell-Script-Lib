@@ -17,94 +17,94 @@ RED='\033[0;31m'
 NEUTRAL='\033[0;0m'
 GREEN='\033[0;32m'
 if [ $(which ufw |grep ufw -c) = 1 ];
-then printf "UFW [${green}INSTALLED${neutral}]";
-else printf "UFW [${red}NOT_INSTALLED${neutral}]" & apt install ufw -y && printf "UFW [${green}INSTALLED${neutral}]";
+then echo "UFW [${green}INSTALLED${neutral}]";
+else echo "UFW [${red}NOT_INSTALLED${neutral}]" & apt install ufw -y && echo "UFW [${green}INSTALLED${neutral}]";
 fi
 if [ $(which cron |grep cron -c) = 1 ];
-then printf "CRON [${green}INSTALLED${neutral}]";
-else printf "CRON [${red}NOT_INSTALLED${neutral}]" & apt install cron -y && printf "CRON [${green}INSTALLED${neutral}]";
+then echo "CRON [${green}INSTALLED${neutral}]";
+else echo "CRON [${red}NOT_INSTALLED${neutral}]" & apt install cron -y && echo "CRON [${green}INSTALLED${neutral}]";
 fi
 if [ $(which nano |grep nano -c) = 1 ];
-then printf "NANO [${green}INSTALLED${neutral}]";
-else printf "NANO [${red}NOT_INSTALLED${neutral}]" & apt install nano -y && printf "NANO [${green}INSTALLED${neutral}]";
+then echo "NANO [${green}INSTALLED${neutral}]";
+else echo "NANO [${red}NOT_INSTALLED${neutral}]" & apt install nano -y && echo "NANO [${green}INSTALLED${neutral}]";
 fi
 if [ $(which locate |grep locate -c) = 1 ];
-then printf "LOCATE [${green}INSTALLED${neutral}]";
-else printf "LOCATE [${red}NOT_INSTALLED${neutral}]" & apt install locate -y && printf "LOCATE [${green}INSTALLED${neutral}]";
+then echo "LOCATE [${green}INSTALLED${neutral}]";
+else echo "LOCATE [${red}NOT_INSTALLED${neutral}]" & apt install locate -y && echo "LOCATE [${green}INSTALLED${neutral}]";
 fi
 if [ $(which iptables |grep iptables -c) = 1 ];
-then printf "IPTABLES [${green}INSTALLED${neutral}]";
-else printf "IPTABLES [${red}NOT_INSTALLED${neutral}]" & apt install iptables -y && printf "IPTABLES [${green}INSTALLED${neutral}]";
+then echo "IPTABLES [${green}INSTALLED${neutral}]";
+else echo "IPTABLES [${red}NOT_INSTALLED${neutral}]" & apt install iptables -y && echo "IPTABLES [${green}INSTALLED${neutral}]";
 fi
 if [ $(which nmap |grep nmap -c) = 1 ];
-then printf "NMAP [${green}INSTALLED${neutral}]";
-else printf "NMAP [${red}NOT_INSTALLED${neutral}]" & apt install nmap -y && printf "NMAP [${green}INSTALLED${neutral}]";
+then echo "NMAP [${green}INSTALLED${neutral}]";
+else echo "NMAP [${red}NOT_INSTALLED${neutral}]" & apt install nmap -y && echo "NMAP [${green}INSTALLED${neutral}]";
 fi
 if [ $(which clamav |grep clamav -c) = 1 ];
-then printf "CLAMAV [${green}INSTALLED${neutral}]";
-else printf "CLAMAV [${red}NOT_INSTALLED${neutral}]" & apt install clamav -y && printf "CLAMAV [${green}INSTALLED${neutral}]";
+then echo "CLAMAV [${green}INSTALLED${neutral}]";
+else echo "CLAMAV [${red}NOT_INSTALLED${neutral}]" & apt install clamav -y && echo "CLAMAV [${green}INSTALLED${neutral}]";
 fi
 if [ $(which clamsmtp |grep clamsmtp -c) = 1 ];
-then printf "CLAMSMTP [${green}INSTALLED${neutral}]";
-else printf "CLAMSMTP [${red}NOT_INSTALLED${neutral}]" & apt install clamsmtp -y && printf "CLAMSMTP [${green}INSTALLED${neutral}]";
+then echo "CLAMSMTP [${green}INSTALLED${neutral}]";
+else echo "CLAMSMTP [${red}NOT_INSTALLED${neutral}]" & apt install clamsmtp -y && echo "CLAMSMTP [${green}INSTALLED${neutral}]";
 fi
 if [ $(which git |grep git -c) = 1 ];
-then printf "GIT [${green}INSTALLED${neutral}]";
-else printf "GIT [${red}NOT_INSTALLED${neutral}]" & apt install git -y && printf "GIT [${green}INSTALLED${neutral}]";
+then echo "GIT [${green}INSTALLED${neutral}]";
+else echo "GIT [${red}NOT_INSTALLED${neutral}]" & apt install git -y && echo "GIT [${green}INSTALLED${neutral}]";
 fi
 if [ $(which lightdm |grep lightdm -c) = 1 ];
-then printf "LIGHTDM [${green}INSTALLED${neutral}]";
-else printf "LIGHTDM [${red}NOT_INSTALLED${neutral}]" & apt install lightdm -y && printf "LIGHTDM [${green}INSTALLED${neutral}]";
+then echo "LIGHTDM [${green}INSTALLED${neutral}]";
+else echo "LIGHTDM [${red}NOT_INSTALLED${neutral}]" & apt install lightdm -y && echo "LIGHTDM [${green}INSTALLED${neutral}]";
 fi
 if [ $(which  chkrootkit |grep chkrootkit -c) = 1 ];
-then printf "CHKROOTKIT [${green}INSTALLED${neutral}]";
-else printf "CHKROOTKIT [${red}NOT_INSTALLED${neutral}]" & apt install chkrootkit -y && printf "CHKROOTKIT [${green}INSTALLED${neutral}]";
+then echo "CHKROOTKIT [${green}INSTALLED${neutral}]";
+else echo "CHKROOTKIT [${red}NOT_INSTALLED${neutral}]" & apt install chkrootkit -y && echo "CHKROOTKIT [${green}INSTALLED${neutral}]";
 fi
-apt install -y libpam-tmpdir  && printf "PAM:EXT [${green}INSTALLED${neutral}]"
-apt install -y libpam-cracklib && printf "PAM:EXT [${green}INSTALLED${neutral}]"
+apt install -y libpam-tmpdir  && echo "PAM:EXT [${green}INSTALLED${neutral}]"
+apt install -y libpam-cracklib && echo "PAM:EXT [${green}INSTALLED${neutral}]"
 if [ $(which cryptsetup |grep cryptsetup -c) = 1 ];
-then printf "CRYPT [${green}INSTALLED${neutral}]";
-else printf "CRYPT [${red}NOT_INSTALLED${neutral}]" & apt install cryptsetup cryptmount -y && printf "CRYPT [${green}INSTALLED${neutral}]";
+then echo "CRYPT [${green}INSTALLED${neutral}]";
+else echo "CRYPT [${red}NOT_INSTALLED${neutral}]" & apt install cryptsetup cryptmount -y && echo "CRYPT [${green}INSTALLED${neutral}]";
 fi
 if [ $(which apt-listbugs |grep apt-listbugs -c) = 1 ];
-then printf "APT:EXT1/2 [${green}INSTALLED${neutral}]";
-else printf "APT:EXT1/2 [${red}NOT_INSTALLED${neutral}]" & apt install apt-listbugs -y && printf "APT:EXT1/2 [${green}INSTALLED${neutral}]";
+then echo "APT:EXT1/2 [${green}INSTALLED${neutral}]";
+else echo "APT:EXT1/2 [${red}NOT_INSTALLED${neutral}]" & apt install apt-listbugs -y && echo "APT:EXT1/2 [${green}INSTALLED${neutral}]";
 fi
 if [ $(which apt-changelog |grep apt-changelog -c) = 1 ];
-then printf "APT:EXT2/2 [${green}INSTALLED${neutral}]";
-else printf "APT:EXT2/2 [${red}NOT_INSTALLED${neutral}]" & apt install apt-changelog -y && printf "APT:EXT2/2 [${green}INSTALLED${neutral}]";
+then echo "APT:EXT2/2 [${green}INSTALLED${neutral}]";
+else echo "APT:EXT2/2 [${red}NOT_INSTALLED${neutral}]" & apt install apt-changelog -y && echo "APT:EXT2/2 [${green}INSTALLED${neutral}]";
 fi
 if [ $(which needrestart |grep needrestart -c) = 1 ];
-then printf "DEB:EXT1/3 [${green}INSTALLED${neutral}]";
-else printf "DEB:EXT1/3 [${red}NOT_INSTALLED${neutral}]" & apt install needrestart -y && printf "DEB:EXT1/3 [${green}INSTALLED${neutral}]";
+then echo "DEB:EXT1/3 [${green}INSTALLED${neutral}]";
+else echo "DEB:EXT1/3 [${red}NOT_INSTALLED${neutral}]" & apt install needrestart -y && echo "DEB:EXT1/3 [${green}INSTALLED${neutral}]";
 fi
 if [ $(which debsums |grep debsums -c) = 1 ];
-then printf "DEB:EXT2/3 [${green}INSTALLED${neutral}]";
-else printf "DEB:EXT2/3 [${red}NOT_INSTALLED${neutral}]" & apt install debsecan -y && printf "DEB:EXT2/3 [${green}INSTALLED${neutral}]";
+then echo "DEB:EXT2/3 [${green}INSTALLED${neutral}]";
+else echo "DEB:EXT2/3 [${red}NOT_INSTALLED${neutral}]" & apt install debsecan -y && echo "DEB:EXT2/3 [${green}INSTALLED${neutral}]";
 fi
 if [ $(which debsums |grep debsums -c) = 1 ];
-then printf "DEB:EXT3/3 [${green}INSTALLED${neutral}]";
-else printf "DEB:EXT3/3 [${red}NOT_INSTALLED${neutral}]" & apt install debsums -y && printf "DEB:EXT3/3 [${green}INSTALLED${neutral}]";
+then echo "DEB:EXT3/3 [${green}INSTALLED${neutral}]";
+else echo "DEB:EXT3/3 [${red}NOT_INSTALLED${neutral}]" & apt install debsums -y && echo "DEB:EXT3/3 [${green}INSTALLED${neutral}]";
 fi
-apt install fail2ban -y && printf FAIL2BAN "[${green}INSTALLED${neutral}]"
+apt install fail2ban -y && echo FAIL2BAN "[${green}INSTALLED${neutral}]"
 if [ $(which snort |grep snort -c) = 1 ];
-then printf "SNORT [${green}INSTALLED${neutral}]";
-else printf "SNORT [${red}NOT_INSTALLED${neutral}]" & apt install snort -y && printf "SNORT [${green}INSTALLED${neutral}]";
+then echo "SNORT [${green}INSTALLED${neutral}]";
+else echo "SNORT [${red}NOT_INSTALLED${neutral}]" & apt install snort -y && echo "SNORT [${green}INSTALLED${neutral}]";
 fi
 if [ $(which whois |grep whois -c) = 1 ];
-then printf "WHOIS [${green}INSTALLED${neutral}]";
-else printf "WHOIS [${red}NOT_INSTALLED${neutral}]" & apt install whois -y && printf "WHOIS [${green}INSTALLED${neutral}]";
+then echo "WHOIS [${green}INSTALLED${neutral}]";
+else echo "WHOIS [${red}NOT_INSTALLED${neutral}]" & apt install whois -y && echo "WHOIS [${green}INSTALLED${neutral}]";
 fi
 if [ $(which aide |grep aide -c) = 1 ];
-then printf "AIDE [${green}INSTALLED${neutral}]";
-else printf "AIDE [${red}NOT_INSTALLED${neutral}]" & apt install aide -y && printf "AIDE [${green}INSTALLED${neutral}]";
+then echo "AIDE [${green}INSTALLED${neutral}]";
+else echo "AIDE [${red}NOT_INSTALLED${neutral}]" & apt install aide -y && echo "AIDE [${green}INSTALLED${neutral}]";
 fi
 if [ $(which build-essential |grep ufw -c) = 1 ];
-then printf "UFW [${green}INSTALLED${neutral}]";
-else printf "UFW [${red}NOT_INSTALLED${neutral}]" & apt install ufw -y && printf "UFW [${green}INSTALLED${neutral}]";
+then echo "UFW [${green}INSTALLED${neutral}]";
+else echo "UFW [${red}NOT_INSTALLED${neutral}]" & apt install ufw -y && echo "UFW [${green}INSTALLED${neutral}]";
 fi 
-apt install -y build-essential && printf "BUILD-ESSENTIAL [${green}INSTALLED${neutral}]"
-apt install -y inotify-tools && printf "INOTIFY-UTILS [${green}INSTALLED${neutral}]"
+apt install -y build-essential && echo "BUILD-ESSENTIAL [${green}INSTALLED${neutral}]"
+apt install -y inotify-tools && echo "INOTIFY-UTILS [${green}INSTALLED${neutral}]"
 
 apt autoremove -y
 echo "Running Setup Scripts"
