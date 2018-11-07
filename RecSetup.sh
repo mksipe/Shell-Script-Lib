@@ -1,8 +1,8 @@
 #!/bin/sh
 cd /bin/lib/sh/MK3S
-echo  "Program Library Installed"
+echo -e  "Program Library Installed"
 unalias -a
-echo  "Installing Required Packages"
+echo -e  "Installing Required Packages"
 cd data/
 git clone https://github.com/mksipe/LCRF
 cd LCRF/
@@ -10,116 +10,116 @@ mkdir /bin/lib/sh/MK3S/ReferenceMaterial
 chmod 755 *.txt
 mv *.txt /bin/lib/sh/MK3S/data/ReferenceMaterial
 cd /bin/lib/sh/MK3S
-echo "2" >> /proc/sys/kernel/randomize_va_space
+echo -e "2" >> /proc/sys/kernel/randomize_va_space
 apt update -y 
 apt full-upgrade -y 
 RED='\033[0;31m'
 NEUTRAL='\033[0;0m'
 GREEN='\033[0;32m'
 if [ $(which ufw |grep ufw -c) = 1 ];
-then echo "UFW [${green}INSTALLED${neutral}]";
-else echo "UFW [${red}NOT_INSTALLED${neutral}]" & apt install ufw -y && echo "UFW [${green}INSTALLED${neutral}]";
+then echo -e "UFW [${green}INSTALLED${neutral}]";
+else echo -e "UFW [${red}NOT_INSTALLED${neutral}]" & apt install ufw -y && echo -e "UFW [${green}INSTALLED${neutral}]";
 fi
 if [ $(which cron |grep cron -c) = 1 ];
-then echo "CRON [${green}INSTALLED${neutral}]";
-else echo "CRON [${red}NOT_INSTALLED${neutral}]" & apt install cron -y && echo "CRON [${green}INSTALLED${neutral}]";
+then echo -e "CRON [${green}INSTALLED${neutral}]";
+else echo -e "CRON [${red}NOT_INSTALLED${neutral}]" & apt install cron -y && echo -e "CRON [${green}INSTALLED${neutral}]";
 fi
 if [ $(which nano |grep nano -c) = 1 ];
-then echo "NANO [${green}INSTALLED${neutral}]";
-else echo "NANO [${red}NOT_INSTALLED${neutral}]" & apt install nano -y && echo "NANO [${green}INSTALLED${neutral}]";
+then echo -e "NANO [${green}INSTALLED${neutral}]";
+else echo -e "NANO [${red}NOT_INSTALLED${neutral}]" & apt install nano -y && echo -e "NANO [${green}INSTALLED${neutral}]";
 fi
 if [ $(which locate |grep locate -c) = 1 ];
-then echo "LOCATE [${green}INSTALLED${neutral}]";
-else echo "LOCATE [${red}NOT_INSTALLED${neutral}]" & apt install locate -y && echo "LOCATE [${green}INSTALLED${neutral}]";
+then echo -e "LOCATE [${green}INSTALLED${neutral}]";
+else echo -e "LOCATE [${red}NOT_INSTALLED${neutral}]" & apt install locate -y && echo -e "LOCATE [${green}INSTALLED${neutral}]";
 fi
 if [ $(which iptables |grep iptables -c) = 1 ];
-then echo "IPTABLES [${green}INSTALLED${neutral}]";
-else echo "IPTABLES [${red}NOT_INSTALLED${neutral}]" & apt install iptables -y && echo "IPTABLES [${green}INSTALLED${neutral}]";
+then echo -e "IPTABLES [${green}INSTALLED${neutral}]";
+else echo -e "IPTABLES [${red}NOT_INSTALLED${neutral}]" & apt install iptables -y && echo -e "IPTABLES [${green}INSTALLED${neutral}]";
 fi
 if [ $(which nmap |grep nmap -c) = 1 ];
-then echo "NMAP [${green}INSTALLED${neutral}]";
-else echo "NMAP [${red}NOT_INSTALLED${neutral}]" & apt install nmap -y && echo "NMAP [${green}INSTALLED${neutral}]";
+then echo -e "NMAP [${green}INSTALLED${neutral}]";
+else echo -e "NMAP [${red}NOT_INSTALLED${neutral}]" & apt install nmap -y && echo -e "NMAP [${green}INSTALLED${neutral}]";
 fi
 if [ $(which clamav |grep clamav -c) = 1 ];
-then echo "CLAMAV [${green}INSTALLED${neutral}]";
-else echo "CLAMAV [${red}NOT_INSTALLED${neutral}]" & apt install clamav -y && echo "CLAMAV [${green}INSTALLED${neutral}]";
+then echo -e "CLAMAV [${green}INSTALLED${neutral}]";
+else echo -e "CLAMAV [${red}NOT_INSTALLED${neutral}]" & apt install clamav -y && echo -e "CLAMAV [${green}INSTALLED${neutral}]";
 fi
 if [ $(which clamsmtp |grep clamsmtp -c) = 1 ];
-then echo "CLAMSMTP [${green}INSTALLED${neutral}]";
-else echo "CLAMSMTP [${red}NOT_INSTALLED${neutral}]" & apt install clamsmtp -y && echo "CLAMSMTP [${green}INSTALLED${neutral}]";
+then echo -e "CLAMSMTP [${green}INSTALLED${neutral}]";
+else echo -e "CLAMSMTP [${red}NOT_INSTALLED${neutral}]" & apt install clamsmtp -y && echo -e "CLAMSMTP [${green}INSTALLED${neutral}]";
 fi
 if [ $(which git |grep git -c) = 1 ];
-then echo "GIT [${green}INSTALLED${neutral}]";
-else echo "GIT [${red}NOT_INSTALLED${neutral}]" & apt install git -y && echo "GIT [${green}INSTALLED${neutral}]";
+then echo -e "GIT [${green}INSTALLED${neutral}]";
+else echo -e "GIT [${red}NOT_INSTALLED${neutral}]" & apt install git -y && echo -e "GIT [${green}INSTALLED${neutral}]";
 fi
 if [ $(which lightdm |grep lightdm -c) = 1 ];
-then echo "LIGHTDM [${green}INSTALLED${neutral}]";
-else echo "LIGHTDM [${red}NOT_INSTALLED${neutral}]" & apt install lightdm -y && echo "LIGHTDM [${green}INSTALLED${neutral}]";
+then echo -e "LIGHTDM [${green}INSTALLED${neutral}]";
+else echo -e "LIGHTDM [${red}NOT_INSTALLED${neutral}]" & apt install lightdm -y && echo -e "LIGHTDM [${green}INSTALLED${neutral}]";
 fi
 if [ $(which  chkrootkit |grep chkrootkit -c) = 1 ];
-then echo "CHKROOTKIT [${green}INSTALLED${neutral}]";
-else echo "CHKROOTKIT [${red}NOT_INSTALLED${neutral}]" & apt install chkrootkit -y && echo "CHKROOTKIT [${green}INSTALLED${neutral}]";
+then echo -e "CHKROOTKIT [${green}INSTALLED${neutral}]";
+else echo -e "CHKROOTKIT [${red}NOT_INSTALLED${neutral}]" & apt install chkrootkit -y && echo -e "CHKROOTKIT [${green}INSTALLED${neutral}]";
 fi
-apt install -y libpam-tmpdir  && echo "PAM:EXT [${green}INSTALLED${neutral}]"
-apt install -y libpam-cracklib && echo "PAM:EXT [${green}INSTALLED${neutral}]"
+apt install -y libpam-tmpdir  && echo -e "PAM:EXT [${green}INSTALLED${neutral}]"
+apt install -y libpam-cracklib && echo -e "PAM:EXT [${green}INSTALLED${neutral}]"
 if [ $(which cryptsetup |grep cryptsetup -c) = 1 ];
-then echo "CRYPT [${green}INSTALLED${neutral}]";
-else echo "CRYPT [${red}NOT_INSTALLED${neutral}]" & apt install cryptsetup cryptmount -y && echo "CRYPT [${green}INSTALLED${neutral}]";
+then echo -e "CRYPT [${green}INSTALLED${neutral}]";
+else echo -e "CRYPT [${red}NOT_INSTALLED${neutral}]" & apt install cryptsetup cryptmount -y && echo -e "CRYPT [${green}INSTALLED${neutral}]";
 fi
 if [ $(which apt-listbugs |grep apt-listbugs -c) = 1 ];
-then echo "APT:EXT1/2 [${green}INSTALLED${neutral}]";
-else echo "APT:EXT1/2 [${red}NOT_INSTALLED${neutral}]" & apt install apt-listbugs -y && echo "APT:EXT1/2 [${green}INSTALLED${neutral}]";
+then echo -e "APT:EXT1/2 [${green}INSTALLED${neutral}]";
+else echo -e "APT:EXT1/2 [${red}NOT_INSTALLED${neutral}]" & apt install apt-listbugs -y && echo -e "APT:EXT1/2 [${green}INSTALLED${neutral}]";
 fi
-if [ $(which apt-changelog |grep apt-changelog -c) = 1 ];
-then echo "APT:EXT2/2 [${green}INSTALLED${neutral}]";
-else echo "APT:EXT2/2 [${red}NOT_INSTALLED${neutral}]" & apt install apt-changelog -y && echo "APT:EXT2/2 [${green}INSTALLED${neutral}]";
+if [ $(which apt-listchanges |grep apt-listcahnges -c) = 1 ];
+then echo -e "APT:EXT2/2 [${green}INSTALLED${neutral}]";
+else echo -e "APT:EXT2/2 [${red}NOT_INSTALLED${neutral}]" & apt install apt-listchanges -y && echo -e "APT:EXT2/2 [${green}INSTALLED${neutral}]";
 fi
 if [ $(which needrestart |grep needrestart -c) = 1 ];
-then echo "DEB:EXT1/3 [${green}INSTALLED${neutral}]";
-else echo "DEB:EXT1/3 [${red}NOT_INSTALLED${neutral}]" & apt install needrestart -y && echo "DEB:EXT1/3 [${green}INSTALLED${neutral}]";
+then echo -e "DEB:EXT1/3 [${green}INSTALLED${neutral}]";
+else echo -e "DEB:EXT1/3 [${red}NOT_INSTALLED${neutral}]" & apt install needrestart -y && echo -e "DEB:EXT1/3 [${green}INSTALLED${neutral}]";
 fi
 if [ $(which debsums |grep debsums -c) = 1 ];
-then echo "DEB:EXT2/3 [${green}INSTALLED${neutral}]";
-else echo "DEB:EXT2/3 [${red}NOT_INSTALLED${neutral}]" & apt install debsecan -y && echo "DEB:EXT2/3 [${green}INSTALLED${neutral}]";
+then echo -e "DEB:EXT2/3 [${green}INSTALLED${neutral}]";
+else echo -e "DEB:EXT2/3 [${red}NOT_INSTALLED${neutral}]" & apt install debsecan -y && echo -e "DEB:EXT2/3 [${green}INSTALLED${neutral}]";
 fi
 if [ $(which debsums |grep debsums -c) = 1 ];
-then echo "DEB:EXT3/3 [${green}INSTALLED${neutral}]";
-else echo "DEB:EXT3/3 [${red}NOT_INSTALLED${neutral}]" & apt install debsums -y && echo "DEB:EXT3/3 [${green}INSTALLED${neutral}]";
+then echo -e "DEB:EXT3/3 [${green}INSTALLED${neutral}]";
+else echo -e "DEB:EXT3/3 [${red}NOT_INSTALLED${neutral}]" & apt install debsums -y && echo -e "DEB:EXT3/3 [${green}INSTALLED${neutral}]";
 fi
-apt install fail2ban -y && echo FAIL2BAN "[${green}INSTALLED${neutral}]"
+apt install fail2ban -y && echo -e FAIL2BAN "[${green}INSTALLED${neutral}]"
 if [ $(which snort |grep snort -c) = 1 ];
-then echo "SNORT [${green}INSTALLED${neutral}]";
-else echo "SNORT [${red}NOT_INSTALLED${neutral}]" & apt install snort -y && echo "SNORT [${green}INSTALLED${neutral}]";
+then echo -e "SNORT [${green}INSTALLED${neutral}]";
+else echo -e "SNORT [${red}NOT_INSTALLED${neutral}]" & apt install snort -y && echo -e "SNORT [${green}INSTALLED${neutral}]";
 fi
 if [ $(which whois |grep whois -c) = 1 ];
-then echo "WHOIS [${green}INSTALLED${neutral}]";
-else echo "WHOIS [${red}NOT_INSTALLED${neutral}]" & apt install whois -y && echo "WHOIS [${green}INSTALLED${neutral}]";
+then echo -e "WHOIS [${green}INSTALLED${neutral}]";
+else echo -e "WHOIS [${red}NOT_INSTALLED${neutral}]" & apt install whois -y && echo -e "WHOIS [${green}INSTALLED${neutral}]";
 fi
 if [ $(which aide |grep aide -c) = 1 ];
-then echo "AIDE [${green}INSTALLED${neutral}]";
-else echo "AIDE [${red}NOT_INSTALLED${neutral}]" & apt install aide -y && echo "AIDE [${green}INSTALLED${neutral}]";
+then echo -e "AIDE [${green}INSTALLED${neutral}]";
+else echo -e "AIDE [${red}NOT_INSTALLED${neutral}]" & apt install aide -y && echo -e "AIDE [${green}INSTALLED${neutral}]";
 fi
 if [ $(which build-essential |grep ufw -c) = 1 ];
-then echo "UFW [${green}INSTALLED${neutral}]";
-else echo "UFW [${red}NOT_INSTALLED${neutral}]" & apt install ufw -y && echo "UFW [${green}INSTALLED${neutral}]";
+then echo -e "UFW [${green}INSTALLED${neutral}]";
+else echo -e "UFW [${red}NOT_INSTALLED${neutral}]" & apt install ufw -y && echo -e "UFW [${green}INSTALLED${neutral}]";
 fi 
-apt install -y build-essential && echo "BUILD-ESSENTIAL [${green}INSTALLED${neutral}]"
-apt install -y inotify-tools && echo "INOTIFY-UTILS [${green}INSTALLED${neutral}]"
+apt install -y build-essential && echo -e "BUILD-ESSENTIAL [${green}INSTALLED${neutral}]"
+apt install -y inotify-tools && echo -e "INOTIFY-UTILS [${green}INSTALLED${neutral}]"
 
 apt autoremove -y
-echo "Running Setup Scripts"
+echo -e "Running Setup Scripts"
 ./Stealth-Mode.sh
 ./UFWC2.sh
 ./umasks.sh
 ./users-groups.sh
 ./User-Auth.sh
-if [ $(which apache2 | grep / -c) = 1 ];  then ./Apache.sh ; else echo "Skipping Apache2 Installation" ; fi
+if [ $(which apache2 | grep / -c) = 1 ];  then ./Apache.sh ; else echo -e "Skipping Apache2 Installation" ; fi
 ./banners.sh
 ./files.sh
 ./iptables.sh
 ./iptables2.sh
 ./network.sh
-if [ $(which nginx | grep / -c) = 1 ]; then ./nginx.sh ; else echo "Skipping Nginx Installation" ; fi
+if [ $(which nginx | grep / -c) = 1 ]; then ./nginx.sh ; else echo -e "Skipping Nginx Installation" ; fi
 ./services.sh
 ./ssh.sh
 ./sudo-su.sh
@@ -155,12 +155,12 @@ mv *.sh /bin/lib/sh/MK3S
 cd /bin/lib/sh/MK3S
 apt autoremove -y
 chmod 551 /bin/lib/sh/MK3S
-echo "Autoconfigure Complete"
-echo "Here is the remaining scripts that you can use in these directories"
+echo -e "Autoconfigure Complete"
+echo -e "Here is the remaining scripts that you can use in these directories"
 apt install python -y
 apt install glade -y
 notify-send -i /usr/share/icons/gnome/scalable/places/start-here.svg 'SSL Correctly Installed.'
 chkrootkit
 mkdir /bin/lib/MK3S/data/Analysis
 cd /bin/lib/sh/MK3S/data/Analysis
-echo "Done"
+echo -e "Done"
