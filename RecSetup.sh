@@ -13,32 +13,99 @@ cd /bin/lib/sh/MK3S
 echo "2" >> /proc/sys/kernel/randomize_va_space
 apt update -y 
 apt full-upgrade -y 
-apt install -y ufw 
-apt install -y cron 
-apt install -y nano 
-apt install -y locate 
-apt install -y iptables 
-apt install -y nmap 
-apt install -y clamav 
-apt install -y clamsmtp 
-apt install -y git 
-apt install -y lightdm 
-apt install -y chkrootkit 
-apt install -y libpam-tmpdir 
-apt install -y libpam-cracklib 
-apt install -y cryptsetup 
-apt install -y cryptmount 
-apt install -y apt-listbugs 
-apt install -y apt-listchanges 
-apt install -y needrestart 
-apt install -y debsecan 
-apt install -y debsums 
-apt install -y fail2ban 
-apt install -y snort
-apt install -y whois
-apt install -y aide 
-apt install -y build-essential
-apt install -y inotify-tools
+RED='\033[0;31m'
+NEUTRAL='\033[0;0m'
+GREEN='\033[0;32m'
+if [ $(which ufw |grep ufw -c) = 1 ];
+then printf "UFW [${green}INSTALLED${neutral}]";
+else printf "UFW [${red}NOT_INSTALLED${neutral}]" & apt install ufw -y && printf "UFW [${green}INSTALLED${neutral}]";
+fi
+if [ $(which cron |grep cron -c) = 1 ];
+then printf "CRON [${green}INSTALLED${neutral}]";
+else printf "CRON [${red}NOT_INSTALLED${neutral}]" & apt install cron -y && printf "CRON [${green}INSTALLED${neutral}]";
+fi
+if [ $(which nano |grep nano -c) = 1 ];
+then printf "NANO [${green}INSTALLED${neutral}]";
+else printf "NANO [${red}NOT_INSTALLED${neutral}]" & apt install nano -y && printf "NANO [${green}INSTALLED${neutral}]";
+fi
+if [ $(which locate |grep locate -c) = 1 ];
+then printf "LOCATE [${green}INSTALLED${neutral}]";
+else printf "LOCATE [${red}NOT_INSTALLED${neutral}]" & apt install locate -y && printf "LOCATE [${green}INSTALLED${neutral}]";
+fi
+if [ $(which iptables |grep iptables -c) = 1 ];
+then printf "IPTABLES [${green}INSTALLED${neutral}]";
+else printf "IPTABLES [${red}NOT_INSTALLED${neutral}]" & apt install iptables -y && printf "IPTABLES [${green}INSTALLED${neutral}]";
+fi
+if [ $(which nmap |grep nmap -c) = 1 ];
+then printf "NMAP [${green}INSTALLED${neutral}]";
+else printf "NMAP [${red}NOT_INSTALLED${neutral}]" & apt install nmap -y && printf "NMAP [${green}INSTALLED${neutral}]";
+fi
+if [ $(which clamav |grep clamav -c) = 1 ];
+then printf "CLAMAV [${green}INSTALLED${neutral}]";
+else printf "CLAMAV [${red}NOT_INSTALLED${neutral}]" & apt install clamav -y && printf "CLAMAV [${green}INSTALLED${neutral}]";
+fi
+if [ $(which clamsmtp |grep clamsmtp -c) = 1 ];
+then printf "CLAMSMTP [${green}INSTALLED${neutral}]";
+else printf "CLAMSMTP [${red}NOT_INSTALLED${neutral}]" & apt install clamsmtp -y && printf "CLAMSMTP [${green}INSTALLED${neutral}]";
+fi
+if [ $(which git |grep git -c) = 1 ];
+then printf "GIT [${green}INSTALLED${neutral}]";
+else printf "GIT [${red}NOT_INSTALLED${neutral}]" & apt install git -y && printf "GIT [${green}INSTALLED${neutral}]";
+fi
+if [ $(which lightdm |grep lightdm -c) = 1 ];
+then printf "LIGHTDM [${green}INSTALLED${neutral}]";
+else printf "LIGHTDM [${red}NOT_INSTALLED${neutral}]" & apt install lightdm -y && printf "LIGHTDM [${green}INSTALLED${neutral}]";
+fi
+if [ $(which  chkrootkit |grep chkrootkit -c) = 1 ];
+then printf "CHKROOTKIT [${green}INSTALLED${neutral}]";
+else printf "CHKROOTKIT [${red}NOT_INSTALLED${neutral}]" & apt install chkrootkit -y && printf "CHKROOTKIT [${green}INSTALLED${neutral}]";
+fi
+apt install -y libpam-tmpdir  && printf "PAM:EXT [${green}INSTALLED${neutral}]"
+apt install -y libpam-cracklib && printf "PAM:EXT [${green}INSTALLED${neutral}]"
+if [ $(which cryptsetup |grep cryptsetup -c) = 1 ];
+then printf "CRYPT [${green}INSTALLED${neutral}]";
+else printf "CRYPT [${red}NOT_INSTALLED${neutral}]" & apt install cryptsetup cryptmount -y && printf "CRYPT [${green}INSTALLED${neutral}]";
+fi
+if [ $(which apt-listbugs |grep apt-listbugs -c) = 1 ];
+then printf "APT:EXT1/2 [${green}INSTALLED${neutral}]";
+else printf "APT:EXT1/2 [${red}NOT_INSTALLED${neutral}]" & apt install apt-listbugs -y && printf "APT:EXT1/2 [${green}INSTALLED${neutral}]";
+fi
+if [ $(which apt-changelog |grep apt-changelog -c) = 1 ];
+then printf "APT:EXT2/2 [${green}INSTALLED${neutral}]";
+else printf "APT:EXT2/2 [${red}NOT_INSTALLED${neutral}]" & apt install apt-changelog -y && printf "APT:EXT2/2 [${green}INSTALLED${neutral}]";
+fi
+if [ $(which needrestart |grep needrestart -c) = 1 ];
+then printf "DEB:EXT1/3 [${green}INSTALLED${neutral}]";
+else printf "DEB:EXT1/3 [${red}NOT_INSTALLED${neutral}]" & apt install needrestart -y && printf "DEB:EXT1/3 [${green}INSTALLED${neutral}]";
+fi
+if [ $(which debsums |grep debsums -c) = 1 ];
+then printf "DEB:EXT2/3 [${green}INSTALLED${neutral}]";
+else printf "DEB:EXT2/3 [${red}NOT_INSTALLED${neutral}]" & apt install debsecan -y && printf "DEB:EXT2/3 [${green}INSTALLED${neutral}]";
+fi
+if [ $(which debsums |grep debsums -c) = 1 ];
+then printf "DEB:EXT3/3 [${green}INSTALLED${neutral}]";
+else printf "DEB:EXT3/3 [${red}NOT_INSTALLED${neutral}]" & apt install debsums -y && printf "DEB:EXT3/3 [${green}INSTALLED${neutral}]";
+fi
+apt install fail2ban -y && printf FAIL2BAN "[${green}INSTALLED${neutral}]"
+if [ $(which snort |grep snort -c) = 1 ];
+then printf "SNORT [${green}INSTALLED${neutral}]";
+else printf "SNORT [${red}NOT_INSTALLED${neutral}]" & apt install snort -y && printf "SNORT [${green}INSTALLED${neutral}]";
+fi
+if [ $(which whois |grep whois -c) = 1 ];
+then printf "WHOIS [${green}INSTALLED${neutral}]";
+else printf "WHOIS [${red}NOT_INSTALLED${neutral}]" & apt install whois -y && printf "WHOIS [${green}INSTALLED${neutral}]";
+fi
+if [ $(which aide |grep aide -c) = 1 ];
+then printf "AIDE [${green}INSTALLED${neutral}]";
+else printf "AIDE [${red}NOT_INSTALLED${neutral}]" & apt install aide -y && printf "AIDE [${green}INSTALLED${neutral}]";
+fi
+if [ $(which build-essential |grep ufw -c) = 1 ];
+then printf "UFW [${green}INSTALLED${neutral}]";
+else printf "UFW [${red}NOT_INSTALLED${neutral}]" & apt install ufw -y && printf "UFW [${green}INSTALLED${neutral}]";
+fi 
+apt install -y build-essential && printf "BUILD-ESSENTIAL [${green}INSTALLED${neutral}]"
+apt install -y inotify-tools && printf "INOTIFY-UTILS [${green}INSTALLED${neutral}]"
+
 apt autoremove -y
 echo "Running Setup Scripts"
 ./Stealth-Mode.sh
