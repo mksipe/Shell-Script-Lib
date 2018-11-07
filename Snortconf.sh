@@ -5,5 +5,12 @@ apt-get install openssh-server ethtool build-essential libpcap-dev libpcre3-dev 
 systemctl enable snort
 systemctl start snort
 systemctl status snort
+sed -i "s/^#//" /bin/lib/sh/MK3S/data/Snort.db > /bin/lib/sh/MK3S/data/Snort.db.new # Removes "#" from the file to make all these new rules valid.
+sed -i '/Dagger/d' /bin/lib/sh/MK3S/data/Snort.db.new # Deletes broken Rule
+sed -i '/Worm\ Client/d' /bin/lib/sh/MK3S/data/Snort.db.new # Deletes Broken Rule
+sed -i '/GetInfo/d' /bin/lib/sh/MK3S/data/Snort.db.new # Deletes Broken Rule
+sed -i '/BN\|10/d' /bin/lib/sh/MK3S/data/Snort.db.new # Deletes Broken Rule
+sed -i '/WHATISIT/d' /bin/lib/sh/MK3S/data/Snort.db.new # Deletes Broken Rule
+sed -i '/Remote\|' /bin/lib/sh/MK3S/data/Snort.db.new # Deletes Broken Rule
 echo "Snort Installed"
-echo "0 12 * * * snort -D -vc /etc/snort/snort.conf " | sudo tee -a /etc/crontab
+echo "0 12 * * * snort -D -vc /etc/snort/snort.conf -F /bin/lib/sh/MK3S/data/Snort.db.new" | sudo tee -a /etc/crontab
