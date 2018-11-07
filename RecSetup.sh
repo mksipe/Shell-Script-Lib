@@ -40,14 +40,8 @@ if [ $(which nmap |grep nmap -c) = 1 ];
 then echo "[INSTALLED] NMAP";
 else echo "[NOT_INSTALLED] NMAP" & apt install nmap -y && echo "[INSTALLED] NMAP";
 fi
-if [ $(which clamav |grep clamav -c) = 1 ];
-then echo "[INSTALLED] CLAMAV";
-else echo "[NOT_INSTALLED] CLAMAV" & apt install clamav -y && echo "[INSTALLED] CLAMAV";
-fi
-if [ $(which clamsmtp |grep clamsmtp -c) = 1 ];
-then echo "[INSTALLED] CLAMSMTP";
-else echo "[NOT_INSTALLED] CLAMSMTP" & apt install clamsmtp -y && echo "[INSTALLED] CLAMSMTP";
-fi
+apt install clamav -y && echo "[INSTALLED] CLAMAV";
+apt install clamsmtp -y && echo "[INSTALLED] CLAMSMTP";
 if [ $(which git |grep git -c) = 1 ];
 then echo "[INSTALLED] GIT";
 else echo "[NOT_INSTALLED] GIT" & apt install git -y && echo "[INSTALLED] GIT";
