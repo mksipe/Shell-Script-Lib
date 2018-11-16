@@ -64,8 +64,6 @@ then echo "[ERROR] NMAP";
 else echo "[INSTALLED] NMAP";
 fi;
 fi
-apt install clamav -y && echo "[INSTALLED] CLAMAV";
-apt install clamsmtp -y && echo "[INSTALLED] CLAMSMTP";
 if [ $(which git |grep git -c) = 1 ];
 then echo "[INSTALLED] GIT";
 else echo "[NOT_INSTALLED] GIT" & apt install git -y;
@@ -90,8 +88,6 @@ then echo "[ERROR] CHKROOTKIT";
 else echo "[INSTALLED] CHKROOTKIT";
 fi;
 fi
-apt install -y libpam-tmpdir  && echo "PAM:EXT [INSTALLED]"
-apt install -y libpam-cracklib && echo "PAM:EXT [INSTALLED]"
 if [ $(which cryptsetup |grep cryptsetup -c) = 1 ];
 then echo "[INSTALLED] CRYPT";
 else echo "[NOT_INSTALLED] CRYPT" & apt install cryptsetup cryptmount -y;
@@ -127,7 +123,7 @@ fi
 if [ $(which debescan |grep debsecan -c) = 1 ];
 then echo "[INSTALLED] DEB:EXT2/3 ";
 else echo "[NOT_INSTALLED] DEB:EXT2/3 " & apt install debsecan -y;
-if [ $(which debsecen |grep debsecan -c) = 0 ];
+if [ $(which debsecan |grep debsecan -c) = 0 ];
 then echo "[ERROR] DEB:EXT:2/3";
 else echo "[INSTALLED] DEB:EXT2/3";
 fi;
@@ -140,7 +136,6 @@ then echo "[ERROR] DEB:EXT3/3";
 else echo "[INSTALLED] DEB:EXT3/3";
 fi;
 fi
-apt install fail2ban -y && echo FAIL2BAN "[INSTALLED]"
 if [ $(which snort |grep snort -c) = 1 ];
 then echo "[INSTALLED] SNORT ";
 else echo "[NOT_INSTALLED] SNORT " & apt install snort -y;
@@ -165,6 +160,11 @@ then echo "[ERROR] AIDE";
 else echo "[INSTALLED] AIDE";
 fi;
 fi
+apt install clamav -y && echo "[INSTALLED] CLAMAV";
+apt install clamsmtp -y && echo "[INSTALLED] CLAMSMTP";
+apt install fail2ban -y && echo FAIL2BAN "[INSTALLED] FAIL2BAN"
+apt install -y libpam-tmpdir  && echo "[INSTALLED] PAM:EXT1/2"
+apt install -y libpam-cracklib && echo "[INSTALLED] PAM:EXT2/2"
 apt install -y build-essential && echo "BUILD-ESSENTIAL [INSTALLED]"
 apt install -y inotify-tools && echo "INOTIFY-UTILS [INSTALLED]"
 apt autoremove -y
