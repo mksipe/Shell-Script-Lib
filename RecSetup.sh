@@ -160,13 +160,61 @@ then echo "[ERROR] AIDE";
 else echo "[INSTALLED] AIDE";
 fi;
 fi
-apt install clamav -y && echo "[INSTALLED] CLAMAV";
-apt install clamsmtp -y && echo "[INSTALLED] CLAMSMTP";
-apt install fail2ban -y && echo "[INSTALLED] FAIL2BAN"
-apt install -y libpam-tmpdir  && echo "[INSTALLED] PAM:EXT1/2"
-apt install -y libpam-cracklib && echo "[INSTALLED] PAM:EXT2/2"
-apt install -y build-essential && echo "[INSTALLED] BUILD-ESSENTIAL "
-apt install -y inotify-tools && echo "[INSTALLED] INOTIFY-UTILS"
+if [ $(apt list clamav |grep installed -c) = 1 ];
+then echo "[INSTALLED] CLAMAV ";
+else echo "[NOT_INSTALLED] CLAMAV " & apt install clamav -y;
+if [ $(apt list clamav |grep installed -c) = 0 ];
+then echo "[ERROR] CLAMAV";
+else echo "[INSTALLED] CLAMAV";
+fi;
+fi
+if [ $(apt list clamsmtp |grep installed -c) = 1 ];
+then echo "[INSTALLED] CLAMSMTP ";
+else echo "[NOT_INSTALLED] CLAMSMTP " & apt install clamsmtp -y;
+if [ $(apt list clamsmtp |grep installed -c) = 0 ];
+then echo "[ERROR] CLAMSMTP";
+else echo "[INSTALLED] CLAMSMTP";
+fi;
+fi
+if [ $(apt list fail2ban |grep installed -c) = 1 ];
+then echo "[INSTALLED] FAIL2BAN ";
+else echo "[NOT_INSTALLED] FAIL2BAN " & apt install fail2ban -y;
+if [ $(apt list fail2ban |grep installed -c) = 0 ];
+then echo "[ERROR] FAIL2BAN";
+else echo "[INSTALLED] FAIL2BAN";
+fi;
+fi
+if [ $(apt list libpam-tmpdir |grep installed -c) = 1 ];
+then echo "[INSTALLED] PAM:EXT1/2 ";
+else echo "[NOT_INSTALLED] PAM:EXT1/2 " & apt install libpam-tmpdir -y;
+if [ $(apt list libpam-tmpdir |grep installed -c) = 0 ];
+then echo "[ERROR] PAM:EXT1/2";
+else echo "[INSTALLED] PAM:EXT1/2";
+fi;
+fi
+if [ $(apt list libpam-cracklib |grep installed -c) = 1 ];
+then echo "[INSTALLED] PAM:EXT2/2 ";
+else echo "[NOT_INSTALLED] PAM:EXT2/2 " & apt install libpam-cracklib -y;
+if [ $(apt list libpam-cracklib |grep installed -c) = 0 ];
+then echo "[ERROR] PAM:EXT2/2";
+else echo "[INSTALLED] PAM:EXT2/2";
+fi;
+fi
+if [ $(apt list build-essential |grep installed -c) = 1 ];
+then echo "[INSTALLED] BUILD-ESSENTIAL ";
+else echo "[NOT_INSTALLED]  BUILD-ESSENTIAL " & apt install build-essentail -y;
+if [ $(apt list build-essential |grep installed -c) = 0 ];
+then echo "[ERROR] BUILD-ESSENTIAL";
+else echo "[INSTALLED] BUILD-ESSENTIAL";
+fi;
+fiif [ $(apt list inotify-utils |grep installed -c) = 1 ];
+then echo "[INSTALLED] INOTIFY-UTILS ";
+else echo "[NOT_INSTALLED] INOTIFY-UTILS " & apt install inotify-utils -y;
+if [ $(apt list inotify-utils |grep installed -c) = 0 ];
+then echo "[ERROR] INOTIFY-UTILS";
+else echo "[INSTALLED] INOTIFY-UTILS";
+fi;
+fi
 apt autoremove -y
 echo "Running Setup Scripts"
 ./Stealth-Mode.sh

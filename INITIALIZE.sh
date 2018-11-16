@@ -3,7 +3,7 @@ if [ $(/usr/bin/id -u) -ne 0 ]; then
     echo "You must be root."
     exit
 fi
-# Version 4.6.16
+# Version 4.6.18
 DATE=$(date -u)
 echo -e "Initializing Directories"
 mkdir /Framework
@@ -34,6 +34,8 @@ chmod 755 *.html
 chmod 755 *.css
 chmod 755 .git 
 chmod 755 .github
+chmod 755 *.Archive
+chmod 755 *.Exper
 mv *.sh /Framework
 mv *.md /Framework
 mv *.txt /Framework
@@ -64,6 +66,8 @@ mv *.html /Framework
 mv *.css /Framework
 sudo mv .git /Framework
 sudo mv .github /Framework
+sudo mv .Archive /Framework
+sudo mv .Experimental /Framework
 rm -r $(pwd)/Shell-Script-Lib
 cd /Framework
 wget -i src1.db
@@ -160,6 +164,8 @@ mv *.css /bin/lib/sh/MK3S/data/web
 mkdir /bin/lib/sh/MK3S/maintain
 sudo mv .git /bin/lib/sh/MK3S/maintain
 sudo mv .github /bin/lib/sh/MK3S/maintain
+sudo mv .Archive /bin/lib/sh/MK3S/
+sudo mv .Experimental /bin/lib/sh/MK3S/
 rm -r /Framework
 touch /bin/lib/sh/MK3S/data/progs.txt
 touch /bin/lib/sh/MK3S/data/AllProcesses.txt
