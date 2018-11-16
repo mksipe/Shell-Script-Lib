@@ -104,10 +104,10 @@ then echo "[ERROR] APT:EXT1/2";
 else echo "[INSTALLED] APT:EXT1/2";
 fi;
 fi
-if [ $(which apt-listchanges |grep apt-listcahnges -c) = 1 ];
+if [ $(which apt-listchanges |grep apt-listchanges -c) = 1 ];
 then echo "[INSTALLED] APT:EXT2/2 ";
 else echo "[NOT_INSTALLED] APT:EXT2/2 " & apt install apt-listchanges -y;
-if [ $(which apt-listbugs |grep apt-listbugs -c) = 0 ];
+if [ $(which apt-listchanges |grep apt-listchanges -c) = 0 ];
 then echo "[ERROR] APT:EXT2/2";
 else echo "[INSTALLED] APT:EXT2/2";
 fi;
@@ -120,7 +120,7 @@ then echo "[ERROR] DEB:EXT1/3";
 else echo "[INSTALLED] DEB:EXT1/3";
 fi;
 fi
-if [ $(which debescan |grep debsecan -c) = 1 ];
+if [ $(which debsecan |grep debsecan -c) = 1 ];
 then echo "[INSTALLED] DEB:EXT2/3 ";
 else echo "[NOT_INSTALLED] DEB:EXT2/3 " & apt install debsecan -y;
 if [ $(which debsecan |grep debsecan -c) = 0 ];
@@ -162,11 +162,11 @@ fi;
 fi
 apt install clamav -y && echo "[INSTALLED] CLAMAV";
 apt install clamsmtp -y && echo "[INSTALLED] CLAMSMTP";
-apt install fail2ban -y && echo FAIL2BAN "[INSTALLED] FAIL2BAN"
+apt install fail2ban -y && echo "[INSTALLED] FAIL2BAN"
 apt install -y libpam-tmpdir  && echo "[INSTALLED] PAM:EXT1/2"
 apt install -y libpam-cracklib && echo "[INSTALLED] PAM:EXT2/2"
-apt install -y build-essential && echo "BUILD-ESSENTIAL [INSTALLED]"
-apt install -y inotify-tools && echo "INOTIFY-UTILS [INSTALLED]"
+apt install -y build-essential && echo "[INSTALLED] BUILD-ESSENTIAL "
+apt install -y inotify-tools && echo "[INSTALLED] INOTIFY-UTILS"
 apt autoremove -y
 echo "Running Setup Scripts"
 ./Stealth-Mode.sh
