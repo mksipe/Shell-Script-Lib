@@ -34,8 +34,8 @@ chmod 755 *.html
 chmod 755 *.css
 chmod 755 .git 
 chmod 755 .github
-chmod 755 *.Archive
-chmod 755 *.Exper
+chmod 755 .Archive
+chmod 755 .Experimental
 mv *.sh /Framework
 mv *.md /Framework
 mv *.txt /Framework
