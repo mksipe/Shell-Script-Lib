@@ -78,7 +78,7 @@ cat snort3-community.rules > /Framework/Snort.db
 cd /Framework
 cat ip-blacklist > badips.db
 touch cve.db
-cat allitems.csv > cve.db
+cat allitems.txt > cve.db
 touch wordlist.db
 cd Probable-Wordlists
 cd /Dictionary-Style/Technical_and_Default
