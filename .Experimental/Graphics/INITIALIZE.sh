@@ -3,7 +3,7 @@ if [ $(/usr/bin/id -u) -ne 0 ]; then
     echo "You must be root."
     exit
 fi
-if [ ! -e /bin/lib/sh/MK3S/data/badips.db ] ; then
+if [ ! -e /bin/lib/sh/MK3S ] ; then
  echo MK3SL is not installed.
  exit 1                      
 fi
