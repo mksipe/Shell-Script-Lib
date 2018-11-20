@@ -1,389 +1,198 @@
 0ad (0.0.21-2)
-Real-time strategy game of ancient warfare
+
 0ad-data (0.0.21-1)
-Real-time strategy game of ancient warfare (data files)
 0ad-data-common (0.0.21-1)
-Real-time strategy game of ancient warfare (common data files)
 2048-qt (0.1.6-1+b1)
-mathematics based puzzle game
 3dchess (0.8.1-19+deb9u1)
-Play chess across 3 boards!
 4digits (1.1.4-1+b1)
-guess-the-number game, aka Bulls and Cows
 7kaa (2.14.6+dfsg-1+b1)
-Seven Kingdoms Ancient Adversaries: real-time strategy game
 7kaa-data (2.14.6+dfsg-1)
-Seven Kingdoms Ancient Adversaries - game data
 a7xpg (0.11.dfsg1-9+b1)
-chase action game
 a7xpg-data (0.11.dfsg1-9)
-chase action game - game data
 aajm (0.4-9+b1)
-ASCII art version of jugglemaster
 abe (1.1+dfsg-2+b1)
-side-scrolling game named "Abe's Amazing Adventure"
 abe-data (1.1+dfsg-2)
-side-scrolling game named "Abe's Amazing Adventure" -- data
 ace-of-penguins (1.5~rc2-1+b1)
-penguin-themed solitaire games
 acm (5.0-29.1)
-Multi-player classic aerial combat simulation
 adanaxisgpl (1.2.5.dfsg.1-6+b2)
-Action game in four spatial dimensions
 adanaxisgpl-data (1.2.5.dfsg.1-6)
-Action game in four spatial dimensions
 adonthell (0.3.6-1)
-2D graphical roleplaying game
 adonthell-data (0.3.6-1)
-Data files needed by Adonthell
 airstrike (0.99+1.0pre6a-8)
-2d dogfight game in the tradition of 'Biplanes' and 'BIP'
 airstrike-common (0.99+1.0pre6a-8)
-2d dogfight game - data files
 aisleriot (1:3.22.1-1)
-GNOME solitaire card game collection
 alex4 (1.1-7)
-Alex the Allegator 4 - a retro platform game
 alex4-data (1.1-7)
-Alex the Allegator 4 - game data
 alien-arena (7.66+dfsg-3) [contrib]
-Standalone 3D first person online deathmatch shooter
 alien-arena-data (7.66-2) [non-free]
-Game data files for Alien Arena
 alien-arena-server (7.66+dfsg-3) [contrib]
-Dedicated server for Alien Arena
 alienblaster (1.1.0-9)
-Classic 2D shoot 'em up
 alienblaster-data (1.1.0-9)
-Game data for Alien Blaster
 amoebax (0.2.1+dfsg-3)
-Puyo Puyo-style puzzle game for up to two players
 amoebax-data (0.2.1+dfsg-3)
-Data files for amoebax
 amphetamine (0.8.10-19)
-jump'n run game with unique visual effects
 amphetamine-data (0.8.7-15)
-data files for the game "Amphetamine"
 an (1.2-1+b4)
-very fast anagram generator
 angband (1:3.5.1-2.2)
-Single-player, text-based, dungeon simulation game
 angband-data (1:3.5.1-2.2)
-Game data for angband
 angrydd (1.0.1-11)
-Angry Drunken Dwarves - falling blocks puzzle game
 animals (201207131226-2+deb9u1)
-Traditional AI animal guessing engine using a binary tree DB
 antigravitaattori (0.0.3-7+b1)
-Multiplayer flying saucer racing game
 ardentryst (1.71-5)
-Action/RPG sidescoller, focused on story and character development
 armagetronad (0.2.8.3.4-1)
-3D Tron-like high speed game
 armagetronad-common (0.2.8.3.4-1)
-Common files for the Armagetron Advanced packages
 armagetronad-dedicated (0.2.8.3.4-1)
-dedicated game server for Armagetron Advanced
 asc (2.6.1.0-1+b3)
-turn-based strategy game
 asc-data (2.6.1.0-1)
-data files for the Advanced Strategic Command game
 asc-music (1.3-3)
-music pack for ASC
 asciijump (1.0.2~beta-7.1)
-Small and funny ASCII-art game about ski jumping
 assaultcube (1.1.0.4+dfsg2-1.2+b1) [contrib]
-realistic first-person-shooter
 assaultcube-data (1.1.0.4+repack1-2.1) [non-free]
-data files and documentation for AssaultCube
 astromenace (1.3.2+repack-3+b1) [contrib]
-hardcore 3D space shooter with spaceship upgrade possibilities
 astromenace-data-src (1.3.2+repack-1) [non-free]
-data files for AstroMenace game
 asylum (0.3.2-2+b1)
-surreal platform shooting game
 asylum-data (0.3.2-2)
-surreal platform shooting game - data files
 atanks (6.5~dfsg-2)
-tank-battling game
 atanks-data (6.5~dfsg-2)
-data files for Atomic tanks
 atom4 (4.1-8)
-Original two-player color puzzle game
 atomix (3.22.0-1)
-puzzle game for building molecules out of separate atoms
 atomix-data (3.22.0-1)
-puzzle game for building molecules out of separate atoms -- data
 attal-themes-medieval (1.0~rc2.dfsg1-1)
-medieval theme for attal
 auralquiz (0.8.1-1+b2)
-simple music quiz game using your own music files
 balder2d (1.0-2+b1)
-A 2D shooter in zero gravity
 balder2d-data (1.0-2)
-data files for balder2d
 ballerburg (1.2.0-1+b1)
-Classical castle combat game
 ballz (1.0.3-1+b2)
-B.A.L.L.Z. - platform/puzzle game where you control a rolling ball
 ballz-data (1.0.3-1)
-B.A.L.L.Z. - game data
 bambam (0.6+dfsg-1)
-keyboard mashing and doodling game for babies
 barrage (1.0.4-2+b1)
-Rather destructive action game
 bastet (0.43-4+b2)
-ncurses Tetris clone with a bastard algorithm
 bb (1.3rc1-10)
-ASCII-art demo based on AAlib
 beneath-a-steel-sky (0.0372-6)
-classic 2D point and click science fiction adventure game
 berusky (1.7-1+deb9u1)
-Logic game based on Sokoban
 berusky-data (1.7-1)
-Data files for Berusky
 berusky2 (0.10-5+b1)
-logic game Bugs Escape 3D
 berusky2-data (0.9-1)
-logic game Bugs Escape 3D -- data files
 between (6+dfsg1-3)
-game about consciousness and isolation
 billard-gl (1.75-16+b1)
-3D billiards game
 billard-gl-data (1.75-16)
-3D billiards game - data files
 biloba (0.9.3-6)
-turn based strategy board game for up to 4 players
 biloba-data (0.9.3-6)
-data package for biloba turn based strategy board game
 biniax2 (1.30-2)
-logic game with arcade and tactics modes
 biniax2-data (1.30-2)
-logic game with arcade and tactics modes -- data
 black-box (1.4.8-4)
-Find the crystals
 blinken (4:16.08.2-1+b1)
-KDE version of the Simon electronic memory game
 blobandconquer (1.11-dfsg+20-1.1)
-3D platform shooting game
 blobandconquer-data (1.11-dfsg+20-1.1)
-3D platform shooting game -- data files
 blobby (1.0-3+b1)
-Volleyball game with blobs
 blobby-data (1.0-3)
-Volleyball game with blobs (data files)
 blobby-server (1.0-3+b1)
-Volleyball game with blobs (server)
 bloboats (1.0.2+dfsg-2+b1)
-Boat racing game
 blobwars (2.00-1+b1)
-platform shooting game
 blobwars-data (2.00-1)
-platform shooting game
 blockattack (2.0.1-1+b1)
-puzzle game inspired by Tetris
 blockout2 (2.4+dfsg1-7+b3)
 Tetris like game (3D-tetris)
 blocks-of-the-undead (1.0-6+b1)
-Tetris Attack clone with spooky undertones
 blocks-of-the-undead-data (1.0-6)
-Tetris Attack clone with spooky undertones - data files
 bombardier (0.8.3+nmu1+b2)
-The GNU Bombing utility
 bomber (4:16.08.1-1+b1)
-arcade spaceship game
 bomberclone (0.11.9-7+b1)
-free Bomberman clone
 bomberclone-data (0.11.9-7)
-Data files for bomberclone game
 boswars (2.7+svn160110-1+b1)
-futuristic real-time strategy game
 boswars-data (2.7+svn160110-1)
-Images, data, and music files for Bos Wars
 bouncy (0.6.20071104-5)
-eat the yummy veggies in the garden - game for small kids
 bovo (4:16.08.1-1+b1)
-gomoku (five in line) board game
 brainparty (0.61+dfsg-3+b1)
-36 puzzle games for all the family
 brainparty-data (0.61+dfsg-3)
-36 puzzle games for all the family -- game data
 briquolo (0.5.7-7+b1)
-fast paced 3d Breakout game
 briquolo-data (0.5.7-7)
-data files for the fast paced 3d Breakout game Briquolo
 brutalchess (0.5.2+dfsg-7)
-3D chess game with reflection of the chessmen
 bsdgames (2.17-25)
-collection of classic textual unix games
 bsdgames-nonfree (2.17-7) [non-free]
-rogue, the classic dungeon exploration game
 btanks (0.9.8083-6)
-fast 2D tank arcade game with multiplayer and split-screen modes
 btanks-data (0.9.8083-6)
-fast 2D tank arcade game -- data
 bubbros (1.6.2-1)
-multiplayer clone of the famous Bubble Bobble game
 bucklespring (1.4.0-2)
-Nostalgia bucklespring keyboard sound
 bucklespring-data (1.4.0-2)
-Nostalgia bucklespring keyboard sound - sound files
 bugsquish (0.0.6-8+b1)
-Bugs are trying to suck blood out of your arm!
 bumprace (1.5.4-3+b1)
-1 or 2 players race through a multi-level maze
 bumprace-data (1.5.4-3)
-data files for bumprace
 burgerspace (1.9.2-2)
-Avoid evil foodstuffs and make burgers
 bygfoot (2.3.2-2+b1)
-football (a.k.a soccer) management game
 bygfoot-data (2.3.2-2)
-data of football (a.k.a soccer) management game
 bzflag (2.4.8-1)
-3D first person tank battle game
 bzflag-client (2.4.8-1)
-3D first person tank battle game -- client
 bzflag-data (2.4.8-1)
-3D first person tank battle game -- data
 bzflag-server (2.4.8-1)
-3D first person tank battle game -- server
 cappuccino (0.5.1-6+deb9u1)
-utility to let your boss think that you're working hard
 caveexpress (2.4+git20160609-3)
-2D platformer with physics-based gameplay
 caveexpress-data (2.4+git20160609-3)
-2D platformer with physics-based gameplay --data
 cavepacker (2.4+git20160609-3)
-sokoban game with network based multiplayer gaming
 cavepacker-data (2.4+git20160609-3)
-sokoban game with network based multiplayer gaming --data
 cavezofphear (0.5.1-1+b2)
-ASCII Boulder Dash clone
 ceferino (0.97.8+svn37-2+b1)
-action game similar to Super Pang
 ceferino-data (0.97.8+svn37-2)
-action game similar to Super Pang
 cgoban (1.9.14-18+b1)
-complete Go board
 chessx (1.4.0-1)
-chess database
 childsplay (2.6.5+dfsg-1)
-Suite of educational games for young children
 childsplay-alphabet-sounds-bg (0.9.1-2)
-Bulgarian sound files for childsplay
 childsplay-alphabet-sounds-el (0.9-2)
-Greek sound files for childsplay
 childsplay-alphabet-sounds-en-gb (0.9.1-2)
-British sound files for childsplay
 childsplay-alphabet-sounds-nb (0.9.1-1)
-Bokmål sound files for childsplay
 childsplay-alphabet-sounds-ro (0.9.1-1)
-Romanian sound files for childsplay
 childsplay-alphabet-sounds-sl (0.9.1-1)
-Slovenian sound files for childsplay
 chipw (2.0.6-1.2+b2)
-custom level editor for TileWorld / Chip's Challenge™
 chocolate-common (2.3.0-3)
-dummy transitional package for chocolate-doom related packages
 chocolate-doom (2.3.0-3)
-Doom engines closely-compatible with Vanilla Doom
-chromium-bsu (0.9.16.1-1+b1)
-fast paced, arcade-style, scrolling space shooter
-chromium-bsu-data (0.9.16.1-1)
-data pack for the Chromium B.S.U. game
+]chromium-bsu (0.9.16.1-1+b1)
+fhromium-bsu-data (0.9.16.1-1)
 circuslinux (1.0.3-33+b1)
-Clowns are trying to pop balloons to score points!
 circuslinux-data (1.0.3-33)
-data files for circuslinux
 colobot (0.1.9-5)
-educational programming strategy game
 colobot-common (0.1.9-5)
-educational programming strategy game - data
 colobot-common-sounds (0.1.9-5)
-educational programming strategy game - sounds and music
 colobot-common-textures (0.1.9-5)
-educational programming strategy game - textures
 colorcode (0.8.5-1+b1)
-advanced clone of the MasterMind code-breaking game
 colossal-cave-adventure (1.4-1)
-Colossal Cave Adventure game
 connectagram (1.2.4-1)
-word unscrambling game
 connectagram-data (1.2.4-1)
-word unscrambling game - data files
 cookietool (2.5-6+b1)
-suite of programs to help maintain a fortune database
 corsix-th (0.60-2) [contrib]
-Open source clone of Theme Hospital
 corsix-th-data (0.60-2) [contrib]
-Open source clone of Theme Hospital (data package)
 cowsay (3.03+dfsg2-3)
-configurable talking cow
 cowsay-off (3.03+dfsg2-3)
-configurable talking cow (offensive cows)
 crack-attack (1.1.14-9.1+b2)
-multiplayer OpenGL puzzle game like "Tetris Attack"
 crafty (23.4-7) [non-free]
-state-of-the-art chess engine, compatible with xboard
 crafty-bitmaps (1.0-1) [contrib]
-bitmap images for crafty chess game annotation mode
 crafty-books-medium (1.0.debian1-2) [contrib]
-Medium size opening books for the crafty chess engine
 crafty-books-medtosmall (1.0.debian1-2) [contrib]
-Medium-to-small size opening books for crafty chess engine
 crafty-books-small (1.0.debian1-2) [contrib]
-Small-size opening books for crafty chess engine
 crawl (2:0.19.3-1+b1 [mips, mips64el, mipsel], 2:0.19.3-1 [amd64, arm64, armel, armhf, i386, ppc64el, s390x])
-Dungeon Crawl, a text-based roguelike game
 crawl-common (2:0.19.3-1)
-Dungeon Crawl, a text-based roguelike game (data files)
 crawl-tiles (2:0.19.3-1+b1 [mips, mips64el, mipsel], 2:0.19.3-1 [amd64, arm64, armel, armhf, i386, ppc64el, s390x])
-Dungeon Crawl, a roguelike game, tiles version
 crawl-tiles-data (2:0.19.3-1)
-Dungeon Crawl, a text-based roguelike game (tile data files)
 crimson (0.5.2-1.1+b1)
-hex-based tactical game
 criticalmass (1:1.0.0-5)
-Shoot-em-up a la galaxian
 criticalmass-data (1:1.0.0-5)
-Shoot-em-up a la galaxian (data files)
 crossfire-client (1.71.0-1.1+b2)
-Client for the multiplayer roguelike Crossfire
 crossfire-client-images (1.70.0-1)
-Base crossfire-client images
 crossfire-client-sounds (1.71.0-3)
-sound files for playing crossfire
 crossfire-common (1.71.0+dfsg1-1)
-Architecture independent common files for Crossfire server
 crossfire-maps (1.71.0-1)
-Standard set of maps for crossfire
 crossfire-maps
-virtual package provided by crossfire-maps-small
 crossfire-maps-small (1.5.0-3)
-Small set of maps for crossfire
 crossfire-server (1.71.0+dfsg1-1+b1)
-Server for Crossfire Games
 crrcsim (0.9.12-6.2+b1)
-Model-Airplane Flight Simulator
 crrcsim-data (0.9.12-6.2)
-Data files for crrcsim package
 csmash (0.6.6-6.8+b1)
-CannonSmash, a table tennis simulation game
 csmash-data (0.6.6-6.8)
-data files for the CannonSmash game
 csmash-demosong (1.4+nmu1)
-Demo song for CannonSmash
 cube2 (0.0.20130203+dfsg-2)
-3D first-person shooter game engine
 cube2-data (1.0-2)
-demo game and content for the Cube2 engine
 cube2-server (0.0.20130203+dfsg-2)
-standalone server for Cube2 based games
 cultivation (9+dfsg1-2+b1)
-game about the interactions within a gardening community
 curseofwar (1.1.8-3+b2)
-Fast-paced action strategy game for Linux based on ncurses
 cutemaze (1.2.0-1)
 single player maze game
 cuyo (2.0.0brl1-3+b2)
