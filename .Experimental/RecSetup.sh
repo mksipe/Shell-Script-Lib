@@ -1,6 +1,6 @@
 #!/bin/sh
 cd /bin/lib/sh/MK3S
-echo  "Program Library Installed"
+echo  "Program Library Installed" 
 unalias -a
 echo  "Installing Required Packages"
 cd data/
@@ -26,6 +26,13 @@ then echo "[ERROR] UFW";
 else echo "[INSTALLED] UFW";
 fi;
 fi
+# The concept over this type of loop is to be able to understand when a certain package is not installed.
+# If the loop returns positive for the type of package then it will return the message [INSTALLED] Packagename.
+# If the loop returns negative then it will attempt to install the package and will enter another loop to check if the package installed correctly.
+# If that loop returns positive then it will do the same as the first loop. 
+# If the loop returns negative then it will display an error message. 
+# For future development of this program it should be noted that this program will end its processes and  end the script if a certain package is not able to be installed.
+# Also for furthur future development it would be unique if it could identify if a certain pacage is missing because it was ended, not found or if it is missing the poper repository.
 if [ $(which cron |grep cron -c) = 1 ];
 then echo "[INSTALLED] CRON";
 else echo "[NOT_INSTALLED] CRON" & apt -qq -y install cron;
