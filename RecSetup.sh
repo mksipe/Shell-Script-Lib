@@ -207,7 +207,8 @@ if [ $(apt list build-essential |grep installed -c) = 0 ];
 then echo "[ERROR] BUILD-ESSENTIAL";
 else echo "[INSTALLED] BUILD-ESSENTIAL";
 fi;
-fiif [ $(apt list inotify-utils |grep installed -c) = 1 ];
+fi
+if [ $(apt list inotify-utils |grep installed -c) = 1 ];
 then echo "[INSTALLED] INOTIFY-UTILS ";
 else echo "[NOT_INSTALLED] INOTIFY-UTILS " & apt install inotify-utils -y;
 if [ $(apt list inotify-utils |grep installed -c) = 0 ];
