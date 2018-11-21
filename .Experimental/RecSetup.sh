@@ -20,7 +20,7 @@ NEUTRAL='\033[0;0m'
 GREEN='\033[0;32m'
 if [ $(which ufw |grep ufw -c) = 1 ];
 then echo "[INSTALLED] UFW ";
-else echo "[NOT_INSTALLED] UFW " & apt -qq -y install ufw;
+else echo "[NOT_INSTALLED] UFW " & apt-get -q -y install ufw;
 if [ $(which ufw |grep ufw -c) = 0 ];
 then echo "[ERROR] UFW";
 else echo "[INSTALLED] UFW";
@@ -35,7 +35,7 @@ fi
 # Also for furthur future development it would be unique if it could identify if a certain pacage is missing because it was ended, not found or if it is missing the poper repository.
 if [ $(which cron |grep cron -c) = 1 ];
 then echo "[INSTALLED] CRON";
-else echo "[NOT_INSTALLED] CRON" & apt -qq -y install cron;
+else echo "[NOT_INSTALLED] CRON" & apt-get -q -y install cron;
 if [ $(which cron |grep cron -c) = 0 ];
 then echo "[ERROR] CRON";
 else echo "[INSTALLED] CRON";
@@ -43,7 +43,7 @@ fi;
 fi
 if [ $(which nano |grep nano -c) = 1 ];
 then echo "[INSTALLED] NANO";
-else echo "[NOT_INSTALLED] NANO" & apt -qq -y install nano;
+else echo "[NOT_INSTALLED] NANO" & apt-get -q -y install nano;
 if [ $(which nano |grep nano -c) = 0 ];
 then echo "[ERROR] NANO";
 else echo "[INSTALLED] NANO";
@@ -51,7 +51,7 @@ fi;
 fi
 if [ $(which locate |grep locate -c) = 1 ];
 then echo "[INSTALLED] LOCATE";
-else echo "[NOT_INSTALLED LOCATE" & apt -qq -y install locate;
+else echo "[NOT_INSTALLED LOCATE" & apt-get -q -y install locate;
 if [ $(which locate |grep locate -c) = 0 ];
 then echo "[ERROR] LOCATE";
 else echo "[INSTALLED] LOCATE";
@@ -59,7 +59,7 @@ fi;
 fi
 if [ $(which iptables |grep iptables -c) = 1 ];
 then echo "[INSTALLED] IPTABLES";
-else echo "[NOT_INSTALLED] IPTABLES" & apt -qq -y install iptables;
+else echo "[NOT_INSTALLED] IPTABLES" & apt-get -q -y install iptables;
 if [ $(which iptables |grep iptables -c) = 0 ];
 then echo "[ERROR] IPTABLES";
 else echo "[INSTALLED] IPTABLES";
@@ -67,7 +67,7 @@ fi;
 fi
 if [ $(which nmap |grep nmap -c) = 1 ];
 then echo "[INSTALLED] NMAP";
-else echo "[NOT_INSTALLED] NMAP" & apt -qq -y install nmap;
+else echo "[NOT_INSTALLED] NMAP" & apt-get -q -y install nmap;
 if [ $(which nmap |grep nmap -c) = 0 ];
 then echo "[ERROR] NMAP";
 else echo "[INSTALLED] NMAP";
@@ -75,7 +75,7 @@ fi;
 fi
 if [ $(which git |grep git -c) = 1 ];
 then echo "[INSTALLED] GIT";
-else echo "[NOT_INSTALLED] GIT" & apt -qq -y install git;
+else echo "[NOT_INSTALLED] GIT" & apt-get -q -y install git;
 if [ $(which git |grep git -c) = 0 ];
 then echo "[ERROR] GIT";
 else echo "[INSTALLED] GIT";
@@ -83,7 +83,7 @@ fi;
 fi
 if [ $(which lightdm |grep lightdm -c) = 1 ];
 then echo "[INSTALLED] LIGHTDM";
-else echo "[NOT_INSTALLED LIGHTDM" & apt -qq -y install lightdm;
+else echo "[NOT_INSTALLED LIGHTDM" & apt-get -q -y install lightdm;
 if [ $(which lightdm |grep lightdm -c) = 0 ];
 then echo "[ERROR] LIGHTDM";
 else echo "[INSTALLED] LIGHTDM";
@@ -91,7 +91,7 @@ fi;
 fi
 if [ $(which  chkrootkit |grep chkrootkit -c) = 1 ];
 then echo "[INSTALLED] CHKROOTKIT";
-else echo "[NOT_INSTALLED] CHKROOTKIT" & apt install chkrootkit -y;
+else echo "[NOT_INSTALLED] CHKROOTKIT" & apt-get -q -y install chkrootkit;
 if [ $(which chkrootkit |grep chkrootkit -c) = 0 ];
 then echo "[ERROR] CHKROOTKIT";
 else echo "[INSTALLED] CHKROOTKIT";
@@ -99,7 +99,7 @@ fi;
 fi
 if [ $(which cryptsetup |grep cryptsetup -c) = 1 ];
 then echo "[INSTALLED] CRYPT";
-else echo "[NOT_INSTALLED] CRYPT" & apt -qq -y install cryptsetup cryptmount;
+else echo "[NOT_INSTALLED] CRYPT" & apt-get -q -y install cryptsetup cryptmount;
 if [ $(which cryptsetup |grep cryptsetup -c) = 0 ];
 then echo "[ERROR] CRYPT";
 else echo "[INSTALLED] CRYPT";
@@ -107,7 +107,7 @@ fi;
 fi
 if [ $(which apt-listbugs |grep apt-listbugs -c) = 1 ];
 then echo "[INSTALLED] APT:EXT1/2 ";
-else echo "[NOT_INSTALLED] APT:EXT1/2 " & apt -qq -y install apt-listbugs;
+else echo "[NOT_INSTALLED] APT:EXT1/2 " & apt-get -q -y install apt-listbugs;
 if [ $(which apt-listbugs |grep apt-listbugs -c) = 0 ];
 then echo "[ERROR] APT:EXT1/2";
 else echo "[INSTALLED] APT:EXT1/2";
@@ -115,7 +115,7 @@ fi;
 fi
 if [ $(which apt-listchanges |grep apt-listchanges -c) = 1 ];
 then echo "[INSTALLED] APT:EXT2/2 ";
-else echo "[NOT_INSTALLED] APT:EXT2/2 " & apt -qq -y install apt-listchanges;
+else echo "[NOT_INSTALLED] APT:EXT2/2 " & apt-get -q -y install apt-listchanges;
 if [ $(which apt-listchanges |grep apt-listchanges -c) = 0 ];
 then echo "[ERROR] APT:EXT2/2";
 else echo "[INSTALLED] APT:EXT2/2";
@@ -123,7 +123,7 @@ fi;
 fi
 if [ $(which needrestart |grep needrestart -c) = 1 ];
 then echo "[INSTALLED] DEB:EXT1/3 ";
-else echo "[NOT_INSTALLED] DEB:EXT1/3 " & apt -qq -y install needrestart;
+else echo "[NOT_INSTALLED] DEB:EXT1/3 " & apt-get -q -y install needrestart;
 if [ $(which needrestart |grep needrestart -c) = 0 ];
 then echo "[ERROR] DEB:EXT1/3";
 else echo "[INSTALLED] DEB:EXT1/3";
@@ -131,7 +131,7 @@ fi;
 fi
 if [ $(which debsecan |grep debsecan -c) = 1 ];
 then echo "[INSTALLED] DEB:EXT2/3 ";
-else echo "[NOT_INSTALLED] DEB:EXT2/3 " & apt -qq -y install debsecan;
+else echo "[NOT_INSTALLED] DEB:EXT2/3 " & apt-get -q -y install debsecan;
 if [ $(which debsecan |grep debsecan -c) = 0 ];
 then echo "[ERROR] DEB:EXT:2/3";
 else echo "[INSTALLED] DEB:EXT2/3";
@@ -139,7 +139,7 @@ fi;
 fi
 if [ $(which debsums |grep debsums -c) = 1 ];
 then echo "[INSTALLED] DEB:EXT3/3 ";
-else echo "[NOT_INSTALLED] DEB:EXT3/3 " & apt -qq -y install debsums;
+else echo "[NOT_INSTALLED] DEB:EXT3/3 " & apt-get -q -y install debsums;
 if [ $(which debsums |grep debsums -c) = 0 ];
 then echo "[ERROR] DEB:EXT3/3";
 else echo "[INSTALLED] DEB:EXT3/3";
@@ -147,7 +147,7 @@ fi;
 fi
 if [ $(which snort |grep snort -c) = 1 ];
 then echo "[INSTALLED] SNORT ";
-else echo "[NOT_INSTALLED] SNORT " & apt -qq -y install snort;
+else echo "[NOT_INSTALLED] SNORT " & apt-get -q -y install snort;
 if [ $(which snort |grep snort -c) = 0 ];
 then echo "[ERROR] SNORT";
 else echo "[INSTALLED] SNORT";
@@ -155,7 +155,7 @@ fi;
 fi
 if [ $(which whois |grep whois -c) = 1 ];
 then echo "[INSTALLED] WHOIS ";
-else echo "[NOT_INSTALLED] WHOIS " & apt -qq -y install whois;
+else echo "[NOT_INSTALLED] WHOIS " & apt-get -q -y install whois;
 if [ $(which whois |grep whois -c) = 0 ];
 then echo "[ERROR] WHOIS";
 else echo "[INSTALLED] WHOIS";
@@ -163,7 +163,7 @@ fi;
 fi
 if [ $(which aide |grep aide -c) = 1 ];
 then echo "[INSTALLED] AIDE";
-else echo "[NOT_INSTALLED] AIDE" & apt -qq -y install aide;
+else echo "[NOT_INSTALLED] AIDE" & apt-get -q -y install aide;
 if [ $(which aide |grep aide -c) = 0 ];
 then echo "[ERROR] AIDE";
 else echo "[INSTALLED] AIDE";
@@ -171,7 +171,7 @@ fi;
 fi
 if [ $(apt list clamav |grep installed -c) = 1 ];
 then echo "[INSTALLED] CLAMAV ";
-else echo "[NOT_INSTALLED] CLAMAV " & apt -qq -y install clamav;
+else echo "[NOT_INSTALLED] CLAMAV " & apt-get -q -y install clamav;
 if [ $(apt list clamav |grep installed -c) = 0 ];
 then echo "[ERROR] CLAMAV";
 else echo "[INSTALLED] CLAMAV";
@@ -179,7 +179,7 @@ fi;
 fi
 if [ $(apt list clamsmtp |grep installed -c) = 1 ];
 then echo "[INSTALLED] CLAMSMTP ";
-else echo "[NOT_INSTALLED] CLAMSMTP " & apt -qq -y install clamsmtp;
+else echo "[NOT_INSTALLED] CLAMSMTP " & apt-get -q -y install clamsmtp;
 if [ $(apt list clamsmtp |grep installed -c) = 0 ];
 then echo "[ERROR] CLAMSMTP";
 else echo "[INSTALLED] CLAMSMTP";
@@ -187,7 +187,7 @@ fi;
 fi
 if [ $(apt list fail2ban |grep installed -c) = 1 ];
 then echo "[INSTALLED] FAIL2BAN ";
-else echo "[NOT_INSTALLED] FAIL2BAN " & apt -qq -y install fail2ban;
+else echo "[NOT_INSTALLED] FAIL2BAN " & apt-get -q -y install fail2ban;
 if [ $(apt list fail2ban |grep installed -c) = 0 ];
 then echo "[ERROR] FAIL2BAN";
 else echo "[INSTALLED] FAIL2BAN";
@@ -195,7 +195,7 @@ fi;
 fi
 if [ $(apt list libpam-tmpdir |grep installed -c) = 1 ];
 then echo "[INSTALLED] PAM:EXT1/2 ";
-else echo "[NOT_INSTALLED] PAM:EXT1/2 " & apt -qq -y install libpam-tmpdir;
+else echo "[NOT_INSTALLED] PAM:EXT1/2 " & apt-get -q -y install libpam-tmpdir;
 if [ $(apt list libpam-tmpdir |grep installed -c) = 0 ];
 then echo "[ERROR] PAM:EXT1/2";
 else echo "[INSTALLED] PAM:EXT1/2";
@@ -203,7 +203,7 @@ fi;
 fi
 if [ $(apt list libpam-cracklib |grep installed -c) = 1 ];
 then echo "[INSTALLED] PAM:EXT2/2 ";
-else echo "[NOT_INSTALLED] PAM:EXT2/2 " & apt -qq -y install libpam-cracklib;
+else echo "[NOT_INSTALLED] PAM:EXT2/2 " & apt-get -q -y install libpam-cracklib;
 if [ $(apt list libpam-cracklib |grep installed -c) = 0 ];
 then echo "[ERROR] PAM:EXT2/2";
 else echo "[INSTALLED] PAM:EXT2/2";
@@ -211,14 +211,15 @@ fi;
 fi
 if [ $(apt list build-essential |grep installed -c) = 1 ];
 then echo "[INSTALLED] BUILD-ESSENTIAL ";
-else echo "[NOT_INSTALLED]  BUILD-ESSENTIAL " & apt -qq -y install build-essential;
+else echo "[NOT_INSTALLED]  BUILD-ESSENTIAL " & apt-get -q -y install build-essential;
 if [ $(apt list build-essential |grep installed -c) = 0 ];
 then echo "[ERROR] BUILD-ESSENTIAL";
 else echo "[INSTALLED] BUILD-ESSENTIAL";
 fi;
-fiif [ $(apt list inotify-utils |grep installed -c) = 1 ];
+fi
+if [ $(apt list inotify-utils |grep installed -c) = 1 ];
 then echo "[INSTALLED] INOTIFY-UTILS ";
-else echo "[NOT_INSTALLED] INOTIFY-UTILS " & apt -qq -y install inotify-utils;
+else echo "[NOT_INSTALLED] INOTIFY-UTILS " & apt-get -q -y install inotify-utils;
 if [ $(apt list inotify-utils |grep installed -c) = 0 ];
 then echo "[ERROR] INOTIFY-UTILS";
 else echo "[INSTALLED] INOTIFY-UTILS";
