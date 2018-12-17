@@ -234,4 +234,40 @@ which drascula && man drascula | cat | head -n 4 | grep -i drascula
 which drascula-french  && man drascula-french  | cat | head -n 4 | grep -i drascula-french 
 which drascula-german && man drascula-german | cat | head -n 4 | grep -i drascula-german
 which drascula-italian  && man drascula-italian  | cat | head -n 4 | grep -i drascula-italian 
+which drascula-music && man drascula-music | cat | head -n 4 | grep -i drascula-music
+which drascula-spanish && man drascula-spanish | cat | head -n 4 | grep -i drascula-spanish
+which dreamchess && man dreamchess | cat | head -n 4 | grep -i dreamchess
+which dreamchess-data && man dreamchess-data | cat | head -n 4 | grep -i dreamchess-data
+which dvorak7min && man dvorak7min | cat | head -n 4 | grep -i dvorak7min
+which eboard && man eboard | cat | head -n 4 | grep -i eboard
+which eboard-extras-pack1 && man eboard-extras-pack1 | cat | head -n 4 | grep -i eboard-extras-pack1
+which efp && man efp | cat | head -n 4 | grep -i efp
+which einstein && man einstein | cat | head -n 4 | grep -i einstein
+which eleeye && man eleeye | cat | head -n 4 | grep -i eleeye
+which ember && man ember| cat | head -n 4 | grep -i ember
+which ember-media && ember-media | cat | head -n 4 | grep -i ember-media
+which empire && man empire | cat | head -n 4 | grep -i empire
+which empire-hub && man empire-hub | cat | head -n 4 | grep -i empire-hub
+which empire-lafe && man empire-lafe | cat | head -n 4 | grep -i empire-lafe
+which endless-sky && man endless-sky | cat | head -n 4 | grep -i endless-sky
+which endless-sky-data && man endless-sky-data | cat | head -n 4 | grep -i endless-sky-data
+which endless-sky-high-dpi && man endless-sky-high-dpi | cat | head -n 4 | grep -i endless-sky-high-dpi
+which enemylines3 && man enemylines3 | cat | head -n 4 | grep -i enemylines3
+which enemylines7 && man enemylines7 | cat | head -n 4 | grep -i enemylines7
+which enigma && man enigma | cat | head -n 4 | grep -i enigma
+which enigma-data && man enigma-data | cat | head -n 4 | grep -i enigma-data
+which epiphany && man epiphany | cat | head -n 4 | grep -i epiphany
+which epiphany-data && man epiphany-data | cat | head -n 4 | grep -i epiphany-data
+which etoys && man etoys | cat | head -n 4 | grep -i etoys
+which etqw && man etqw | cat | head -n 4 | grep -i etqw
+which etqw-server  && man etqw-server  | cat | head -n 4 | grep -i etqw-server 
+which etw && man etw | cat | head -n 4 | grep -i etw
+which etw-data && man etw-data | cat | head -n 4 | grep -i etw-data
+which excellent-bifurcation && man excellent-bifurcation | cat | head -n 4 | grep -i excellent-bifurcation
+which extremetuxracer && man extremetuxracer | cat | head -n 4 | grep -i extremetuxracer
+which extremetuxracer-data && man extremetuxracer-data | cat | head -n 4 | grep -i extremetuxracer-data
+which exult && man exult | cat | head -n 4 | grep -i exult
+which exult-studio && man exult-studio | cat | head -n 4 | grep -i exult-studio
+which ezquake && man ezquake | cat | head -n 4 | grep -i ezquake
+which fairymax && man fairymax | cat | head -n 4 | grep -i fairymax
 # NOT COMPLETE
