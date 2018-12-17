@@ -302,5 +302,66 @@ which fltk1.3-games && man fltk1.3-games | cat | head -n 4 | grep -i fltk1.3-gam
 which fofix && man fofix | cat | head -n 4 | grep -i fofix
 which foobillardplus && man foobillardplus | cat | head -n 4 | grep -i foobillardplus
 which foobillardplus-data && man foobillardplus-data | cat | head -n 4 | grep -i foobillardplus-data
-
+which fortune-mod  && man fortune-mod  | cat | head -n 4 | grep -i fortune-mod 
+which fortune-zh && man fortune-zh | cat | head -n 4 | grep -i fortune-zh
+which fortunes && man fortunes | cat | head -n 4 | grep -i fortunes
+which fortunes-bg && man fortunes-bg | cat | head -n 4 | grep -i fortunes-bg
+which fortunes-bofh-excuses && man fortunes-bofh-excuses | cat | head -n 4 | grep -i fortunes-bofh-excuses
+which fortunes-br && man fortunes-br | cat | head -n 4 | grep -i fortunes-br
+which fortunes-cs && man fortunes-cs | cat | head -n 4 | grep -i fortunes-cs
+which fortunes-de&& man fortunes-de | cat | head -n 4 | grep -i fortunes-de
+which fortunes-debian-hints && man fortunes-debian-hints | cat | head -n 4 | grep -i fortunes-debian-hints
+which fortunes-eo && man fortunes-eo | cat | head -n 4 | grep -i fortunes-eo
+which fortunes-eo-ascii && man fortunes-eo-ascii | cat | head -n 4 | grep -i fortunes-eo-ascii
+which fortunes-eo-iso3 && man fortunes-eo-iso3 | cat | head -n 4 | grep -i fortunes-eo-iso3
+which fortunes-es && man fortunes-es | cat | head -n 4 | grep -i fortunes-es
+which fortunes-es-off && man fortunes-es-off | cat | head -n 4 | grep -i fortunes-es-off
+which fortunes-fr && man fortunes-fr | cat | head -n 4 | grep -i fortunes-fr
+which fortunes-ga && man fortunes-ga | cat | head -n 4 | grep -i fortunes-ga
+which fortunes-it && man fortunes-it | cat | head -n 4 | grep -i fortunes-it
+which fortunes-it-off && man fortunes-it-off | cat | head -n 4 | grep -i fortunes-it-off
+which fortunes-mario && man fortunes-mario | cat | head -n 4 | grep -i fortunes-mario
+which fortunes-min && man fortunes-min | head -n 4 | grep -i fortunes-min
+which fortunes-off && man fortunes-off | head -n 4 | grep -i fortunes-off
+which fortunes-pl && man fortunes-pl | cat | head -n 4 | grep -i fortunes-pl
+which fortunes-ru && man fortunes-ru | cat | head -n 4 | grep -i fortunes-ru
+which four-in-a-row && man four-in-a-row | cat | head -n 4 | grep -i four-in-a-row
+which freealchemist && man freealchemist | cat | head -n 4 | grep -i freealchemist
+which freecell-solver-bin && man freecell-solver-bin | cat | head -n 4 | grep -i freecell-solver-bin
+which freeciv && man freeciv | cat | head -n 4 | grep -i freeciv
+which freeciv-client-extras && man freeciv-client-extras | cat | head -n 4 | grep -i freeciv-client-extras
+which freeciv-client-gtk && man freeciv-client-gtk | cat | head -n 4 | grep -i freeciv-client-gtk
+which freeciv-client-gtk3 && man freeciv-client-gtk3 | cat | head -n 4 | grep -i freeciv-client-gtk3
+which freeciv-client-qt && man freeciv-client-qt | cat | head -n 4 | grep -i freeciv-client-qt
+which freeciv-client-sdl && man freeciv-client-sdl | cat | head -n 4 | grep -i freeciv-client-sdl
+which freeciv-data && man freeciv-data | cat | head -n 4 | grep -i freeciv-data
+which freeciv-server && man freeciv-server | cat | head -n 4 | grep -i freeciv-server
+which freeciv-sound-standard && man freeciv-sound-standard | cat | head -n 4 | grep -i freeciv-sound-standard
+which freecol && man freecol | cat | head -n 4 | grep -i freecol
+which freedink && man freedink | cat | head -n 4 | grep -i freedink
+which freedink-data && man freedink-data | cat | head -n 4 | grep -i freedink-data
+which freedink-dfarc && man freedink-dfarc | cat | head -n 4 | grep -i freedink-dfarc
+which freedink-dfarc && man freedink-dfarc | cat | head -n 4 | grep -i freedink-dfarc
+which freedm && man freedm | cat | head -n 4 | grep -i freedm
+which freedoom && man freedoom | cat | head -n 4 | gerp -i freedoom
+which freedroid && man freedroid | cat | head -n 4 | grep -i freedroid
+which freedroid-data && man freedroid-data | cat | head -n 4 | grep -i freedroid-data
+which freedroidrpg && man freedroidrpg | cat | head -n 4 | grep -i freedroidrpg
+which freedroidrpg-data && man freedroidrpg-data | cat | head -n 4 | grep -i freedroidrpg-data
+which freegish && man freegish | cat | head -n 4 | grep -i freegish
+which freegish-data  && man freegish-data  | cat | head -n 4 | grep -i freegish-data 
+which freeorion && man freeorion | cat | head -n 4 | grep -i freeorion
+which freeorion-data && man freeorion-data | cat | head -n 4 | grep -i freeorion-data
+which freespace2-launcher-wxlauncher && man freespace2-launcher-wxlauncher | cat | head -n 4 | grep -i freespace2-launcher-wxlauncher
+which freesweep && man freesweep | cat | head -n 4 | grep -i freesweep
+which freetennis && man freetennis | cat | head -n 4 | grep -i freetennis
+which freetennis-common && man freetennis-common | cat | head -n 4 | grep -i freetennis-common
+which freevial && man freevial | cat | head -n 4 | grep -i freevial
+which fretsonfire && man fretsonfire | cat | head -n 4 | grep -i fretsonfire
+which fretsonfire-game && man fretsonfire-game | cat | head -n 4 | grep -i fretsonfire-game
+which fretsonfire-songs-muldjord && man fretsonfire-songs-muldjord | cat | head -n 4 | grep -i fretsonfire-songs-muldjord
+which fretsonfire-songs-sectoid && man fretsonfire-songs-sectoid | cat | head -n 4 | grep -i fretsonfire-songs-sectoid
+which frogatto && man frogatto | cat | head -n 4 | grep -i frogatto
+which frogatto-data && man frogatto-data | cat | head -n 4 | grep -i frogatto-data
+which frotz && man frotz | cat | head -n 4 | grep -i frotz
 # NOT COMPLETE
