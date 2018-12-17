@@ -270,4 +270,37 @@ which exult && man exult | cat | head -n 4 | grep -i exult
 which exult-studio && man exult-studio | cat | head -n 4 | grep -i exult-studio
 which ezquake && man ezquake | cat | head -n 4 | grep -i ezquake
 which fairymax && man fairymax | cat | head -n 4 | grep -i fairymax
+which fb-music-high && man fb-music-high | cat | head -n 4 | grep -i fb-music-high
+which fceux && man fceux | cat | head -n 4 | grep -i fceux
+which ffrenzy && man ffrenzy | cat | head -n 4 | grep -i ffrenzy
+which fgo && man fgo | cat | head -n 4 | grep -i fgo
+which fheroes2-pkg && man fheroes2-pkg | cat | head -n 4 | grep -i fheroes2-pkg
+which filler && man filler | cat | head -n 4 | grep -i filler
+which fillets-ng && man fillets-ng | cat | head -n 4 | grep -i fillets-ng
+which fillets-ng-data && man fillets-ng-data | cat | head -n 4 | grep -i fillets-ng-data
+which fillets-ng-data-cs && man fillets-ng-data-cs | cat | head -n 4 | grep -i fillets-ng-data-cs
+which fillets-ng-data-nl && man fillets-ng-data-nl | cat | head -n 4 | grep -i fillets-ng-data-nl
+which filters && man filters | cat | head -n 4 | grep -i filters
+which five-or-more  && man five-or-more  | cat | head -n 4 | grep -i five-or-more 
+which fizmo-common && man fizmo-common | cat | head -n 4 | grep -i fizmo-common
+which fizmo-console && man fizmo-console | cat | head -n 4 | grep -i fizmo-console
+which fizmo-ncursesw && man fizmo-ncursesw | cat | head-n 4 | grep -i fizmo-ncursesw
+which flare && man flare | cat | head -n 4 | grep -i flare
+which flare-data && man flare-data | cat | head -n 4 | grep -i flare-data
+which flare-engine && man flare-engine | cat | head -n 4 | grep -i flare-engine
+which flare-game && man flare-game | cat | head -n 4 | grep -i flare-game
+which flight-of-the-amazon-queen && man flight-of-the-amazon-queen | cat | head -n 4 | grep -i flight-of-the-amazon-queen
+which flightgear && man flightgear | cat | head -n 4 | grep -i flightgear
+which flightgear-data-ai && man flightgear-data-ai | cat | head -n 4 | grep -i flightgear-data-ai
+which flightgear-data-all && manflightgear-data-all | cat | head -n 4 | grep -i flightgear-data-all
+which flightgear-data-base && man flightgear-data-base | cat | head -n 4 | grep -i flightgear-data-base
+which flightgear-data-models && man flightgear-data-models | cat | head -n 4 | grep -i flightgear-data-models
+which flightgear-phi  && man flightgear-phi  | cat | head -n 4 | grep -i flightgear-phi 
+which flobopuyo &&  man flobopuyo | cat | head -n 4 | grep -i flobopuyo
+which fltk1.1-games && man fltk1.1-games | cat | head -n 4 | grep -i fltk1.1-games
+which fltk1.3-games && man fltk1.3-games | cat | head -n 4 | grep -i fltk1.3-games
+which fofix && man fofix | cat | head -n 4 | grep -i fofix
+which foobillardplus && man foobillardplus | cat | head -n 4 | grep -i foobillardplus
+which foobillardplus-data && man foobillardplus-data | cat | head -n 4 | grep -i foobillardplus-data
+
 # NOT COMPLETE
