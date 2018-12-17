@@ -399,6 +399,7 @@ which pipal && man pipal | cat | head -n 4 | grep -i pipal | tee -a /bin/lib/sh/
 which rdpy && man rdpy | cat | head -n 4 | grep -i rdpy | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "----------Backdoors-----------------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which netcat && man netcat | cat | head -n 4 | grep -i netcat | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which nc && man nc | cat | head -n 4 | grep -i nc | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which ssh && man ssh  | cat | head -n 4 | grep -i ssh | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which vsftpd && man vsftpd | cat | head -n 4 | grep -i vsftpd | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which telnet && man telnet | cat | head -n 4 | grep -i telnet | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
