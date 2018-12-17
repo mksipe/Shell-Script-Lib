@@ -21,7 +21,7 @@ which abe && man abe | cat | head -n 4 | grep -i abe
 which abe-data && man abe-data | cat | head -n 4 | grep -i abe-data
 which ace-of-penguins && man ace-of-penguins | cat | head -n 4 | grep -i ace-of-penguins
 which acm && man acm | cat | head -n 4 | grep -i acm
-which adanaxisgpl && man && | cat | head -n 4 | grep -i adanaxisgpl
+which adanaxisgpl && man adanaxisgpl | cat | head -n 4 | grep -i adanaxisgpl
 which adanaxisgpl-data && man adanaxisgpl-data | cat | head -n 4 | grep -i adanaxisgpl-data
 which adonthell && man adonthell | cat | head -n 4 | grep -i adonthell
 which adonthell-data && man adonthell-data  | cat | head -n 4 | grep -i adonthell-data 
