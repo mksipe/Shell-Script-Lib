@@ -39,8 +39,8 @@ The contents of Shell Script Lib can change and alter certain files on your comp
 | Hardening 	| 56 	|
 | Stealth 	| 14 	|
 | Debugging 	| 12 	|
-| Information 	| 20 	|
-| Database 	| 4 	|
+| Information 	| 21 	|
+| Database 	| 5 	|
 
 ### INSTALLATION
 
