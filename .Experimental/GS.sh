@@ -1063,7 +1063,7 @@ which uhexen2-common && man uhexen2-common | cat | head -n 4 | grep -i uhexen2-c
 which uligo && man uligo | cat | head -n 4 | grep -i uligo
 which unknown-horizons && man unknown-horizons | cat | head -n 4 | grep -i unknown-horizons
 which uqm && man uqm | cat | head -n 4 | grep -i uqm
-whivh uqm-content && man uqm-content | cat | head -n 4 | grep -i uqm-content
+which uqm-content && man uqm-content | cat | head -n 4 | grep -i uqm-content
 which uqm-music && man uqm-music | cat | head -n 4 | grep -i uqm-music
 which uqm-russian && man uqm-russian | cat | head -n 4 | grep -i uqm-russian
 which uqm-voice && man uqm-voice | cat | head -n 4 | grep -i uqm-voice
