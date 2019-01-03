@@ -1,11 +1,6 @@
-#ADD SHEBANG AND PRIVCHECK
-if [ $(which php5 |grep php5 -c) = 1 ];
-then echo "[INSTALLED] PGP5 ";
-else echo "[NOT_INSTALLED] PHP5 " & apt install php5 -y;
-if [ $(which php5 |grep php5 -c) = 0 ];
-then echo "[ERROR] PHP5" & exit 1;
-else echo "[INSTALLED] PHP5";
-fi;
+#/bin/sh
+# PHP metapackage to check for.
+# php-pear php-fpm php-dev php-zip php-curl php-xmlrpc php-gd php-mysql php-mbstring php-xml libapache2-mod-php
 fised -i "s/^expose_php=*/expose_php=off" /etc/php5/apaceh2/php.ini
 sed -i "s/^allow_url_fopen=*/allow_url_fopen=off" /etc/php5/apaceh2/php.ini
 sed -i "s/^allow_url_include=*/allow_url_include=off" /etc/php5/apaceh2/php.ini
