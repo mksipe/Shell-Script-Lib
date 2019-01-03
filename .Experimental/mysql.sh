@@ -8,9 +8,7 @@ else echo "[INSTALLED] MYSQL";
 fi;
 fi
 mysql_secure_installation
-echo "Enter SQL Password" # yes im well aware that this is in plain test and is therefore not secure.
-read PASS
-mysql –u root –p $PASS
+mysql –u root –p
 CREATE USER ‘myusr’@’localhost’ IDENTIFIED BY ‘password’; # It would be smart to change this to another password.
 GRANT SELECT,INSERT,UPDATE,DELETE ON mydb.* TO ‘myusr’@’localhost’ IDENTIFIED BY ‘password’;
 FLUSH PRIVILEGES;
