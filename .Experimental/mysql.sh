@@ -1,10 +1,10 @@
 # ADD SHEBANG AND PRIVCHECK
-if [ $(which mysql |grep mysql -c) = 1 ];
-then echo "[INSTALLED] MYSQL ";
-else echo "[NOT_INSTALLED] MYSQL " & apt install mysql -y;
-if [ $(which mysql |grep mysql -c) = 0 ];
-then echo "[ERROR] MYSQL" & exit 1;
-else echo "[INSTALLED] MYSQL";
+if [ $(which mysql-server |grep mysql-server -c) = 1 ];
+then echo "[INSTALLED] MYSQL-SERVER ";
+else echo "[NOT_INSTALLED] MYSQL-SERVER " & apt install mysql-server -y;
+if [ $(which mysql-server |grep mysql-server -c) = 0 ];
+then echo "[ERROR] MYSQL-SERVER" & exit 1;
+else echo "[INSTALLED] MYSQL-SERVER";
 fi;
 fi
 mysql_secure_installation
