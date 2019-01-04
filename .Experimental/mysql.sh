@@ -8,10 +8,11 @@ else echo "[INSTALLED] MYSQL-SERVER";
 fi;
 fi
 mysql_secure_installation
-mysql –u root –p
-CREATE USER ‘myusr’@’localhost’ IDENTIFIED BY ‘password’; # It would be smart to change this to another password.
-GRANT SELECT,INSERT,UPDATE,DELETE ON mydb.* TO ‘myusr’@’localhost’ IDENTIFIED BY ‘password’;
-FLUSH PRIVILEGES;
+#mysql –u root –p
+#CREATE USER ‘myusr’@’localhost’ IDENTIFIED BY ‘password’; # It would be smart to change this to another password.
+#GRANT SELECT,INSERT,UPDATE,DELETE ON mydb.* TO ‘myusr’@’localhost’ IDENTIFIED BY ‘password’;
+#FLUSH PRIVILEGES;
+# ^^^ These commands will need to be redone. Thould be set by a system administrator to ensure that the situation given will match these requirements.
 exit
 sed -i "s/^bind-address=*/Bind-address=127.0.0.1" /etc/mysql/my.conf 
 sed -i "s/^local-infile=*/local-infile=0" /etc/mysql/my.conf
