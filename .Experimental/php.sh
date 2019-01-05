@@ -110,3 +110,4 @@ sed -i "s/^max_execution_time = */max_execution_time = 30" /etc/php/7.2/apache2/
 sed -i "s/^max_input_time = */max_input_time = 60" /etc/php5/apache2/php.ini
 else echo "ERROR";
 fi
+
