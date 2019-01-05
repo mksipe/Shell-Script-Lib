@@ -24,26 +24,26 @@ then echo "[ERROR] PHP-DEV" & exit 255;
 else echo "[INSTALLED] PHP-DEV";
 fi;
 fi
-if [ $(which php-zip |grep php-zip -c) = 1 ];
+if [ $(apt list php-zip |grep php-zip -c) = 1 ];
 then echo "[INSTALLED] PHP-ZIP ";
 else echo "[NOT_INSTALLED] PHP-ZIP " & apt-get install -qq -y php-zip;
-if [ $(which php-zip |grep php-zip -c) = 0 ];
+if [ $(apt list php-zip |grep php-zip -c) = 0 ];
 then echo "[ERROR] PHP-ZIP" & exit 255;
 else echo "[INSTALLED] PHP-ZIP";
 fi;
 fi
-if [ $(which php-curl |grep php-curl -c) = 1 ];
+if [ $(apt list php-curl |grep php-curl -c) = 1 ];
 then echo "[INSTALLED] PHP-CURL ";
 else echo "[NOT_INSTALLED] PHP-CURL " & apt-get install -qq -y php-curl;
-if [ $(which php-curl |grep php-curl -c) = 0 ];
+if [ $(apt list php-curl |grep php-curl -c) = 0 ];
 then echo "[ERROR] PHP-CURL" & exit 255;
 else echo "[INSTALLED] PHP-CURL";
 fi;
 fi
-if [ $(which php-xmlrpc |grep php-xmlrpc -c) = 1 ];
+if [ $(apt list  php-xmlrpc |grep php-xmlrpc -c) = 1 ];
 then echo "[INSTALLED] PHP-XMLRPC ";
 else echo "[NOT_INSTALLED] PHP-XMLRPC " & apt-get install -qq -y php-xmlrpc;
-if [ $(which php-xmlrpc |grep php-xmlrpc -c) = 0 ];
+if [ $(apt list  php-xmlrpc |grep php-xmlrpc -c) = 0 ];
 then echo "[ERROR] PHP-XMLRPC" & exit 255;
 else echo "[INSTALLED] PHP-XMLRPC";
 fi;
