@@ -1,6 +1,6 @@
 #/bin/sh
 # PHP metapackage to check for.
-if [ $(apt-list php-pear |grep php-pear -c) = 1 ];
+if [ $(apt list php-pear |grep php-pear -c) = 1 ];
 then echo "[INSTALLED] PHP-PEAR ";
 else echo "[NOT_INSTALLED] PHP-PEAR " & apt-get install -qq -y php-pear;
 if [ $(apt list php-pear |grep php-pear -c) = 0 ];
