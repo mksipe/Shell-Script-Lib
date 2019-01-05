@@ -427,6 +427,14 @@ which setoolkit && man setoolkit  | cat | head -n 4 | grep -i set | tee -a /bin/
 which tor && man tor  | cat | head -n 4 | grep -i tor | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which torsocks && man torsocks | cat | head -n 4 | grep -i torsocks | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which BeEF && man beef | cat | head -n 4 | grep -i beef | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which ftpd && man tftpd | cat | head -n 4 | grep -i tftpd | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which x11vnc && man x11vnc | cat | head -n 4 | grep -i x11vnc | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which tightvncserver && man tightvncserver | cat | head -n 4 | grep -i tightvncserver | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which Snmp && man Snmp | cat | head -n 4 | grep -i Snmp | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which nfs && man nfs | cat | head -n 4 | grep -i nfs | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which sendmail && man sendmail | cat | head -n 4 | grep -i sendmail | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which postfix && man postfix | cat | head -n 4 | grep -i postfix | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
+which Xinetd && man Xinetd | cat | head -n 4 | grep -i Xinetd | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 echo "----------BackupScan----------------------|" | sudo tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which acccheck | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
 which ace-voip | grep -i / | tee -a /bin/lib/sh/MK3S/data/Exploit-Search.txt
