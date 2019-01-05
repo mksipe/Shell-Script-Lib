@@ -90,24 +90,24 @@ fi;
 fi
 if [ $(php -v | grep 5.0 -c ) = 3 ];
 then
-sed 's/^expose_php=*/expose_php=off/' /etc/php5/apache2/php.ini
-sed 's/^allow_url_fopen=*/allow_url_fopen=off/' /etc/php5/apache2/php.ini
-sed 's/^allow_url_include=*/allow_url_include=off/' /etc/php5/apache2/php.ini
-sed 's/^disable_functions=*/disable_functions=exec,shell_exec,passthru,system,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,proc_open,pcntl_exec/' /etc/php5/apache2/php.ini
-sed 's/^upload_maX_filesize = */upload_max_filesize = 2M/' /etc/php5/apache2/php.ini
-sed 's/^max_execution_time = */max_execution_time = 30/' /etc/php5/apache2/php.ini
-sed 's/^max_input_time = */max_input_time = 60/' /etc/php5/apache2/php.ini
+sed 's/^expose_php=*/expose_php=off/' /etc/php5/apache2/php.ini | grep expose_php
+sed 's/^allow_url_fopen=*/allow_url_fopen=off/' /etc/php5/apache2/php.ini | grep allow_url_fopen
+sed 's/^allow_url_include=*/allow_url_include=off/' /etc/php5/apache2/php.ini | grep allow_url_include
+sed 's/^disable_functions=*/disable_functions=exec,shell_exec,passthru,system,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,proc_open,pcntl_exec/' /etc/php5/apache2/php.ini | grep disable_functions
+sed 's/^upload_max_filesize = */upload_max_filesize = 2M/' /etc/php5/apache2/php.ini | grep upload_max_filesize
+sed 's/^max_execution_time = */max_execution_time = 30/' /etc/php5/apache2/php.ini | grep max_execution_time
+sed 's/^max_input_time = */max_input_time = 60/' /etc/php5/apache2/php.ini | grep max_input_time
 else continue;
 if  [ $(php -v | grep 7.2 -c ) = 3 ];
 then
 # This would be for later versions of php such as 7.2
-sed 's/^expose_php=*/expose_php=off/' /etc/php/7.2/apache2/php.ini
-sed 's/^allow_url_fopen=*/allow_url_fopen=off/' /etc/php/7.2/apache2/php.ini
-sed 's/^allow_url_include=*/allow_url_include=off/' /etc/php/7.2/apache2/php.ini
-sed 's/^disable_functions=*/disable_functions=exec,shell_exec,passthru,system,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,proc_open,pcntl_exec/' /etc/php/7.2/apache2/php.ini
-sed 's/^upload_maX_filesize = */upload_max_filesize = 2M/' /etc/php/7.2/apache2/php.ini
-sed 's/^max_execution_time = */max_execution_time = 30/' /etc/php/7.2/apache2/php.ini
-sed 's/^max_input_time = */max_input_time = 60/' /etc/php5/apache2/php.ini
+sed 's/^expose_php=*/expose_php=off/' /etc/php/7.2/apache2/php.ini | grep expose_php
+sed 's/^allow_url_fopen=*/allow_url_fopen=off/' /etc/php/7.2/apache2/php.ini | grep allow_url_fopen
+sed 's/^allow_url_include=*/allow_url_include=off/' /etc/php/7.2/apache2/php.ini | grep allow_url_include
+sed 's/^disable_functions=*/disable_functions=exec,shell_exec,passthru,system,popen,curl_exec,curl_multi_exec,parse_ini_file,show_source,proc_open,pcntl_exec/' /etc/php/7.2/apache2/php.ini | grep disable_functions
+sed 's/^upload_max_filesize = */upload_max_filesize = 2M/' /etc/php/7.2/apache2/php.ini | grep upload_max_filesize
+sed 's/^max_execution_time = */max_execution_time = 30/' /etc/php/7.2/apache2/php.ini | grep max_execution_time
+sed 's/^max_input_time = */max_input_time = 60/' /etc/php5/apache2/php.ini | grep max_input_time
 else echo "ERROR";
 fi;
 fi
