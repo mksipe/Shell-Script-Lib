@@ -72,20 +72,21 @@ a2dismod -f autoindex
 echo "" > /var/www/html/index.html
 
 # Secure root directory
-echo "<Directory />" >> /etc/apache2/conf-available/security.conf
-echo "Options -Indexes" >> /etc/apache2/conf-available/security.conf
-echo "AllowOverride None" >> /etc/apache2/conf-available/security.conf
-echo "Order Deny,Allow" >> /etc/apache2/conf-available/security.conf
-echo "Deny from all" >> /etc/apache2/conf-available/security.conf
-echo "</Directory>" >> /etc/apache2/conf-available/security.conf
+echo "<Directory />" >> /etc/apache2/apache2.conf
+echo "Options -Indexes" >> /etc/apache2/apache2.conf
+echo "AllowOverride None" >> /etc/apache2/apache2.conf
+echo "Order Deny,Allow" >> /etc/apache2/apache2.conf
+echo "Deny from all" >> /etc/apache2/apache2.conf
+echo "</Directory>" >> /etc/apache2/apache2.conf
 
 # Secure html directory
-echo "<Directory /var/www/html>" >> /etc/apache2/conf-available/security.conf
-echo "Options -Indexes -Includes" >> /etc/apache2/conf-available/security.conf
-echo "AllowOverride None" >> /etc/apache2/conf-available/security.conf
-echo "Order Allow,Deny" >> /etc/apache2/conf-available/security.conf
-echo "Allow from All" >> /etc/apache2/conf-available/security.conf
-echo "</Directory>" >> /etc/apache2/conf-available/security.conf
+echo "<Directory /var/www/html>" >> /etc/apache2/apache2.conf
+echo "Options -Indexes -Includes" >> /etc/apache2/apache2.conf
+echo "AllowOverride None" >> /etc/apache2/apache2.conf
+echo "Order Allow,Deny" >> /etc/apache2/apache2.conf
+echo "Allow from All" >> /etc/apache2/apache2.conf
+echo "Options None" >> /etc/apache2/apache2.conf
+echo "</Directory>" >> /etc/apache2/apache2.conf
   
 # Use TLS only
 sed -i "s/SSLProtocol all -SSLv3/SSLProtocol –ALL +TLSv1 +TLSv1.1 +TLSv1.2/" /etc/apache2/mods-available/ssl.conf
@@ -97,26 +98,31 @@ sed -i "s/SSLCipherSuite HIGH:\!aNULL/SSLCipherSuite HIGH:\!MEDIUM:\!aNULL:\!MD5
 a2enmod headers
 
 # Enable HttpOnly and Secure flags
-echo "Header edit Set-Cookie ^(.*)\$ \$1;HttpOnly;Secure" >> /etc/apache2/conf-available/security.conf
+echo "Header edit Set-Cookie ^(.*)\$ \$1;HttpOnly;Secure" >> /etc/apache2/apache2.conf
 
 # Clickjacking Attack Protection
-echo "Header always append X-Frame-Options SAMEORIGIN" >> /etc/apache2/conf-available/security.conf
+echo "Header always append X-Frame-Options SAMEORIGIN" >> /etc/apache2/apache2.conf
 
 # XSS Protection
-echo "Header set X-XSS-Protection \"1; mode=block\"" >> /etc/apache2/conf-available/security.conf
+echo "Header set X-XSS-Protection \"1; mode=block\"" >> /etc/apache2/apache2.conf
 
 # Enforce secure connections to the server
-echo "Header always set Strict-Transport-Security \"max-age=31536000; includeSubDomains\"" >> /etc/apache2/conf-available/security.conf
+echo "Header always set Strict-Transport-Security \"max-age=31536000; includeSubDomains\"" >> /etc/apache2/apache2.conf
 
 # MIME sniffing Protection
-echo "Header set X-Content-Type-Options: \"nosniff\"" >> /etc/apache2/conf-available/security.conf
+echo "Header set X-Content-Type-Options: \"nosniff\"" >> /etc/apache2/apache2.conf
 
 # Prevent Cross-site scripting and injections
-echo "Header set Content-Security-Policy \"default-src 'self';\"" >> /etc/apache2/conf-available/security.conf
+echo "Header set Content-Security-Policy \"default-src 'self';\"" >> /etc/apache2/apache2.conf
 
 # Prevent DoS attacks - Limit timeout
-sed -i "s/Timeout 300/Timeout 60/" /etc/apache2/apache2.conf
+sed -i "s/Timeout 300/Timeout 45/" /etc/apache2/apache2.conf
 
+# Adding user apache as a standalone user
+adduser apache
+echo "User apache" >> /etc/apache2/apache2.conf 
+echo "Group apache" >> /etc/apache2/apache2.conf 
 service apache2 restart
 
+service httpd restart
 echo [SUCCESS] apache.sh audit ran by $USER on $(date -u). Though apache appears to be: $(service apache2 status | grep ok) $(service apache2 status | grep fail) | tee -a /bin/lib/sh/MK3S/data/MK3S.log
