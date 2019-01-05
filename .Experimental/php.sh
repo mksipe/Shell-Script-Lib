@@ -89,7 +89,7 @@ else echo "[INSTALLED] LIBAPACHE2_MOD_PHP";
 fi;
 fi
 if [ $(php -v | grep 5.0 -c ) = 3 ];
-then;
+then
 sed -i "s/^expose_php=*/expose_php=off" /etc/php5/apache2/php.ini
 sed -i "s/^allow_url_fopen=*/allow_url_fopen=off" /etc/php5/apache2/php.ini
 sed -i "s/^allow_url_include=*/allow_url_include=off" /etc/php5/apache2/php.ini
@@ -99,7 +99,7 @@ sed -i "s/^max_execution_time = */max_execution_time = 30" /etc/php5/apache2/php
 sed -i "s/^max_input_time = */max_input_time = 60" /etc/php5/apache2/php.ini
 else continue;
 if  [ $(php -v | grep 7.2 -c ) = 3 ];
-then;
+then
 # This would be for later versions of php such as 7.2
 sed -i "s/^expose_php=*/expose_php=off" /etc/php/7.2/apache2/php.ini
 sed -i "s/^allow_url_fopen=*/allow_url_fopen=off" /etc/php/7.2/apache2/php.ini
