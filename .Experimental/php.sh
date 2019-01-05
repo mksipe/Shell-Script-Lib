@@ -1,25 +1,25 @@
 #/bin/sh
 # PHP metapackage to check for.
-if [ $(which php-pear |grep php-pear -c) = 1 ];
+if [ $(apt-list php-pear |grep php-pear -c) = 1 ];
 then echo "[INSTALLED] PHP-PEAR ";
 else echo "[NOT_INSTALLED] PHP-PEAR " & apt-get install -qq -y php-pear;
-if [ $(which php-pear |grep php-pear -c) = 0 ];
+if [ $(apt list php-pear |grep php-pear -c) = 0 ];
 then echo "[ERROR] PHP-PEAR" & exit 255;
 else echo "[INSTALLED] PHP-PEAR";
 fi;
 fi
-if [ $(which php-fpm |grep php-fpm -c) = 1 ];
+if [ $(apt list php-fpm |grep php-fpm -c) = 1 ];
 then echo "[INSTALLED] PHP-FPM ";
 else echo "[NOT_INSTALLED] PHP-FPM " & apt-get install -qq -y php-fpm;
-if [ $(which php-fpm |grep php-fpm -c) = 0 ];
+if [ $(apt list php-fpm |grep php-fpm -c) = 0 ];
 then echo "[ERROR] PHP-FPM" & exit 255;
 else echo "[INSTALLED] PHP-FPM";
 fi;
 fi
-if [ $(which php-dev |grep php-dev -c) = 1 ];
+if [ $(apt list php-dev |grep php-dev -c) = 1 ];
 then echo "[INSTALLED] PHP-DEV ";
 else echo "[NOT_INSTALLED] PHP-DEV " & apt-get install -qq -y php-dev;
-if [ $(which php-dev |grep php-dev -c) = 0 ];
+if [ $(apt list php-dev |grep php-dev -c) = 0 ];
 then echo "[ERROR] PHP-DEV" & exit 255;
 else echo "[INSTALLED] PHP-DEV";
 fi;
@@ -48,42 +48,42 @@ then echo "[ERROR] PHP-XMLRPC" & exit 255;
 else echo "[INSTALLED] PHP-XMLRPC";
 fi;
 fi
-if [ $(which php-gd |grep php-gd -c) = 1 ];
+if [ $(apt list php-gd |grep php-gd -c) = 1 ];
 then echo "[INSTALLED] PHP-GD ";
 else echo "[NOT_INSTALLED] PHP-GD " & apt-get install -qq -y php-gd;
-if [ $(which php-gd |grep php-gd -c) = 0 ];
+if [ $(apt list php-gd |grep php-gd -c) = 0 ];
 then echo "[ERROR] PHP-GD" & exit 255;
 else echo "[INSTALLED] PHP-GD";
 fi;
 fi
-if [ $(which php-mysql |grep php-mysql -c) = 1 ];
+if [ $(apt list php-mysql |grep php-mysql -c) = 1 ];
 then echo "[INSTALLED] PHP-MYSQL ";
 else echo "[NOT_INSTALLED] PHP-MYSQL " & apt-get install -qq -y php-mysql;
-if [ $(which php-mysql |grep php-mysql -c) = 0 ];
+if [ $(apt list php-mysql |grep php-mysql -c) = 0 ];
 then echo "[ERROR] PHP-MYSQL" & exit 255;
 else echo "[INSTALLED] PHP-MYSQL";
 fi;
 fi
-if [ $(which php-mbstring |grep php-mbstring -c) = 1 ];
+if [ $(apt list php-mbstring |grep php-mbstring -c) = 1 ];
 then echo "[INSTALLED] PHP-MBSTRING ";
 else echo "[NOT_INSTALLED] PHP-MBSTRING " & apt-get install -qq -y php-mbstring;
-if [ $(which php-mbstring |grep php-mbstring -c) = 0 ];
+if [ $(apt list  php-mbstring |grep php-mbstring -c) = 0 ];
 then echo "[ERROR] PHP-MBSTRING" & exit 255;
 else echo "[INSTALLED] PHP-MBSTRING";
 fi;
 fi
-if [ $(which php-xml |grep php-xml -c) = 1 ];
+if [ $(apt list php-xml |grep php-xml -c) = 1 ];
 then echo "[INSTALLED] PHP-XML ";
 else echo "[NOT_INSTALLED] PHP-XML " & apt-get install -qq -y php-xml;
-if [ $(which php-xml |grep php-xml -c) = 0 ];
+if [ $(apt list  php-xml |grep php-xml -c) = 0 ];
 then echo "[ERROR] PHP-XML" & exit 255;
 else echo "[INSTALLED] PHP-XML";
 fi;
 fi
-if [ $(which libapache2-mod-php |grep libapache2-modp-php -c) = 1 ];
+if [ $(apt list  libapache2-mod-php |grep libapache2-modp-php -c) = 1 ];
 then echo "[INSTALLED] LIBAPACHE2_MOD_PHP ";
 else echo "[NOT_INSTALLED] LIBAPACHE2_MOD_PHP " & apt-get install -qq -y libapache2-mod-php;
-if [ $(which libapache2-mod-php |grep libapache2-mod-php -c) = 0 ];
+if [ $(apt list libapache2-mod-php |grep libapache2-mod-php -c) = 0 ];
 then echo "[ERROR] LIBAPACHE2_MOD_PHP" & exit 255;
 else echo "[INSTALLED] LIBAPACHE2_MOD_PHP";
 fi;
