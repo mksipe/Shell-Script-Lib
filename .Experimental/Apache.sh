@@ -123,13 +123,6 @@ adduser apache
 echo "User apache" >> /etc/apache2/apache2.conf 
 echo "Group apache" >> /etc/apache2/apache2.conf 
 service apache2 restart
-if [ $(which mod_security |grep mod_security -c) = 1 ];
-then echo "[INSTALLED] MOD_SECURITY ";
-else echo "[NOT_INSTALLED] MOD_SECURITY " & apt install mod_security -y;
-if [ $(which mod_security |grep mod_security -c) = 0 ];
-then echo "[ERROR] MOD_SECURITY" & exit 1;
-else echo "[INSTALLED] MOD_SECURITY";
-fi;
-fi
+
 service httpd restart
 echo [SUCCESS] apache.sh audit ran by $USER on $(date -u). Though apache appears to be: $(service apache2 status | grep ok) $(service apache2 status | grep fail) | tee -a /bin/lib/sh/MK3S/data/MK3S.log
