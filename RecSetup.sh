@@ -227,7 +227,7 @@ if [ $(which apache2 | grep / -c) = 1 ];  then ./Apache.sh ; else echo "Skipping
 ./banners.sh
 ./files.sh
 ./iptables.sh
-./iptables2.sh
+./Iptables2.sh
 ./network.sh
 if [ $(which nginx | grep / -c) = 1 ]; then ./nginx.sh ; else echo "Skipping Nginx Installation" ; fi
 ./services.sh
