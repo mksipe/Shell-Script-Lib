@@ -10,32 +10,6 @@ fi
 # Install iptables
 apt -y install iptables
 
-# Install iptables-persistent
-apt -y install iptables-persistent
-systemctl enable netfilter-persistent
-
-# Flush/Delete firewall rules
-iptables -F
-iptables -X
-iptables -Z
-iptables -t nat -F
-iptables -t mangle -F
-iptables -t nat -X
-iptables -t mangle -X
-iptables -F
-iptables -X
-iptables -P INPUT DROP
-iptables -P FORWARD DROP
-iptables -P OUTPUT ACCEPT
-ip6tables -t nat -F
-ip6tables -t mangle -F
-ip6tables -t nat -X
-ip6tables -t mangle -X
-ip6tables -F
-ip6tables -X	
-ip6tables -P INPUT DROP
-ip6tables -P FORWARD DROP
-ip6tables -P OUTPUT DROP
 # Βlock null packets (DoS)
 iptables -A INPUT -p tcp --tcp-flags ALL NONE -j DROP
 
