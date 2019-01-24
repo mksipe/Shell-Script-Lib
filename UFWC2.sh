@@ -42,6 +42,27 @@ touch /iptables/rules.v6.bak
 iptables-save > /iptables/rules.v4.bak
 ip6tables-save > /iptables/rules.v6.bak
 #Clear out and default iptables
+iptables -F
+iptables -X
+iptables -Z
+iptables -t nat -F
+iptables -t mangle -F
+iptables -t nat -X
+iptables -t mangle -X
+iptables -F
+iptables -X
+iptables -P INPUT DROP
+iptables -P FORWARD DROP
+iptables -P OUTPUT ACCEPT
+ip6tables -t nat -F
+ip6tables -t mangle -F
+ip6tables -t nat -X
+ip6tables -t mangle -X
+ip6tables -F
+ip6tables -X	
+ip6tables -P INPUT DROP
+ip6tables -P FORWARD DROP
+ip6tables -P OUTPUT DROP
 iptables -t nat -F
 iptables -t mangle -F
 iptables -t nat -X
