@@ -202,7 +202,7 @@ fi;
 fi
 if [ $(apt list build-essential |grep installed -c) = 1 ];
 then echo "[INSTALLED] BUILD-ESSENTIAL ";
-else echo "[NOT_INSTALLED]  BUILD-ESSENTIAL " & apt install build-essentail -y;
+else echo "[NOT_INSTALLED]  BUILD-ESSENTIAL " & apt install build-essential -y;
 if [ $(apt list build-essential |grep installed -c) = 0 ];
 then echo "[ERROR] BUILD-ESSENTIAL";
 else echo "[INSTALLED] BUILD-ESSENTIAL";
