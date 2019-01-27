@@ -13,4 +13,4 @@ sed -i '/BN\|10/d' /bin/lib/sh/MK3S/data/Snort.db.new # Deletes Broken Rule
 sed -i '/WHATISIT/d' /bin/lib/sh/MK3S/data/Snort.db.new # Deletes Broken Rule
 sed -i '/Remote\|' /bin/lib/sh/MK3S/data/Snort.db.new # Deletes Broken Rule
 echo "Snort Installed"
-echo "0 12 * * * snort -D -vc /etc/snort/snort.conf -F /bin/lib/sh/MK3S/data/Snort.db.new" | sudo tee -a /etc/crontab
+echo "0 12 * * * snort -D -A full -vc /etc/snort/snort.conf -F /bin/lib/sh/MK3S/data/Snort.db.new" | sudo tee -a /etc/crontab
